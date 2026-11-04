@@ -1,2 +1,4 @@
 seed_win: 1976 tasks to run (0 done)
   seed_win 50/1976 0.3 min; eta 12.3 min
+  seed_win 100/1976 0.7 min; eta 12.6 min
+  seed_win 150/1976 1.0 min; eta 12.2 min

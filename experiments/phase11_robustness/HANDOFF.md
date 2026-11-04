@@ -61,7 +61,7 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | code: titration11 (+ exactness test, 20 series), hrt11 (+ tests), harness11 (+ tests), run11, data11 | done | |
 | pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget: 0 errors; Tier 1 8.2 h + Tier 2 9.4 h = 17.6 h (no thinning) | done | |
 | PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | (this commit) |
-| Tier 1 run started 2026-11-04 (`run_tier1.log`); prep, hrt, covar, sham_win, transplant done | running | 7514b6e |
+| Tier 1 run started 2026-11-04 (`run_tier1.log`) | done | 7514b6e |
 | Tier 1 run: all 12 parts done (RUN11 DONE), 0 errors | done | |
 | Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments done (summary: supports); A5 segments done | done | (this commit) |
 | Tier 2 run started (`run_tier2.log`) | running | |
