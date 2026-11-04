@@ -278,3 +278,15 @@ Any thinning is recorded as an amendment.
 (`paper_tables.py`), figures (`figures11.py`), report `docs/PHASE11_ROBUSTNESS_RESULTS.md`.
 
 ## Amendments
+
+### Amendment 1 (2026-11-04): one EXPLORATORY analysis added (not confirmatory; changes nothing above)
+Written after the A2 synthetic results were seen and before any of this analysis was run. Reason: A2.4 gave 89/100
+positives for ONE isolated ventricular-type beat in N1, while Phase 10 gave 5/100 and 0/100 for the same beat model at
+5 % and 10 % density (S2). This analysis only describes the dose-response between those points; it has no prediction,
+no verdict, and is labelled exploratory everywhere it is reported.
+- `explore11.py`: N1 (`run11.synth_series("null", "N1_linear_rr", seed)`), seeds 11000-11099, 512 intervals;
+  k in {0, 1, 2, 4, 8, 16, 26, 51} isolated beats inserted with the Phase 5 rule (`phase5_rr.systems.add_ectopics`
+  logic: c ~ U(0.6, 0.8), full compensatory pause, indices 1..N-2, spacing >= 3; k = 26 and 51 equal Phase 10's S2 5 %
+  and 10 %); times re-quantized to 1/360 s; frozen titration (R0, raw arm). Event draws:
+  SeedSequence([20261103, 99, k, seed, 1]); titration noise: SeedSequence([20261103, 99, seed, 2]), shared by all k.
+- Reported: positive rate per k with Wilson CI; mean NL among positives. Runs after Tier 2, before Tier 3.
