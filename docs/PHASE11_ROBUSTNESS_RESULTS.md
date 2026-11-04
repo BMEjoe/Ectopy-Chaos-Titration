@@ -32,7 +32,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | B1 seeds | small ranges | *pending* | *pending* |
 | B2 K3 at 1/128 s, false positives | ≤ 7/100 in every FP condition | **3 of 155 conditions fail** (KTz P = 120 / 200 / 250, no ectopy: 14, 10, 10 per 100); pooled 55/10,092 vs 1/10,092 at 1/360 s | **weakens K3 claims** |
 | B2 degeneracy of the 8 real K3 detections | only nsr029 w9 degenerate | only nsr029 w9 degenerate (surrogate SD 0); other 7 SD 0.04-0.08 | supports |
-| B3 variance-preserving spike-ins | (descriptive bounds) | *pending* | *pending* |
+| B3 variance-preserving spike-ins | (descriptive bounds) | f_min unchanged in 14 of 16 rows at π < 0.05 and 15 of 16 at π < 0.20; logistic r = 3.88 weaker at π < 0.05 (0.5 to 0.7), vdP (8, 3.3) stronger at π < 0.20 (0.3 to 0.2) | bounds robust to the design |
 | B4 second base window | (descriptive bounds) | *pending* | *pending* |
 | C1 manuscript-number checks | | "7 of 8" run claim unsupported (4 windows); other items, see C1 | correct the manuscript |
 
@@ -337,7 +337,39 @@ The apparent power gain at 1/128 s for chaos_primary is partly the artefact abov
 series whose RR carries no chaos (Phase 9: KTz chaos is in the T wave only), and 22 of the 251 power detections at
 1/128 s are degenerate.
 
-## B1, B3, B4 (Tier 2): pending
+## B3. Variance-preserving spike-ins (K3)
+
+**Design.** x'_k = μ_NN + √(1 − f)(x_k − μ_NN) + √f σ_NN c_k, applied to every interval. The base windows,
+chaotic components, f grid and 1/128 s quantization are the same as Phase 10's additive design.
+- 1,328 tasks and 9,296 series, with 0 errors and 0 out-of-range intervals.
+- Bounds use Phase 10's real K3 bound U = 0.0146, as registered.
+- `primary_phase10_recomputed` reproduces Phase 10 Table VI exactly.
+
+Detected / 83 at f = 0.05 … 0.9, and f_min (design formula) at π < 0.05 / 0.20:
+
+| Family, parameter (λ) | Additive (Phase 10) | f_min | Variance-preserving | f_min | Wilson-lower f_min (0.20) |
+|---|---|---|---|---|---|
+| Hénon a = 1.22 (0.303) | 0 0 3 6 32 58 76 | 0.5 / 0.5 | 0 1 3 6 26 53 66 | 0.5 / 0.5 | 0.5 |
+| Hénon a = 1.40 (0.419) | 0 1 4 9 29 58 76 | 0.5 / 0.3 | 0 0 3 8 27 53 71 | 0.5 / 0.3 | 0.5 |
+| Hénon a = 1.14 (0.244) | 0 0 0 2 2 9 8 | none / 0.7 | 0 1 1 1 3 10 13 | none / 0.7 | 0.9 |
+| logistic r = 3.88 (0.464) | 1 1 1 5 28 59 77 | 0.5 / 0.5 | 0 1 3 7 24 52 65 | **0.7** / **0.3** | 0.5 |
+| logistic r = 4.00 (0.693) | 0 0 0 1 9 25 73 | 0.7 / 0.5 | 0 0 0 2 7 26 62 | 0.7 / 0.5 | 0.7 |
+| coupled vdP (8, 3.3) (0.075) | 1 2 5 13 33 48 71 | 0.5 / 0.3 | 0 2 7 11 33 48 60 | 0.5 / **0.2** | 0.3 |
+| coupled vdP (6, 3.3) (0.079) | 0 0 0 3 10 13 23 | none / 0.5 | 0 1 0 1 8 11 18 | none / 0.5 | 0.7 |
+| coupled vdP (2, 2.7) (0.085) | 0 0 0 2 6 20 63 | 0.9 / 0.7 | 0 0 0 0 3 21 47 | 0.9 / 0.7 | 0.7 |
+| coupled vdP (6, 4.0) (0.101) | 0 1 2 6 13 15 27 | 0.9 / 0.5 | 1 0 1 1 12 15 27 | 0.9 / 0.5 | 0.5 |
+| weak maps (Hénon 1.08, logistic 3.58 / 3.65), all phase-reset | ≤ 5 at any f | none / none | ≤ 3 at any f | none / none | none |
+
+**Reading (descriptive; no registered prediction).**
+- The exclusion bounds do not depend on the spike-in design.
+- Of 16 rows, the π < 0.05 f_min changes in one (logistic r = 3.88, 0.5 to 0.7, weaker).
+- The π < 0.20 f_min changes in two: logistic r = 3.88 from 0.5 to 0.3, and vdP (8, 3.3) from 0.3 to 0.2, both
+  stronger.
+- Detection at f = 0.9 is lower under variance preservation (e.g. logistic r = 4.00: 62 vs 73), because the base
+  window's own variability is shrunk rather than kept.
+- The Wilson-lower variant is more conservative, typically one f step higher.
+
+## B1, B4 (Tier 2): pending
 
 ## Exploratory: ectopy dose-response on N1 (Amendment 1): pending
 

@@ -345,3 +345,14 @@ b3: 1328 tasks to run (0 done)
   b3 750/1328 43.0 min; eta 33.1 min
   b3 800/1328 45.4 min; eta 30.0 min
   b3 850/1328 48.4 min; eta 27.2 min
+  b3 900/1328 51.3 min; eta 24.4 min
+  b3 950/1328 54.3 min; eta 21.6 min
+  b3 1000/1328 57.1 min; eta 18.7 min
+  b3 1050/1328 60.0 min; eta 15.9 min
+  b3 1100/1328 62.9 min; eta 13.0 min
+  b3 1150/1328 65.6 min; eta 10.2 min
+  b3 1200/1328 68.3 min; eta 7.3 min
+  b3 1250/1328 71.0 min; eta 4.4 min
+  b3 1300/1328 73.7 min; eta 1.6 min
+  b3 1328/1328 75.0 min; eta 0.0 min
+seed_seg: 166 tasks to run (0 done)
