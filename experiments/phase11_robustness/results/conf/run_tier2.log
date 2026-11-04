@@ -358,3 +358,4 @@ b3: 1328 tasks to run (0 done)
 seed_seg: 166 tasks to run (0 done)
   seed_seg 50/166 50.3 min; eta 116.7 min
   seed_seg 100/166 99.8 min; eta 65.9 min
+  seed_seg 150/166 151.5 min; eta 16.2 min
