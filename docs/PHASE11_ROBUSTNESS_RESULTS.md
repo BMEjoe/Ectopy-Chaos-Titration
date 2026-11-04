@@ -1,14 +1,42 @@
 # Phase 11: registered robustness analyses for "Ectopic Beats Masquerade as Chaos in Heart Rate"
 
-**Status: DRAFT, in progress.** Tier 1 results are final. Still pending:
-Tier 2 (B1-B4), the exploratory dose-response, and Tier 3 (tables, figures). Every number below is read from
-`experiments/phase11_robustness/results/conf/analysis/analysis11.json`; nothing is hand-entered.
+**Status: complete (2026-11-04).** Tiers 1-3 and the exploratory analysis are done. Every number below comes from
+`experiments/phase11_robustness/results/conf/analysis/analysis11.json`, or from `explore_dose.json` for the
+exploratory section. Rerunning every section from scratch reproduced the incrementally built JSON exactly
+(0 differing values).
 
 Branch `phase11-robustness` (mirrored to `claude/beautiful-hawking-i1ommp`). The preregistration
 (`experiments/phase11_robustness/PREREGISTRATION.md`) was pushed in commit `2b0e459` before any Phase 11 analysis
 touched confirmatory data. One dated amendment, `1cf78a6`, adds an exploratory analysis and changes nothing
 registered. Phase 10 code and thresholds are frozen; `final_pipeline.py` is unchanged. CIs are 95% subject-cluster
 bootstrap CIs (10,000 resamples) unless stated otherwise.
+
+## Bottom line
+
+**What holds.**
+- **Ectopy drives titration positives, and handling removes them for a reason beyond data loss.** The sham control
+  supports this in all five cells (A1).
+- **One premature beat is enough.** Transplanting a single ventricular-type beat into clean real windows raises the
+  positive rate from 22 % to 86 % (A2). The beat itself is the mechanism, not heart-rate turbulence.
+- **The burden effect survives covariates and within-subject comparison:** OR 3.40 [2.62, 4.41] (A3).
+- **No group difference after adjustment:** CHF OR 0.88 [0.46, 1.69] (A3).
+- **Every verified implementation reading reproduces the claims (A5), and no titration conclusion depends on the seed
+  (B1).**
+
+**What weakens the paper, with the same weight.**
+1. **K3 is not size-controlled at the 1/128 s resolution of the real data (B2).** Three non-chaotic KTz conditions
+   exceed the registered 7/100 (14, 10, 10), against 0 at 1/360 s. The cause is degenerate surrogates in rhythms whose
+   variability is below one quantization step.
+2. **K3 and K1 detections are seed-sensitive at window level (B1).** Under two new K3 seeds, only 6 of the 8 K3
+   windows recur and 3-4 new ones appear. The π < 0.05 exclusion bounds of Table VI weaken by up to one f step (one is
+   lost).
+3. **About a third of the masked-arm reduction in windows (a fifth in segments) is reproduced by sham masks (A1).**
+4. **A titration reading that fails verification (R5, nested F-test) erases the raw group difference and reverses the
+   post-masking one (A5).** The claims hold only for implementations that behave like the published method.
+5. **K1's burden association is not significant within subjects** (OR 1.42 [0.85, 2.38], A3).
+6. **The synthetic "isolated ectopy is safe" result held only at 5-10 % density.** One to eight isolated beats per 512
+   intervals make titration positive in 91-99 % of linear-RR windows (A2.4 and the exploratory dose-response).
+7. **The "7 of 8 windows" atrial-run statement is unsupported** (C1).
 
 ## Summary
 
@@ -50,8 +78,22 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
   Phase 10 recipe. pytest gives 462 passed and 1 known failure, the same as Phase 10.
 - **Sanity check.** Rerunning `analysis10 --phase conf` on the stored Phase 10 results reproduced `analysis.json`
   exactly (0 differing values).
-- **Incident.** A container restart killed the Tier 1 runner during `rdg_synth`. No JSONL file had a partial line,
-  and the resumable runner was restarted with the same command.
+- **Incidents: three container restarts during Tier 1** (during `rdg_synth`, and twice during `sham_seg`).
+  - Each time, every JSONL file was checked for partial lines (none), and the resumable runner was restarted with the
+    same command. Data hashes were re-verified after the second restart (0 mismatches). No stored task result was lost
+    or changed; only tasks in flight were redone.
+  - The restarts happened while the session was idle, so from then on the session stayed active during runs. There
+    were no further incidents.
+- **B2 generation errors.** 56 of 12,290 windows failed to generate ("fewer than n intervals"), the known Phase 9
+  generator limit (63 in Phase 9 TEST). Every other part had 0 task errors.
+- **Not run: B3 with K1 (`b3k1`).** The preregistration runs it last and only if budget remains; it was projected at
+  about 4.5 h and is outside the 17.6 h budget. Tiers 1-2 took about 20 h of wall-clock time (00:25 to 20:35 UTC,
+  including about 3 h lost to restarts), so adding it would have passed the 24 h ceiling. B3 is reported for K3 only,
+  as registered for that case.
+- **Additions that are not registered, labelled where they appear:**
+  - `B1_K3_bounds`: Table VI bounds recomputed with each K3 seed's U.
+  - B1/B2 descriptive breakdowns: NL changes between salts; where the 1/128 s detections come from.
+  - The B1 conclusion-check code was written before any seed result was inspected (commit `edd9fe5`).
 - **Amendment 1** (2026-11-04, exploratory only; written before running): an ectopy dose-response on N1. It is
   reported in its own section and has no verdict.
 
@@ -169,10 +211,10 @@ By group, V1: NSR +65.5 [60.3, 70.9]; CHF +58.8 [44.6, 73.3].
    not. HRT can act as a trigger when intrinsic variability is small; it is not what drives the real-data effect.
    (vdP regime 26 is the forced quasi-periodic regime that Phase 10 already found positive without ectopy.)
 
-**The synthetic single-beat result conflicts with Phase 10.** One isolated beat in N1 gives 89/100 positives
+**The synthetic single-beat result appears to conflict with Phase 10.** One isolated beat in N1 gives 89/100 positives
 (Δ = +89 [82, 95]). Phase 10 reported 5/100 and 0/100 for the same beat model at 5 % and 10 % density (S2). Titration
-therefore reacts to a single high-leverage event more than to many. The exploratory dose-response (below) maps the
-curve between these points.
+therefore reacts to a few high-leverage events more than to many. The exploratory dose-response (below) maps the curve
+between these points and resolves the conflict: positives peak at 1-8 beats per 512 intervals and vanish at ≥ 26.
 
 **Extended masking.** In 134 burden 1-4 windows analysable under both masks, masking the 20 post-beat intervals as well
 changed the positive rate by standard − extended = −1.5 pp [−4.7, +1.4] (McNemar 1 / 3). It removed no extra
@@ -267,8 +309,8 @@ The edited-arm CHF − NSR CI includes 0 in every reading. R5 is the closest to 
   - Titration becomes positive in 81 % of raw windows.
   - The raw group difference disappears (+5.6 pp, CI includes 0).
   - After masking, CHF has *fewer* positives than NSR (−17.4 pp [−31.7, −2.8]).
-  - R5 fails verification: NL at logistic r = 3.7 is twice the published value, and it is positive on a period-3
-    orbit. The R5 result therefore shows the claims hold only for implementations that behave like the published
+  - R5 fails verification: NL at logistic r = 3.7 is 1.36, against 0.64 for R0 and about 0.75 published, and it is
+    positive on a period-3 orbit (12/20). The R5 result therefore shows the claims hold only for implementations that behave like the published
     method on the standard systems; an implementation choice that inflates sensitivity can change the group
     comparison.
 - **R1 and R2 (short linear memory) fail verification** because they read periodic signals as nonlinear. They
@@ -289,6 +331,54 @@ The edited-arm CHF − NSR CI includes 0 in every reading. R5 is the closest to 
 - Under R4, the post-Wu difference is the one that comes closest to excluding 0 (p = 0.08).
 
 ---
+
+## B1. Seeds
+
+**Registered rule.** A headline conclusion changes if its CI moves to the other side of its null. There are 16
+checks: P3 burden OR and CHF OR in windows; P2 CHF − NSR raw, masked and Wu in segments; P2 masked change by group;
+and LLE burden OR. Each is checked at two new seeds.
+**Result: 0 of 16 change. Verdict: supports.**
+
+**Titration (salts 1 and 2): no decision changes, by construction.**
+- 0 of 988 windows flip (raw, masked, edited) and 0 of 8,993 segments flip (raw, masked, Wu). Every titration headline
+  number is identical to Phase 10's.
+- **The new salts were applied.** NL values differ in 453 of 455 raw-positive windows (mean |ΔNL| 0.035, max 0.31).
+- **The decision cannot change.** Titration declares a series positive when the noise-free VWK test is significant.
+  The noise realisations, which are the only thing the seed controls, change only the size of NL. (R7 gave the same
+  result for the noise schedule.)
+- So B1 cannot test the seed robustness of titration's yes/no claims. That robustness is guaranteed, and it also
+  means "titration-positive" in this paper is the same as "the noise-free VWK test favours a nonlinear model". The
+  manuscript should say so.
+
+**K3 (masked_growth_seed_entropy 11101, 11102): the count is stable in size; the set of windows is not.**
+
+| Seed | Detected / 988 | Flips vs Phase 10 | Phase 10 detections recovered | New windows |
+|---|---|---|---|---|
+| Phase 10 | 8 | – | – | – |
+| 11101 | 11 | 5 | 7 of 8 (not nsr029 w9) | chf216 w7, w12; nsr035 w5; nsr048 w3 |
+| 11102 | 10 | 6 | 6 of 8 (not nsr029 w9, chf216 w2) | chf225 w4; nsr014 w11; nsr048 w3, w12 |
+
+- Six windows are detected under all three seeds: chf211 w7, chf218 w12, nsr049 w3/w5/w6, nsr052 w6. Fifteen windows
+  are detected under at least one seed.
+- The degenerate nsr029 w9 is not reproduced under either new seed.
+- **Descriptive, not registered** (`B1_K3_bounds`). With 11 or 10 detections, Phase 10's real bound U rises from
+  0.0146 to 0.0191 / 0.0171, and the primary-design f_min at π < 0.05 gets weaker:
+  - logistic r = 4.00: 0.7 to 0.9;
+  - logistic r = 3.88: 0.5 to 0.7;
+  - Hénon a = 1.40: 0.5 to 0.7 (seed 11101 only);
+  - coupled vdP (6, 4.0): 0.9 to no bound.
+  The π < 0.20 bounds are unchanged.
+
+**K1 and its components (seed pairs (11201, 11211), (11202, 11212)):**
+
+| | Phase 10 | Seed pair 1 | Seed pair 2 | Flips (1 / 2) |
+|---|---|---|---|---|
+| K1 (LLE AND UPO) | 16 | 19 | 16 | 13 / 12 (about 10-11 windows stable) |
+| LLE | 401 | 393 | 403 | 38 / 36 |
+| UPO | 31 | 34 | 28 | 19 / 25 |
+| LLE burden OR (GEE) | 1.51 [1.31, 1.75] | 1.51 [1.30, 1.76] | 1.58 [1.35, 1.85] | – |
+
+The K1 count is stable, but about a third of its detections, and most of the UPO detections, depend on the seed.
 
 ## B2. K3 at 1/128 s (Phase 9 TEST groups, new seeds)
 
@@ -370,54 +460,6 @@ Detected / 83 at f = 0.05 … 0.9, and f_min (design formula) at π < 0.05 / 0.2
   window's own variability is shrunk rather than kept.
 - The Wilson-lower variant is more conservative, typically one f step higher.
 
-## B1. Seeds
-
-**Registered rule.** A headline conclusion changes if its CI moves to the other side of its null. There are 16
-checks: P3 burden OR and CHF OR in windows; P2 CHF − NSR raw, masked and Wu in segments; P2 masked change by group;
-and LLE burden OR. Each is checked at two new seeds.
-**Result: 0 of 16 change. Verdict: supports.**
-
-**Titration (salts 1 and 2): no decision changes, by construction.**
-- 0 of 988 windows flip (raw, masked, edited) and 0 of 8,993 segments flip (raw, masked, Wu). Every titration headline
-  number is identical to Phase 10's.
-- **The new salts were applied.** NL values differ in 453 of 455 raw-positive windows (mean |ΔNL| 0.035, max 0.31).
-- **The decision cannot change.** Titration declares a series positive when the noise-free VWK test is significant.
-  The noise realisations, which are the only thing the seed controls, change only the size of NL. (R7 gave the same
-  result for the noise schedule.)
-- So B1 cannot test the seed robustness of titration's yes/no claims. That robustness is guaranteed, and it also
-  means "titration-positive" in this paper is the same as "the noise-free VWK test favours a nonlinear model". The
-  manuscript should say so.
-
-**K3 (masked_growth_seed_entropy 11101, 11102): the count is stable in size; the set of windows is not.**
-
-| Seed | Detected / 988 | Flips vs Phase 10 | Phase 10 detections recovered | New windows |
-|---|---|---|---|---|
-| Phase 10 | 8 | – | – | – |
-| 11101 | 11 | 5 | 7 of 8 (not nsr029 w9) | chf216 w7, w12; nsr035 w5; nsr048 w3 |
-| 11102 | 10 | 6 | 6 of 8 (not nsr029 w9, chf216 w2) | chf225 w4; nsr014 w11; nsr048 w3, w12 |
-
-- Six windows are detected under all three seeds: chf211 w7, chf218 w12, nsr049 w3/w5/w6, nsr052 w6. Fifteen windows
-  are detected under at least one seed.
-- The degenerate nsr029 w9 is not reproduced under either new seed.
-- **Descriptive, not registered** (`B1_K3_bounds`). With 11 or 10 detections, Phase 10's real bound U rises from
-  0.0146 to 0.0191 / 0.0171, and the primary-design f_min at π < 0.05 gets weaker:
-  - logistic r = 4.00: 0.7 to 0.9;
-  - logistic r = 3.88: 0.5 to 0.7;
-  - Hénon a = 1.40: 0.5 to 0.7 (seed 11101 only);
-  - coupled vdP (6, 4.0): 0.9 to no bound.
-  The π < 0.20 bounds are unchanged.
-
-**K1 and its components (seed pairs (11201, 11211), (11202, 11212)):**
-
-| | Phase 10 | Seed pair 1 | Seed pair 2 | Flips (1 / 2) |
-|---|---|---|---|---|
-| K1 (LLE AND UPO) | 16 | 19 | 16 | 13 / 12 (about 10-11 windows stable) |
-| LLE | 401 | 393 | 403 | 38 / 36 |
-| UPO | 31 | 34 | 28 | 19 / 25 |
-| LLE burden OR (GEE) | 1.51 [1.31, 1.75] | 1.51 [1.30, 1.76] | 1.58 [1.35, 1.85] | – |
-
-The K1 count is stable, but about a third of its detections, and most of the UPO detections, depend on the seed.
-
 ## B4. Second base window (K3, additive design)
 
 **Design.** A second base window per subject, j' = 1 + ((s + 6) mod 12), never Phase 10's. The same additive design,
@@ -457,15 +499,15 @@ across k. 800 tasks, 0 errors (`results/conf/analysis/explore_dose.json`).
 |---|---|---|---|---|---|---|---|---|
 | Positive / 100 | 0 | **91** | **99** | **99** | **92** | 43 | 5 | 0 |
 | Wilson 95 % CI | [0, 4] | [84, 95] | [95, 100] | [95, 100] | [85, 96] | [34, 53] | [2, 11] | [0, 4] |
-| Mean NL of positives | – | 0.27 | 0.29 | 0.35 | 0.32 | 0.27 | 0.30 | – |
+| Mean NL of positives | – | 0.27 | 0.29 | 0.34 | 0.32 | 0.27 | 0.30 | – |
 
 **Reading.**
 - **The dose-response is an inverted U.** Titration fires in 91-99 % of linear-RR windows with 1-8 isolated beats (up to
   ~1.6 % of beats), in 43 % with 16, and almost never at the 5-10 % densities Phase 10 tested (5/100 and 0/100, both
   reproduced here).
 - This reconciles A2.4's single-beat result (89/100, different positions and seed) with Phase 10. Phase 10's
-  synthetic test of isolated ectopy sat on the far side of the curve, where titration is specific. Real windows mostly
-  carry 1-15 abnormal beats, which is the region where titration is not specific.
+  synthetic test of isolated ectopy sat on the far side of the curve, where titration is specific. Real windows with
+  ectopy mostly carry 1-15 abnormal beats (315 of 426; median 4), which is the region where titration is not specific.
 - **A possible mechanism (not tested here).** With a few beats, the nonlinear terms of the polynomial autoregression
   can fit the few high-leverage premature/compensatory pairs. With many, those pairs dominate the residual variance
   of both the linear and the nonlinear model, and neither predicts them.
@@ -474,8 +516,11 @@ across k. 800 tasks, 0 errors (`results/conf/analysis/explore_dose.json`).
 
 ## C1. Manuscript numbers (paper_tables.py)
 
-`paper_tables.py` builds Tables I-VII and the supplementary tables from the analysis JSON only (*to be run*). There
-is no manuscript draft, so the known issues were checked against code and data:
+`paper_tables.py` builds Tables I-VII and the supplementary tables (S-A1 to S-A5, S-B1a-e, S-B2, S-B2b, S-B2c,
+S-B3/B4, S-X) from the analysis JSON only. They are written as markdown and CSV to
+`experiments/phase11_robustness/results/conf/analysis/paper_tables/`, combined in `all_tables.md`. Table I reads the
+detector parameters from the code constants (detrend gate 0.7). Table VI repeats "Real detections 8/988". There is
+no manuscript draft, so the known issues were checked against code and data:
 
 - **"7 of 8 windows" with an atrial run of three: unsupported.**
   - Only 4 confirmatory windows contain a single annotated supraventricular run of length ≥ 3: nsr010 w4 (5),
@@ -487,11 +532,25 @@ is no manuscript draft, so the known issues were checked against code and data:
 - **Detrend threshold.** The code gate is 0.7 (`PHASE6_DETREND`); "0.07" is a typo.
 - **Table VI shifted strings.** The generated Table VI (`paper_tables/table_VI.md`) is identical, row by row, to Phase 10 report §5.1 (detected counts, replacement, f_min). A shift in the manuscript's copy cannot be confirmed without the draft; it should be replaced by the generated table.
 
-## C2. Figures: pending
+## C2. Figures
+
+`figures11.py` writes PDF and 300 dpi PNG files to `experiments/phase11_robustness/results/conf/analysis/figures/`. It
+uses a colour-blind-safe categorical palette (#2a78d6, #eb6834, #1baf7a, #eda100, validated) and Blues for the heat
+map. Widths are 3.37 in (one column) and 6.69 in (two columns).
+
+| Figure | Content | Source |
+|---|---|---|
+| F1 | Titration false-positive heat map over the non-chaotic synthetic conditions (raw, raw at 1/128 s, edited, masked) | Phase 10 Q2e |
+| F2 | Titration positive rate by ectopy burden in real windows (burden OR per doubling) | Phase 10 Q3 |
+| F3 | CHF vs NSR subject positive rate by arm (raw, masked, edited, Wu; segments) | Phase 10 P2 |
+| F4 | K3 exclusion bound π_upper vs chaos fraction f, by family | Phase 10 Q1 / P1 |
+| F5 | Titration verification: logistic bifurcation scan, and V1-V6 pass/fail under readings R0-R7 | Phase 10 Q2b + A5 |
+| F6 | True vs sham handling: removed fractions and D with CIs | A1 |
+| F7 | Transplant variants V1-V7: Δ vs V0 by group | A2 |
 
 ---
 
-## What this changes in the manuscript (draft)
+## What this changes in the manuscript
 
 The manuscript draft was not available, so the passages are identified by content.
 
@@ -527,7 +586,8 @@ The manuscript draft was not available, so the passages are identified by conten
 - It must qualify the Phase 10 statement that isolated synthetic beats rarely trigger titration. That holds only at
   5-10 % density (5/100, 0/100). The exploratory dose-response (Amendment 1) shows an inverted U: 91-99/100 positive
   with 1-8 isolated beats per 512 intervals, 43/100 with 16, 5/100 with 26 and 0/100 with 51. The S2 condition tested
-  densities where titration happens to be specific; real windows mostly carry 1-15 abnormal beats. Suggested text:
+  densities where titration happens to be specific. Real windows with ectopy mostly carry 1-15 abnormal beats (315 of 426;
+  median 4). Suggested text:
   "A single isolated premature beat in 512 intervals is enough to make titration positive in about 90 % of
   linear-RR windows; only at densities of 5 % or more does the effect disappear."
 - It should note the unexplained beat-type discrepancy: real single V beats give 47 % and real A beats 76 %, while the
@@ -556,27 +616,39 @@ The manuscript draft was not available, so the passages are identified by conten
   seed-dependent at window level. Under two new K3 seeds, 6 of the 8 detections recur and 3-4 new ones appear; K1
   keeps about 10-11 of 16. Counts are stable (K3 8-11, K1 16-19).
 - Table VI (exclusion bounds) depends on the K3 seed through U. Under the new seeds, the π < 0.05 bounds of the
-  logistic maps, Hénon a = 1.40 and vdP (6, 4.0) are weaker by one f step (vdP (6, 4.0): none). Say that the
+  logistic maps, Hénon a = 1.40 (one seed) and vdP (6, 4.0) are weaker by one f step (vdP (6, 4.0): none). Say that the
   π < 0.05 column is seed-sensitive and the π < 0.20 column is not.
 - "Seven of eight windows ... atrial run of three": remove or correct (4 windows).
 - Detrend threshold 0.07 → 0.7; K3 count 8/988 at 512 intervals.
 
-**Supplementary items.**
-- Sham-control table (A1).
-- Transplant table (A2).
-- HRT table.
-- A3 model table.
-- A4 subject-level metrics.
-- A5 verification and claims matrices.
-- Seeds, K3 resolution and spike-in tables (Tier 2).
+**Supplementary items** (generated; `paper_tables/`, `figures/`):
+- S-A1: sham control, all five cells; with F6.
+- S-A2: HRT, transplant V0-V7, synthetic single beats, extended masking, beat type; with F7.
+- S-A3: GEE and conditional logit models (windows, segments; TIT, LLE, K1).
+- S-A4: original-study subject-level metrics.
+- S-A5: verification V1-V6 per reading and the claims matrix.
+- S-B1a-e: seeds, the conclusion check, and K3 bound sensitivity.
+- S-B2, S-B2b, S-B2c: K3 at 1/128 s, real-detection degeneracy, failing conditions.
+- S-B3/B4: exclusion bounds across designs and base windows.
+- S-X: the exploratory dose-response, labelled exploratory.
 
 ## Regeneration
 
 Run from the repository root on branch `phase11-robustness`, with the environment from
 `experiments/phase10_final/requirements-phase10.txt` and `OMP_NUM_THREADS=1`.
+- `run11` refuses confirmatory data unless `PREREGISTRATION.md` is committed, unmodified and pushed to the current
+  branch's origin (the guard).
+- Every run is resumable: finished task ids are skipped.
+- The Phase 10 stored results (`experiments/phase10_final/results/conf/`) are inputs.
+- Runtime with 4 workers is about 20 h for Tiers 1-2 and about 15 min for the exploratory run. The full analysis takes
+  about 35 min.
 
 ```bash
 PYTHONPATH=. python -m experiments.phase10_final.run10 --phase conf --download
+```
+
+```bash
+PYTHONPATH=. python -m experiments.phase10_final.data10 --download dev
 ```
 
 ```bash
@@ -585,6 +657,18 @@ PYTHONPATH=. python -m experiments.phase11_robustness.data11 --download nstdb
 
 ```bash
 PYTHONPATH=. python -m experiments.phase11_robustness.data11 --verify
+```
+
+```bash
+PYTHONPATH=. python -m pytest -q experiments/phase11_robustness/tests
+```
+
+```bash
+PYTHONPATH=. python -m experiments.phase11_robustness.run11 --pilot --part all --workers 4
+```
+
+```bash
+PYTHONPATH=. python -m experiments.phase11_robustness.budget11
 ```
 
 ```bash
