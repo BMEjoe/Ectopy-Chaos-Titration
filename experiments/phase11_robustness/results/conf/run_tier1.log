@@ -18,3 +18,23 @@ sham_win: 988 tasks to run (0 done)
   sham_win 450/988 6.6 min; eta 7.9 min
   sham_win 500/988 7.4 min; eta 7.3 min
   sham_win 550/988 8.3 min; eta 6.6 min
+  sham_win 600/988 9.2 min; eta 6.0 min
+  sham_win 650/988 9.8 min; eta 5.1 min
+  sham_win 700/988 10.3 min; eta 4.3 min
+  sham_win 750/988 11.1 min; eta 3.5 min
+  sham_win 800/988 11.8 min; eta 2.8 min
+  sham_win 850/988 12.3 min; eta 2.0 min
+  sham_win 900/988 13.3 min; eta 1.3 min
+  sham_win 950/988 13.7 min; eta 0.5 min
+  sham_win 988/988 14.2 min; eta 0.0 min
+transplant: 439 tasks to run (0 done)
+  transplant 50/439 1.5 min; eta 11.4 min
+  transplant 100/439 2.9 min; eta 9.9 min
+  transplant 150/439 4.4 min; eta 8.4 min
+  transplant 200/439 5.8 min; eta 6.9 min
+  transplant 250/439 7.2 min; eta 5.4 min
+  transplant 300/439 8.6 min; eta 4.0 min
+  transplant 350/439 10.0 min; eta 2.5 min
+  transplant 400/439 11.4 min; eta 1.1 min
+  transplant 439/439 12.5 min; eta 0.0 min
+synth1: 700 tasks to run (0 done)
