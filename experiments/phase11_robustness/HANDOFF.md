@@ -59,8 +59,8 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | data re-downloaded, SHA-256 OK | done | |
 | sanity check analysis10 conf identical | done | |
 | code: titration11 (+ exactness test, 20 series), hrt11 (+ tests), harness11 (+ tests), run11, data11 | done | |
-| pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget | running | |
-| PREREGISTRATION.md committed + pushed | todo | |
+| pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget: 0 errors; Tier 1 8.2 h + Tier 2 9.4 h = 17.6 h (no thinning) | done | |
+| PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | (this commit) |
 | Tier 1 run | todo | |
 | Tier 1 analysis | todo | |
 | Tier 2 run + analysis | todo | |
@@ -68,7 +68,18 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | report docs/PHASE11_ROBUSTNESS_RESULTS.md | todo | |
 
 ## Resume commands
-(filled in once the preregistration is pushed)
+All runs are resumable (finished task ids skipped). Run from branch `phase11-robustness` (the guard checks
+`origin/phase11-robustness`).
+```bash
+cd /home/user/arrhythmia-detection-pipeline
+nohup env OMP_NUM_THREADS=1 PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.run11 --part tier1 --workers 4 >> experiments/phase11_robustness/results/conf/run_tier1.log 2>&1 &
+nohup env OMP_NUM_THREADS=1 PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.run11 --part tier2 --workers 4 >> experiments/phase11_robustness/results/conf/run_tier2.log 2>&1 &
+# optional, last: --part b3k1
+PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.analysis11 --phase conf [--only A1,A2_hrt,...]
+PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.paper_tables
+PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.figures11
+```
+Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line counts of `results/conf/*.jsonl`.
 
 ## Decisions
 - D1 (branch): `phase11-robustness` as asked; mirrored to the session branch.

@@ -30,6 +30,7 @@ Parts (PREREGISTRATION.md sections in brackets)
   b2          [B2] Phase 9 TEST groups (new seeds), K3 at 1/360 s and re-quantized at 1/128 s
   b3          [B3] variance-preserving spike-ins (K3)
   b4          [B4] additive spike-ins in a second base window per subject (K3)
+  b3k1        [B3, optional] K1 on the variance-preserving spike-ins (only after every other part is complete)
 """
 from __future__ import annotations
 
@@ -224,7 +225,7 @@ def tasks(ctx, part):
         if ctx.pilot:
             TT = TT[::3]
         return [{**t, "id": f"b2|{t['task_id']}", "part": "b2"} for t in TT]
-    if part in ("b3", "b4"):
+    if part in ("b3", "b4", "b3k1"):
         for db, rec, si in subjects(ctx):
             t = R10.series(ctx.root, db, rec)[0]
             ws = H.window_starts(t)
@@ -551,6 +552,10 @@ def run_spike11(ctx, task):
            "family": fam, "param": H.FAMILIES[fam][p][0], "lam": H.FAMILIES[fam][p][2], "fs": fs,
            "burden": int(np.sum(~np.isin(sym, list(D.NORMAL)))), "designs": {}}
     for f in H.F_GRID:
+        if task["part"] == "b3k1":
+            q, meta = H11.spike_varpres(rr, lab, c, f, fs)
+            out["designs"][f"varpres_{f}"] = {"f": f, **meta, "K1": H.k1(q)}
+            continue
         if task["part"] == "b3":
             q, meta = H11.spike_varpres(rr, lab, c, f, fs)
             name = f"varpres_{f}"
@@ -565,7 +570,7 @@ RUN = {"prep": run_prep, "hrt": run_hrt, "covar": run_covar, "sham_win": run_sha
        "transplant": run_transplant, "synth1": run_synth1, "extmask": run_extmask, "rdg_verify": run_rdg_verify,
        "rdg_win": run_rdg_win, "rdg_synth": run_rdg_synth, "rdg_seg": run_rdg_seg, "seed_win": run_seed_win,
        "seed_seg": run_seed_seg, "k3seed": run_k3seed, "k1seed": run_k1seed, "b2": run_b2, "b3": run_spike11,
-       "b4": run_spike11}
+       "b4": run_spike11, "b3k1": run_spike11}
 
 
 def execute(args):
