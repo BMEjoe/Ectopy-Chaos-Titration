@@ -453,6 +453,9 @@ The manuscript draft was not available, so the passages are identified by conten
 - State the implementation choices covered by A5 (linear memory, test, ε, noise schedule) and that only readings
   passing the standard-system verification are interpreted.
 - State that clock time was unavailable and elapsed time was used.
+- State what a titration "positive" is in this implementation: NL > 0 exactly when the noise-free VWK test favours a
+  nonlinear model. The noise titration step grades the size (NL) and does not change the decision, so the decisions do
+  not depend on the noise seed (B1) or the noise schedule (R7).
 - K3: give the resolution of every false-positive figure (1/360 s for Phase 9 TEST). Add the degeneracy diagnostic: the
   surrogate prediction-error SD at the m attaining z_max, flagged when < 1e-6.
 
@@ -494,6 +497,12 @@ The manuscript draft was not available, so the passages are identified by conten
   windows, 0.20 in segments). Editing and Wu-style elimination are not explained by data loss (Q < 0.01), but their
   shams are weak controls.
 - K3 "most specific detector, 0/10,100": add the resolution, and the 1/128 s result above.
+- Any statement about *which* windows K3 or K1 detected (for example nsr049) should say the detections are
+  seed-dependent at window level. Under two new K3 seeds, 6 of the 8 detections recur and 3-4 new ones appear; K1
+  keeps about 10-11 of 16. Counts are stable (K3 8-11, K1 16-19).
+- Table VI (exclusion bounds) depends on the K3 seed through U. Under the new seeds, the π < 0.05 bounds of the
+  logistic maps, Hénon a = 1.40 and vdP (6, 4.0) are weaker by one f step (vdP (6, 4.0): none). Say that the
+  π < 0.05 column is seed-sensitive and the π < 0.20 column is not.
 - "Seven of eight windows ... atrial run of three": remove or correct (4 windows).
 - Detrend threshold 0.07 → 0.7; K3 count 8/988 at 512 intervals.
 
