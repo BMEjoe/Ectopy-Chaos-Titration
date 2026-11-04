@@ -405,13 +405,16 @@ The manuscript draft was not available, so the passages are identified by conten
 - State the implementation choices covered by A5 (linear memory, test, ε, noise schedule) and that only readings
   passing the standard-system verification are interpreted.
 - State that clock time was unavailable and elapsed time was used.
+- K3: give the resolution of every false-positive figure (1/360 s for Phase 9 TEST). Add the degeneracy diagnostic: the
+  surrogate prediction-error SD at the m attaining z_max, flagged when < 1e-6.
 
 **Results.**
 - Add the transplant: "Inserting one ventricular-type premature beat into each of 439 annotated-clean windows raised
   the titration positive rate from 22.1 % to 86.3 % (Δ = +64.2 pp [59.2, 69.3]); adding heart-rate turbulence changed
   nothing, and turbulence alone did not raise it (−0.7 pp [−1.7, +0.2])."
-- Report the sham result with its qualification: about a third of the masked-arm reduction (Q = 0.36) is reproduced by
-  removing the same number of rows at random, ectopy left in.
+- Report the sham result with its qualification. Removing the same number of rows at random, with the ectopy left in,
+  reproduces about a third of the masked-arm reduction in windows (Q = 0.36) and a fifth in segments (Q = 0.20).
+  D stays clearly positive in all five cells.
 - Replace the GEE-only burden statement with the within-subject estimate: OR 3.40 [2.62, 4.41], covariate-adjusted.
 - Report the CHF effect adjusted for burden and covariates: OR 0.88 [0.46, 1.69].
 
@@ -426,11 +429,23 @@ The manuscript draft was not available, so the passages are identified by conten
 - Add: claims (ii)-(iii) depend on an implementation that passes the standard-system verification. With the nested
   partial F-test, which fails verification, the raw group difference disappears and masked CHF falls below NSR.
 
+**Discussion / Limitations, K3 (wherever its specificity is stated).**
+- "0/10,100 synthetic null and non-chaotic windows" holds at 1/360 s only.
+- At the 1/128 s resolution of nsr2db / chf2db, K3 gave 55/10,092 false positives. It exceeded the registered
+  7/100 in three KTz conditions (14, 10, 10 per 100), and 43 of the 55 were degenerate.
+- Suggested text: "At 1/128 s, K3 is not size-controlled for rhythms whose beat-to-beat variability is below the
+  quantization step (SDNN ≈ 5 ms); the IAAFT surrogates then degenerate. Seven of the eight real detections have
+  SDNN 39-202 ms and non-degenerate surrogates; the eighth (nsr029, window 9) is degenerate."
+- The K3 power gain at 1/128 s (chaos_primary 10.1 % vs 7.2 %) should not be cited as power. It includes 23
+  detections on KTz series whose RR carries no chaos.
+
 **Claims to weaken.**
 - K1's burden association: the within-subject OR is 1.42 [0.85, 2.38], not significant. Say "K1's 16 positives
   occurred more often in high-burden windows (GEE), but the association was not significant within subjects."
-- "Masking removed 49-66 % of positives": add that part of the reduction is generic data loss (sham Q ≈ 0.36 in
-  windows).
+- "Masking removed 49-66 % of positives": add that part of the reduction is generic data loss (sham Q = 0.36 in
+  windows, 0.20 in segments). Editing and Wu-style elimination are not explained by data loss (Q < 0.01), but their
+  shams are weak controls.
+- K3 "most specific detector, 0/10,100": add the resolution, and the 1/128 s result above.
 - "Seven of eight windows ... atrial run of three": remove or correct (4 windows).
 - Detrend threshold 0.07 → 0.7; K3 count 8/988 at 512 intervals.
 
