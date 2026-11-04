@@ -30,7 +30,8 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | A5 unverified readings (R1, R2, R5) | (flagged) | R1, R2 reproduce; **R5 fails (ii) and reverses (iii)** | reported, see A5 |
 | A5 segments (R0, R1, R4) | reproduce (ii), (iii) | raw diff +22.4 / +20.6 / +28.3 pp (all CIs > 0); masked and Wu CIs include 0 | supports (R4 Wu +6.7 [−1.0, +14.5]) |
 | B1 seeds | small ranges | *pending* | *pending* |
-| B2 K3 at 1/128 s | ≤ 7/100 FP per condition | *pending* | *pending* |
+| B2 K3 at 1/128 s, false positives | ≤ 7/100 in every FP condition | **3 of 155 conditions fail** (KTz P = 120 / 200 / 250, no ectopy: 14, 10, 10 per 100); pooled 55/10,092 vs 1/10,092 at 1/360 s | **weakens K3 claims** |
+| B2 degeneracy of the 8 real K3 detections | only nsr029 w9 degenerate | only nsr029 w9 degenerate (surrogate SD 0); other 7 SD 0.04-0.08 | supports |
 | B3 variance-preserving spike-ins | (descriptive bounds) | *pending* | *pending* |
 | B4 second base window | (descriptive bounds) | *pending* | *pending* |
 | C1 manuscript-number checks | | "7 of 8" run claim unsupported (4 windows); other items, see C1 | correct the manuscript |
@@ -288,7 +289,55 @@ The edited-arm CHF − NSR CI includes 0 in every reading. R5 is the closest to 
 
 ---
 
-## B1-B4 (Tier 2): pending
+## B2. K3 at 1/128 s (Phase 9 TEST groups, new seeds)
+
+**Data.** 12,290 windows, re-quantized from 1/360 s to 1/128 s (beat times rounded).
+- 56 windows failed to generate ("fewer than n intervals", fast coupled-vdP regimes), the same generator limit
+  Phase 9 TEST hit 63 times. They are left out.
+- 12,234 windows were analysed: 10,092 false-positive (FP) windows in 155 conditions and 2,142 power windows.
+
+**False positives (registered pass rule: ≤ 7 detections per 100 windows in every FP condition).**
+
+| Resolution | Pooled FP | Conditions > 7/100 | Pass |
+|---|---|---|---|
+| 1/360 s (native) | 1 / 10,092 | none | yes |
+| **1/128 s (the resolution of the real data)** | **55 / 10,092** | **KTz P = 120, 200, 250 (no ectopy, real noise channel): 14, 10, 10 per 100** | **no** |
+
+**Verdict: weakens the K3 claims.** At the resolution of nsr2db / chf2db, K3 is not size-controlled in every
+non-chaotic condition.
+
+**Where the false positives come from (description, not a re-definition of the rule).**
+- **They are confined to KTz.** 53 of the 55 are KTz windows, whose RR is the pacing input plus the real noise
+  channel. Their NN SDNN is about 4.7 ms (median), less than one quantization step at 1/128 s (7.8 ms).
+- **43 of the 55 are degenerate.** The surrogate prediction-error SD at the m attaining z_max is < 1e-6, and z_max
+  reaches ~10^15. With intervals taking one or two values, the IAAFT surrogates are near-identical and the z-score
+  divides by about zero.
+- **Outside KTz there are 2 false positives in 6,992 windows** at 1/128 s, against 1 at 1/360 s.
+- 2,182 FP windows are not analysable at 1/128 s. They count as not detected, as in Phase 9.
+
+**Real detections (degeneracy diagnostic).** Of the 8 Phase 10 real K3 detections, only nsr029 window 9 is degenerate
+(SDNN 15 ms, NN MAD 7.8 ms, surrogate SD 0, z_max 2 × 10^11), as Phase 10 reported. The other seven have SDNN 39-202 ms,
+surrogate SD 0.039-0.080 and z_max 10.0-16.1, so the registered "weakens" criterion for real detections is not met.
+Real windows with very low variability are exposed to the same artefact; nsr029 w9 is the one example.
+
+**Power** (detections / windows; 1/128 s vs 1/360 s):
+
+| Group | Family | 1/128 s | 1/360 s |
+|---|---|---|---|
+| chaos_primary | coupled vdP | 66/312 | 66/312 |
+| chaos_primary | phase-reset | 39/630 | 25/630 |
+| chaos_primary | KTz | 23/330 | 0/330 |
+| chaos_second | coupled vdP | 40/120 | 34/120 |
+| chaos_second | Mackey–Glass | 67/210 | 82/210 |
+| chaos_second | phase-reset | 16/210 | 15/210 |
+| chaos_second | KTz | 0/330 | 0/330 |
+| **pooled** | primary / second | **10.1 % / 14.1 %** | **7.2 % / 15.1 %** |
+
+The apparent power gain at 1/128 s for chaos_primary is partly the artefact above. The 23 KTz "detections" are on
+series whose RR carries no chaos (Phase 9: KTz chaos is in the T wave only), and 22 of the 251 power detections at
+1/128 s are degenerate.
+
+## B1, B3, B4 (Tier 2): pending
 
 ## Exploratory: ectopy dose-response on N1 (Amendment 1): pending
 
