@@ -326,3 +326,15 @@ rdg_win: 6916 tasks to run (0 done)
   rdg_win 6916/6916 58.4 min; eta 0.0 min
 sham_seg: 83 tasks to run (0 done)
   sham_seg 50/83 118.6 min; eta 78.3 min
+=== restart after container restart 2026-11-04T06:49:56Z
+prep: 0 tasks to run (1 done)
+hrt: 0 tasks to run (83 done)
+covar: 0 tasks to run (83 done)
+sham_win: 0 tasks to run (988 done)
+transplant: 0 tasks to run (439 done)
+synth1: 0 tasks to run (700 done)
+extmask: 0 tasks to run (232 done)
+rdg_verify: 0 tasks to run (1680 done)
+rdg_synth: 0 tasks to run (4000 done)
+rdg_win: 0 tasks to run (6916 done)
+sham_seg: 27 tasks to run (56 done)

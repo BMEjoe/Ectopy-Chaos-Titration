@@ -87,6 +87,10 @@ Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line
 ## Incidents
 - 2026-11-04: container restart during Tier 1 (rdg_synth at 2,352/4,000). venv, data and results survived. Every
   JSONL checked for partial last lines (none found); the runner was restarted with the same command (resumable).
+- 2026-11-04 (found 06:49 UTC): second container restart during Tier 1 (sham_seg at 56/83). venv, data and results
+  survived; every JSONL parsed line by line (0 bad lines, all newline-terminated); `data11 --verify` 0 mismatches;
+  runner restarted 06:49:56 UTC with the same command (resumed sham_seg 27 tasks). Restarts appear to happen
+  while the session is idle, so check-ins are now every ~40 min (each restarts the runner if it is not running).
 
 ## Decisions
 - D1 (branch): `phase11-robustness` as asked; mirrored to the session branch.
