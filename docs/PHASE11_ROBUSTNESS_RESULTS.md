@@ -33,7 +33,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | B2 K3 at 1/128 s, false positives | ≤ 7/100 in every FP condition | **3 of 155 conditions fail** (KTz P = 120 / 200 / 250, no ectopy: 14, 10, 10 per 100); pooled 55/10,092 vs 1/10,092 at 1/360 s | **weakens K3 claims** |
 | B2 degeneracy of the 8 real K3 detections | only nsr029 w9 degenerate | only nsr029 w9 degenerate (surrogate SD 0); other 7 SD 0.04-0.08 | supports |
 | B3 variance-preserving spike-ins | (descriptive bounds) | f_min unchanged in 15 of 16 rows at π < 0.05 and 14 of 16 at π < 0.20. Logistic r = 3.88 is weaker at π < 0.05 (0.5 to 0.7) but stronger at π < 0.20 (0.5 to 0.3); vdP (8, 3.3) is stronger at π < 0.20 (0.3 to 0.2) | bounds robust to the design |
-| B4 second base window | (descriptive bounds) | *pending* | *pending* |
+| B4 second base window (pooled 166 base windows) | (descriptive bounds) | f_min unchanged in 13 of 16 rows; vdP (6, 4.0) loses its π < 0.05 bound (0.9 → none); Hénon a = 1.22 and logistic r = 3.88 gain at π < 0.20 (0.5 → 0.3) | bounds robust to the base window |
 | C1 manuscript-number checks | | "7 of 8" run claim unsupported (4 windows); other items, see C1 | correct the manuscript |
 
 ## Deviations, missing inputs, incidents
@@ -417,7 +417,33 @@ and LLE burden OR. Each is checked at two new seeds.
 
 The K1 count is stable, but about a third of its detections, and most of the UPO detections, depend on the seed.
 
-## B4 (Tier 2): pending
+## B4. Second base window (K3, additive design)
+
+**Design.** A second base window per subject, j' = 1 + ((s + 6) mod 12), never Phase 10's. The same additive design,
+chaotic components and f grid are used: 1,328 tasks, 0 errors. Results are pooled with Phase 10 (166 base windows per
+condition) and use Phase 10's U = 0.0146.
+
+| Family, parameter | Phase 10 (83) | Second window (83) | Pooled (166) | f_min π < 0.05 / 0.20: Phase 10 → pooled | Pooled, Wilson-lower |
+|---|---|---|---|---|---|
+| Hénon a = 1.22 | 0 0 3 6 32 58 76 | 1 4 7 10 36 60 73 | 1 4 10 16 68 118 149 | 0.5 / 0.5 → 0.5 / **0.3** | 0.5 / 0.5 |
+| Hénon a = 1.40 | 0 1 4 9 29 58 76 | 2 3 6 5 27 60 79 | 2 4 10 14 56 118 155 | 0.5 / 0.3 → 0.5 / 0.3 | 0.7 / 0.5 |
+| Hénon a = 1.14 | 0 0 0 2 2 9 8 | 0 0 0 2 2 10 8 | 0 0 0 4 4 19 16 | none / 0.7 → none / 0.7 | none / none |
+| logistic r = 3.88 | 1 1 1 5 28 59 77 | 2 2 5 8 31 59 75 | 3 3 6 13 59 118 152 | 0.5 / 0.5 → 0.5 / **0.3** | 0.7 / 0.5 |
+| logistic r = 4.00 | 0 0 0 1 9 25 73 | 0 1 3 5 9 29 73 | 0 1 3 6 18 54 146 | 0.7 / 0.5 → 0.7 / 0.5 | 0.9 / 0.7 |
+| coupled vdP (8, 3.3) | 1 2 5 13 33 48 71 | 3 3 5 11 30 57 75 | 4 5 10 24 63 105 146 | 0.5 / 0.3 → 0.5 / 0.3 | 0.5 / 0.3 |
+| coupled vdP (6, 3.3) | 0 0 0 3 10 13 23 | 1 3 3 2 6 13 25 | 1 3 3 5 16 26 48 | none / 0.5 → none / 0.5 | none / 0.7 |
+| coupled vdP (2, 2.7) | 0 0 0 2 6 20 63 | 0 0 1 1 6 19 56 | 0 0 1 3 12 39 119 | 0.9 / 0.7 → 0.9 / 0.7 | 0.9 / 0.7 |
+| coupled vdP (6, 4.0) | 0 1 2 6 13 15 27 | 0 1 2 1 13 15 20 | 0 2 4 7 26 30 47 | 0.9 / 0.5 → **none** / 0.5 | none / 0.5 |
+| weak maps, all phase-reset | ≤ 5 at any f | ≤ 1 at any f | ≤ 9 at any f | none / none | none / none |
+
+**Reading (descriptive).**
+- The second base window gives detection curves close to Phase 10's.
+- Pooling changes f_min in 3 of 16 rows. vdP (6, 4.0) loses its π < 0.05 bound. Hénon a = 1.22 and logistic r = 3.88
+  gain at π < 0.20 (0.5 to 0.3).
+- The Wilson-lower variant, which accounts for the finite number of spiked windows, is up to one f step more
+  conservative. It is the safer column to quote.
+- **Across B1 (K3 seed), B3 (design) and B4 (base window), only vdP (6, 4.0) at π < 0.05 is fragile.** It loses its
+  bound in all three. The other bounds move by at most one f step.
 
 ## Exploratory: ectopy dose-response on N1 (Amendment 1): pending
 

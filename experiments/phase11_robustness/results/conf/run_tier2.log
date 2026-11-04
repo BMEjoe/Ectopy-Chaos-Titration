@@ -440,3 +440,21 @@ b4: 1328 tasks to run (0 done)
   b4 400/1328 23.2 min; eta 53.9 min
   b4 450/1328 26.2 min; eta 51.2 min
   b4 500/1328 29.1 min; eta 48.2 min
+  b4 550/1328 32.0 min; eta 45.3 min
+  b4 600/1328 34.7 min; eta 42.1 min
+  b4 650/1328 37.5 min; eta 39.1 min
+  b4 700/1328 40.5 min; eta 36.3 min
+  b4 750/1328 43.6 min; eta 33.6 min
+  b4 800/1328 46.3 min; eta 30.6 min
+  b4 850/1328 49.3 min; eta 27.7 min
+  b4 900/1328 52.3 min; eta 24.9 min
+  b4 950/1328 55.2 min; eta 22.0 min
+  b4 1000/1328 58.4 min; eta 19.2 min
+  b4 1050/1328 61.4 min; eta 16.3 min
+  b4 1100/1328 64.5 min; eta 13.4 min
+  b4 1150/1328 67.5 min; eta 10.5 min
+  b4 1200/1328 70.3 min; eta 7.5 min
+  b4 1250/1328 73.0 min; eta 4.6 min
+  b4 1300/1328 76.0 min; eta 1.6 min
+  b4 1328/1328 77.8 min; eta 0.0 min
+RUN11 DONE ('seed_win', 'k3seed', 'b2', 'b3', 'seed_seg', 'k1seed', 'b4')
