@@ -359,3 +359,25 @@ seed_seg: 166 tasks to run (0 done)
   seed_seg 50/166 50.3 min; eta 116.7 min
   seed_seg 100/166 99.8 min; eta 65.9 min
   seed_seg 150/166 151.5 min; eta 16.2 min
+  seed_seg 166/166 165.0 min; eta 0.0 min
+k1seed: 1976 tasks to run (0 done)
+  k1seed 50/1976 1.7 min; eta 66.6 min
+  k1seed 100/1976 3.3 min; eta 62.0 min
+/home/user/arrhythmia-detection-pipeline/final_pipeline.py:904: RuntimeWarning: divide by zero encountered in divide
+  E2 = Estar[1:] / Estar[:-1]
+  k1seed 150/1976 4.9 min; eta 59.2 min
+  k1seed 200/1976 6.4 min; eta 57.2 min
+  k1seed 250/1976 8.0 min; eta 55.2 min
+  k1seed 300/1976 9.7 min; eta 53.9 min
+  k1seed 350/1976 11.2 min; eta 52.0 min
+/home/user/arrhythmia-detection-pipeline/final_pipeline.py:904: RuntimeWarning: divide by zero encountered in divide
+  E2 = Estar[1:] / Estar[:-1]
+  k1seed 400/1976 12.9 min; eta 50.7 min
+/home/user/arrhythmia-detection-pipeline/final_pipeline.py:904: RuntimeWarning: divide by zero encountered in divide
+  E2 = Estar[1:] / Estar[:-1]
+  k1seed 450/1976 14.4 min; eta 49.0 min
+  k1seed 500/1976 16.0 min; eta 47.2 min
+/home/user/arrhythmia-detection-pipeline/final_pipeline.py:904: RuntimeWarning: divide by zero encountered in divide
+  E2 = Estar[1:] / Estar[:-1]
+  k1seed 550/1976 17.6 min; eta 45.6 min
+  k1seed 600/1976 19.2 min; eta 43.9 min
