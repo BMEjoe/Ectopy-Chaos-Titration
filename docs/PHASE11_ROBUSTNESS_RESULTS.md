@@ -20,6 +20,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | A2 transplant: one ventricular-type beat into 439 clean real windows | positive rate rises | 22.1 % to 86.3 %, Δ = +64.2 pp [59.2, 69.3] | **supports** |
 | A2 heart-rate turbulence as mechanism | (not predicted) | HRT alone Δ = −0.7 pp [−1.7, +0.2]; HRT added to the beat changes nothing | HRT is not the mechanism in real windows |
 | A2 synthetic single beat (N1 linear RR) | rises | 0/100 to 89/100 | supports; contrasts with Phase 10's 5/100 at 5 % density |
+| Exploratory dose-response, N1 (Amendment 1) | (none; exploratory) | inverted U: k = 1, 2, 4, 8 → 91, 99, 99, 92 / 100; 16 → 43; 26 → 5; 51 → 0 | explains the A2-Phase 10 contrast |
 | A2 extended masking (20 HRT intervals) | removes positives (and/or) | standard − extended = −1.5 pp [−4.7, +1.4] | nothing removed |
 | A3 within-subject burden OR (conditional logit + covariates, windows) | OR > 1 | 3.40 [2.62, 4.41] (bootstrap [2.35, 5.97]) | **supports** |
 | A3 CHF effect adjusted for burden + covariates | (not predicted) | OR 0.88 [0.46, 1.69] | no group effect |
@@ -446,7 +447,30 @@ condition) and use Phase 10's U = 0.0146.
   bound under both new K3 seeds and in the pooled base-window analysis, but keeps it (0.9) under the
   variance-preserving design. Every other bound moves by at most one f step in either direction.
 
-## Exploratory: ectopy dose-response on N1 (Amendment 1): pending
+## Exploratory: ectopy dose-response on N1 (Amendment 1; not confirmatory, no verdict)
+
+**Setup.** k isolated ventricular-type beats were inserted into N1 linear RR (512 intervals, 100 windows per k). The
+Phase 5 beat model was used (c ~ U(0.6, 0.8), full compensatory pause, spacing ≥ 3), and the titration seed is shared
+across k. 800 tasks, 0 errors (`results/conf/analysis/explore_dose.json`).
+
+| k beats per 512 | 0 | 1 | 2 | 4 | 8 | 16 | 26 (≈ 5 %) | 51 (≈ 10 %) |
+|---|---|---|---|---|---|---|---|---|
+| Positive / 100 | 0 | **91** | **99** | **99** | **92** | 43 | 5 | 0 |
+| Wilson 95 % CI | [0, 4] | [84, 95] | [95, 100] | [95, 100] | [85, 96] | [34, 53] | [2, 11] | [0, 4] |
+| Mean NL of positives | – | 0.27 | 0.29 | 0.35 | 0.32 | 0.27 | 0.30 | – |
+
+**Reading.**
+- **The dose-response is an inverted U.** Titration fires in 91-99 % of linear-RR windows with 1-8 isolated beats (up to
+  ~1.6 % of beats), in 43 % with 16, and almost never at the 5-10 % densities Phase 10 tested (5/100 and 0/100, both
+  reproduced here).
+- This reconciles A2.4's single-beat result (89/100, different positions and seed) with Phase 10. Phase 10's
+  synthetic test of isolated ectopy sat on the far side of the curve, where titration is specific. Real windows mostly
+  carry 1-15 abnormal beats, which is the region where titration is not specific.
+- **A possible mechanism (not tested here).** With a few beats, the nonlinear terms of the polynomial autoregression
+  can fit the few high-leverage premature/compensatory pairs. With many, those pairs dominate the residual variance
+  of both the linear and the nonlinear model, and neither predicts them.
+- Real windows do not show the downturn: positive rate 63 % at burden 1, 80 % at 2-4, 85-86 % at ≥ 5. Real
+  high-burden windows also contain couplets and runs, which are positive at any density (Phase 10 E3, E4).
 
 ## C1. Manuscript numbers (paper_tables.py)
 
@@ -500,8 +524,12 @@ The manuscript draft was not available, so the passages are identified by conten
 - The paragraph should say the single-beat effect is reproduced experimentally, not just observed. It should also
   say the mechanism is the premature beat itself, a single high-leverage event in the polynomial autoregression,
   not heart-rate turbulence.
-- It must qualify the Phase 10 statement that isolated synthetic beats rarely trigger titration. That holds at 5-10 %
-  density (5/100, 0/100) but not for a single beat in 512 intervals (89/100).
+- It must qualify the Phase 10 statement that isolated synthetic beats rarely trigger titration. That holds only at
+  5-10 % density (5/100, 0/100). The exploratory dose-response (Amendment 1) shows an inverted U: 91-99/100 positive
+  with 1-8 isolated beats per 512 intervals, 43/100 with 16, 5/100 with 26 and 0/100 with 51. The S2 condition tested
+  densities where titration happens to be specific; real windows mostly carry 1-15 abnormal beats. Suggested text:
+  "A single isolated premature beat in 512 intervals is enough to make titration positive in about 90 % of
+  linear-RR windows; only at densities of 5 % or more does the effect disappear."
 - It should note the unexplained beat-type discrepancy: real single V beats give 47 % and real A beats 76 %, while the
   synthetic beat models give 86 % (V-type) and 54 % (A-type).
 - Add: claims (ii)-(iii) depend on an implementation that passes the standard-system verification. With the nested
