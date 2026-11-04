@@ -325,3 +325,4 @@ rdg_win: 6916 tasks to run (0 done)
   rdg_win 6900/6916 58.2 min; eta 0.1 min
   rdg_win 6916/6916 58.4 min; eta 0.0 min
 sham_seg: 83 tasks to run (0 done)
+  sham_seg 50/83 118.6 min; eta 78.3 min
