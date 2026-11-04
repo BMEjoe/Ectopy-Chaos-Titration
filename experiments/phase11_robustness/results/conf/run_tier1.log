@@ -48,3 +48,106 @@ synth1: 700 tasks to run (0 done)
   synth1 400/700 23.3 min; eta 17.5 min
   synth1 450/700 26.2 min; eta 14.5 min
   synth1 500/700 28.5 min; eta 11.4 min
+  synth1 550/700 30.3 min; eta 8.3 min
+  synth1 600/700 32.3 min; eta 5.4 min
+  synth1 650/700 34.3 min; eta 2.6 min
+  synth1 700/700 36.4 min; eta 0.0 min
+extmask: 232 tasks to run (0 done)
+  extmask 50/232 0.1 min; eta 0.4 min
+  extmask 100/232 0.2 min; eta 0.3 min
+  extmask 150/232 0.4 min; eta 0.2 min
+  extmask 200/232 0.5 min; eta 0.1 min
+  extmask 232/232 0.7 min; eta 0.0 min
+rdg_verify: 1680 tasks to run (0 done)
+  rdg_verify 50/1680 0.2 min; eta 7.7 min
+  rdg_verify 100/1680 0.5 min; eta 7.2 min
+  rdg_verify 150/1680 0.7 min; eta 6.9 min
+  rdg_verify 200/1680 1.0 min; eta 7.3 min
+  rdg_verify 250/1680 1.3 min; eta 7.5 min
+  rdg_verify 300/1680 1.5 min; eta 7.1 min
+  rdg_verify 350/1680 1.8 min; eta 6.8 min
+  rdg_verify 400/1680 2.2 min; eta 6.9 min
+  rdg_verify 450/1680 2.4 min; eta 6.5 min
+  rdg_verify 500/1680 2.7 min; eta 6.3 min
+  rdg_verify 550/1680 3.0 min; eta 6.1 min
+  rdg_verify 600/1680 3.2 min; eta 5.8 min
+  rdg_verify 650/1680 3.5 min; eta 5.5 min
+  rdg_verify 700/1680 3.8 min; eta 5.3 min
+  rdg_verify 750/1680 4.0 min; eta 4.9 min
+  rdg_verify 800/1680 4.2 min; eta 4.6 min
+  rdg_verify 850/1680 4.4 min; eta 4.3 min
+  rdg_verify 900/1680 4.7 min; eta 4.1 min
+  rdg_verify 950/1680 4.9 min; eta 3.8 min
+  rdg_verify 1000/1680 5.2 min; eta 3.5 min
+  rdg_verify 1050/1680 5.5 min; eta 3.3 min
+  rdg_verify 1100/1680 5.8 min; eta 3.1 min
+  rdg_verify 1150/1680 6.1 min; eta 2.8 min
+  rdg_verify 1200/1680 6.3 min; eta 2.5 min
+  rdg_verify 1250/1680 6.6 min; eta 2.3 min
+  rdg_verify 1300/1680 6.8 min; eta 2.0 min
+  rdg_verify 1350/1680 7.1 min; eta 1.7 min
+  rdg_verify 1400/1680 7.5 min; eta 1.5 min
+  rdg_verify 1450/1680 7.8 min; eta 1.2 min
+  rdg_verify 1500/1680 8.0 min; eta 1.0 min
+  rdg_verify 1550/1680 8.3 min; eta 0.7 min
+  rdg_verify 1600/1680 8.5 min; eta 0.4 min
+  rdg_verify 1650/1680 8.8 min; eta 0.2 min
+  rdg_verify 1680/1680 9.1 min; eta 0.0 min
+rdg_synth: 4000 tasks to run (0 done)
+  rdg_synth 50/4000 0.5 min; eta 37.5 min
+  rdg_synth 100/4000 0.8 min; eta 32.7 min
+  rdg_synth 150/4000 1.3 min; eta 34.3 min
+  rdg_synth 200/4000 1.8 min; eta 34.2 min
+  rdg_synth 250/4000 2.2 min; eta 32.7 min
+  rdg_synth 300/4000 2.6 min; eta 32.6 min
+  rdg_synth 350/4000 3.0 min; eta 31.3 min
+  rdg_synth 400/4000 3.5 min; eta 31.3 min
+  rdg_synth 450/4000 3.9 min; eta 30.5 min
+  rdg_synth 500/4000 4.5 min; eta 31.2 min
+  rdg_synth 550/4000 4.9 min; eta 30.7 min
+  rdg_synth 600/4000 5.3 min; eta 30.2 min
+  rdg_synth 650/4000 5.8 min; eta 30.0 min
+  rdg_synth 700/4000 6.4 min; eta 30.3 min
+  rdg_synth 750/4000 6.8 min; eta 29.6 min
+  rdg_synth 800/4000 7.4 min; eta 29.5 min
+  rdg_synth 850/4000 7.9 min; eta 29.4 min
+  rdg_synth 900/4000 8.4 min; eta 29.0 min
+  rdg_synth 950/4000 8.8 min; eta 28.3 min
+  rdg_synth 1000/4000 9.3 min; eta 28.0 min
+  rdg_synth 1050/4000 9.7 min; eta 27.3 min
+  rdg_synth 1100/4000 10.3 min; eta 27.3 min
+  rdg_synth 1150/4000 10.8 min; eta 26.7 min
+  rdg_synth 1200/4000 11.2 min; eta 26.2 min
+  rdg_synth 1250/4000 11.8 min; eta 25.9 min
+  rdg_synth 1300/4000 12.2 min; eta 25.3 min
+  rdg_synth 1350/4000 12.6 min; eta 24.8 min
+  rdg_synth 1400/4000 13.1 min; eta 24.4 min
+  rdg_synth 1450/4000 13.6 min; eta 23.8 min
+  rdg_synth 1500/4000 14.2 min; eta 23.6 min
+  rdg_synth 1550/4000 14.6 min; eta 23.0 min
+  rdg_synth 1600/4000 14.9 min; eta 22.4 min
+  rdg_synth 1650/4000 15.4 min; eta 21.9 min
+  rdg_synth 1700/4000 15.8 min; eta 21.3 min
+  rdg_synth 1750/4000 16.2 min; eta 20.8 min
+  rdg_synth 1800/4000 16.6 min; eta 20.3 min
+  rdg_synth 1850/4000 17.0 min; eta 19.7 min
+  rdg_synth 1900/4000 17.3 min; eta 19.1 min
+  rdg_synth 1950/4000 17.8 min; eta 18.7 min
+  rdg_synth 2000/4000 18.2 min; eta 18.2 min
+  rdg_synth 2050/4000 18.5 min; eta 17.6 min
+  rdg_synth 2100/4000 18.8 min; eta 17.0 min
+  rdg_synth 2150/4000 19.2 min; eta 16.5 min
+  rdg_synth 2200/4000 19.6 min; eta 16.0 min
+  rdg_synth 2250/4000 20.0 min; eta 15.5 min
+  rdg_synth 2300/4000 20.3 min; eta 15.0 min
+  rdg_synth 2350/4000 20.8 min; eta 14.6 min
+=== container restart 2026-11-04T01:57:49Z: runner restarted (resumable) ===
+prep: 0 tasks to run (1 done)
+hrt: 0 tasks to run (83 done)
+covar: 0 tasks to run (83 done)
+sham_win: 0 tasks to run (988 done)
+transplant: 0 tasks to run (439 done)
+synth1: 0 tasks to run (700 done)
+extmask: 0 tasks to run (232 done)
+rdg_verify: 0 tasks to run (1680 done)
+rdg_synth: 1648 tasks to run (2352 done)

@@ -81,6 +81,10 @@ PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.figures1
 ```
 Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line counts of `results/conf/*.jsonl`.
 
+## Incidents
+- 2026-11-04: container restart during Tier 1 (rdg_synth at 2,352/4,000). venv, data and results survived. Every
+  JSONL checked for partial last lines (none found); the runner was restarted with the same command (resumable).
+
 ## Decisions
 - D1 (branch): `phase11-robustness` as asked; mirrored to the session branch.
 - D2 (pilot on development data): the runtime pilot runs on nsrdb / chfdb (same code paths) and pilot seeds
