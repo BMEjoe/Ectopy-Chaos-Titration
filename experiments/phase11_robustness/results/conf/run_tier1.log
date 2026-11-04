@@ -151,3 +151,4 @@ synth1: 0 tasks to run (700 done)
 extmask: 0 tasks to run (232 done)
 rdg_verify: 0 tasks to run (1680 done)
 rdg_synth: 1648 tasks to run (2352 done)
+  rdg_synth 50/1648 0.5 min; eta 17.4 min
