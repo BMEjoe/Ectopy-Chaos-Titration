@@ -111,5 +111,10 @@ Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line
   (-17.4 % [-31.7, -2.8]); report prominently even though R5 fails verification. R7 decisions identical to R0 on all
   windows: positivity is set by the base VWK test, the scheme changes only NL magnitude.
 
+- B2: K3 at 1/128 s FAILS the registered FP rule (KTz P=120/200/250 no ectopy: 14/10/10 per 100; pooled 55/10,092 vs
+  1/10,092 at 1/360 s); 43/55 degenerate (surrogate SD ~0, KTz SDNN ~4.7 ms < 7.8 ms quantum). Real K3: only nsr029 w9
+  degenerate. To carry into 'claims to weaken': Phase 10's '0/10,100 synthetic null' holds at 1/360 s only.
+- b2 has 56 generation errors ('fewer than n intervals', fast vdP), same generator limit as Phase 9 TEST (63).
+
 ## Notes
 - Never `pkill -f <pattern>` with a pattern that also appears in the calling shell command.

@@ -328,3 +328,7 @@ b2: 12290 tasks to run (0 done)
   b2 12250/12290 160.3 min; eta 0.5 min
   b2 12290/12290 160.9 min; eta 0.0 min
 b3: 1328 tasks to run (0 done)
+  b3 50/1328 3.3 min; eta 83.1 min
+  b3 100/1328 5.9 min; eta 73.0 min
+  b3 150/1328 8.6 min; eta 67.7 min
+  b3 200/1328 11.5 min; eta 65.1 min
