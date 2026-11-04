@@ -66,7 +66,9 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments, A5 R1/R4 segments pending | partial | (this commit) |
 | Tier 2 run + analysis | todo | |
 | Tier 3 tables / figures | todo | |
-| report docs/PHASE11_ROBUSTNESS_RESULTS.md | todo | |
+| report docs/PHASE11_ROBUSTNESS_RESULTS.md | draft (Tier 1 windows filled; rest pending) | 5677e0a |
+| exploratory dose-response (Amendment 1, `explore11.py`) | written; runs after Tier 2 | 1cf78a6 |
+| paper_tables.py test run on partial JSON | ok (Table VI = Phase 10 §5.1) | |
 
 ## Resume commands
 All runs are resumable (finished task ids skipped). Run from branch `phase11-robustness` (the guard checks

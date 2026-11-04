@@ -1,0 +1,17 @@
+family,parameter,λ,detected at f grid,replacement,f_min π<0.05,f_min π<0.20,f_min π<0.20 (Wilson lower)
+Hénon,a1.08,0.136,0 1 0 0 0 0 0,0,none,none,none
+Hénon,a1.14,0.244,0 0 0 2 2 9 8,4,none,0.7,none
+Hénon,a1.22,0.303,0 0 3 6 32 58 76,33,0.5,0.5,0.5
+Hénon,a1.40,0.419,0 1 4 9 29 58 76,69,0.5,0.3,0.5
+logistic,r3.58,0.105,0 0 0 0 0 0 0,0,none,none,none
+logistic,r3.65,0.255,0 0 0 0 0 1 0,0,none,none,none
+logistic,r3.88,0.464,1 1 1 5 28 59 77,62,0.5,0.5,0.5
+logistic,r4.00,0.693,0 0 0 1 9 25 73,76,0.7,0.5,0.7
+coupled vdP,rho8_om3.3,0.0751,1 2 5 13 33 48 71,31,0.5,0.3,0.3
+coupled vdP,rho6_om3.3,0.0788,0 0 0 3 10 13 23,45,none,0.5,0.7
+coupled vdP,rho2_om2.7,0.085,0 0 0 2 6 20 63,60,0.9,0.7,0.7
+coupled vdP,rho6_om4.0,0.101,0 1 2 6 13 15 27,25,0.9,0.5,0.5
+phase-reset,tau1.14,0.0354,0 0 0 1 0 0 0,2,none,none,none
+phase-reset,tau0.58,0.081,0 1 1 1 1 0 0,0,none,none,none
+phase-reset,tau1.20,0.138,0 0 0 0 2 0 0,2,none,none,none
+phase-reset,tau1.16,0.185,0 0 0 0 2 1 5,10,none,none,none

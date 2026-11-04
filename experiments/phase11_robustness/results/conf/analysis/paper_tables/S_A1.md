@@ -1,0 +1,12 @@
+### S-A1. True vs sham handling (raw-positive ectopic units; summary verdict: incomplete (2/5 cells))
+
+| level / arm | group | units | subjects | removed by true (%) | removed by sham (%) | D [95 % CI] (points) | Q = sham/true | verdict |
+|---|---|---|---|---|---|---|---|---|
+| windows_masked | NSR | 96 | 42 | 54.2 | 21.0 | 33.1 [20.7, 46.5] | 0.39 [0.27, 0.53] | supports |
+| windows_masked | CHF | 30 | 14 | 60.0 | 16.4 | 43.6 [25.9, 64.0] | 0.27 [0.14, 0.40] | supports |
+| windows_masked | pooled | 126 | 56 | 55.6 | 19.9 | 35.6 [24.8, 46.9] | 0.36 [0.26, 0.47] | supports |
+| windows_masked | clean units (donor masks) | 90 | 45 | – | 9.6 | – | – | CI [5.6, 14.3] |
+| windows_edited | NSR | 154 | 45 | 64.3 | 0.6 | 63.6 [51.1, 74.9] | 0.01 [0.00, 0.03] | supports |
+| windows_edited | CHF | 104 | 23 | 73.1 | 0.6 | 72.5 [60.0, 81.8] | 0.01 [0.00, 0.02] | supports |
+| windows_edited | pooled | 258 | 68 | 67.8 | 0.6 | 67.2 [58.2, 75.2] | 0.01 [0.00, 0.02] | supports |
+| windows_edited | clean units (donor masks) | 97 | 45 | – | 7.1 | – | – | CI [4.5, 9.8] |

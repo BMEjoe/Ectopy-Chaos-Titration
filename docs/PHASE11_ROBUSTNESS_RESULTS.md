@@ -278,7 +278,7 @@ is no manuscript draft, so the known issues were checked against code and data:
 - **K3 count "9" vs "8".** At 512 intervals Phase 10 gives 8/988; the 9 probably comes from 9/320 at 1,024 intervals.
   The manuscript should give 8/988 with its length.
 - **Detrend threshold.** The code gate is 0.7 (`PHASE6_DETREND`); "0.07" is a typo.
-- **Table VI shifted strings:** to be confirmed when the tables are generated.
+- **Table VI shifted strings.** The generated Table VI (`paper_tables/table_VI.md`) is identical, row by row, to Phase 10 report §5.1 (detected counts, replacement, f_min). A shift in the manuscript's copy cannot be confirmed without the draft; it should be replaced by the generated table.
 
 ## C2. Figures: pending
 
