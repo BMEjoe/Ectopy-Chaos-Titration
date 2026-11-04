@@ -849,10 +849,32 @@ def b3_b4(phase):
     return out
 
 
+def b1_k3_bounds(phase):
+    """NOT REGISTERED (descriptive addition, added after the B1 results were seen): Phase 10's real K3 bound U and the
+    primary-design f_min recomputed with the K3 detections of each new K3 seed, because the K3 count changes."""
+    from experiments.phase10_final import analysis10 as A
+    df = p10_real(phase)
+    K3 = load(phase, "k3seed")
+    sp10 = A.spike_frame(A.load(p10_phase(phase), "spike"))
+    sp10 = sp10[sp10.design == "add"]
+    out = {"label": "descriptive, not registered"}
+    for e in [0] + sorted({r["entropy"] for r in K3}):
+        d = df.copy()
+        if e:
+            det = {r["id"].split("|", 1)[1].rsplit("|", 1)[0]: bool(r["K3"]["detected"]) for r in K3 if r["entropy"] == e}
+            d["K3"] = d.wid.map(det).fillna(False).astype(bool)
+        up = A.real_upper(d, "K3")
+        ex = exclusion_table(sp10, up["U"])
+        out[f"seed{e}"] = {"k": up["k"], "U": up["U"],
+                           "f_min": {k: v["design"]["f_min"] for k, v in ex.items()}}
+    return out
+
+
 # ----------------------------------------------------------------------------------------------- main
 SECTIONS = {"A1": a1, "A2_hrt": a2_hrt, "A2_transplant": a2_transplant, "A2_synth": a2_synth,
             "A2_extmask": a2_extmask, "A2_beat_type": a2_beat_type, "A3": a3, "A4": a4, "A5": a5, "B1": b1, "B2": b2,
-            "B2_real_K3": real_k3_detections, "B3_B4": b3_b4}
+            "B2_real_K3": real_k3_detections, "B3_B4": b3_b4,
+            "B1_K3_bounds": b1_k3_bounds}
 
 
 def main(argv=None):

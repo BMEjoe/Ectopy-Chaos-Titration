@@ -29,7 +29,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | A5 verified readings (R0, R3, R4, R6, R7) reproduce claims (i)-(iv), windows | all reproduce | all reproduce | **supports** |
 | A5 unverified readings (R1, R2, R5) | (flagged) | R1, R2 reproduce; **R5 fails (ii) and reverses (iii)** | reported, see A5 |
 | A5 segments (R0, R1, R4) | reproduce (ii), (iii) | raw diff +22.4 / +20.6 / +28.3 pp (all CIs > 0); masked and Wu CIs include 0 | supports (R4 Wu +6.7 [−1.0, +14.5]) |
-| B1 seeds | small ranges | *pending* | *pending* |
+| B1 seeds (titration salts 1, 2; K3 and K1 seeds) | small ranges, no conclusion changes | 0 of 16 headline conclusions change; titration decisions 0 flips (by construction, see text); K3 8 → 11 / 10 detections (6 stable), K1 16 → 19 / 16 (10-11 stable) | supports (registered rule); **K3 / K1 window-level detections are seed-sensitive** |
 | B2 K3 at 1/128 s, false positives | ≤ 7/100 in every FP condition | **3 of 155 conditions fail** (KTz P = 120 / 200 / 250, no ectopy: 14, 10, 10 per 100); pooled 55/10,092 vs 1/10,092 at 1/360 s | **weakens K3 claims** |
 | B2 degeneracy of the 8 real K3 detections | only nsr029 w9 degenerate | only nsr029 w9 degenerate (surrogate SD 0); other 7 SD 0.04-0.08 | supports |
 | B3 variance-preserving spike-ins | (descriptive bounds) | f_min unchanged in 15 of 16 rows at π < 0.05 and 14 of 16 at π < 0.20. Logistic r = 3.88 is weaker at π < 0.05 (0.5 to 0.7) but stronger at π < 0.20 (0.5 to 0.3); vdP (8, 3.3) is stronger at π < 0.20 (0.3 to 0.2) | bounds robust to the design |
@@ -369,7 +369,55 @@ Detected / 83 at f = 0.05 … 0.9, and f_min (design formula) at π < 0.05 / 0.2
   window's own variability is shrunk rather than kept.
 - The Wilson-lower variant is more conservative, typically one f step higher.
 
-## B1, B4 (Tier 2): pending
+## B1. Seeds
+
+**Registered rule.** A headline conclusion changes if its CI moves to the other side of its null. There are 16
+checks: P3 burden OR and CHF OR in windows; P2 CHF − NSR raw, masked and Wu in segments; P2 masked change by group;
+and LLE burden OR. Each is checked at two new seeds.
+**Result: 0 of 16 change. Verdict: supports.**
+
+**Titration (salts 1 and 2): no decision changes, by construction.**
+- 0 of 988 windows flip (raw, masked, edited) and 0 of 8,993 segments flip (raw, masked, Wu). Every titration headline
+  number is identical to Phase 10's.
+- **The new salts were applied.** NL values differ in 453 of 455 raw-positive windows (mean |ΔNL| 0.035, max 0.31).
+- **The decision cannot change.** Titration declares a series positive when the noise-free VWK test is significant.
+  The noise realisations, which are the only thing the seed controls, change only the size of NL. (R7 gave the same
+  result for the noise schedule.)
+- So B1 cannot test the seed robustness of titration's yes/no claims. That robustness is guaranteed, and it also
+  means "titration-positive" in this paper is the same as "the noise-free VWK test favours a nonlinear model". The
+  manuscript should say so.
+
+**K3 (masked_growth_seed_entropy 11101, 11102): the count is stable in size; the set of windows is not.**
+
+| Seed | Detected / 988 | Flips vs Phase 10 | Phase 10 detections recovered | New windows |
+|---|---|---|---|---|
+| Phase 10 | 8 | – | – | – |
+| 11101 | 11 | 5 | 7 of 8 (not nsr029 w9) | chf216 w7, w12; nsr035 w5; nsr048 w3 |
+| 11102 | 10 | 6 | 6 of 8 (not nsr029 w9, chf216 w2) | chf225 w4; nsr014 w11; nsr048 w3, w12 |
+
+- Six windows are detected under all three seeds: chf211 w7, chf218 w12, nsr049 w3/w5/w6, nsr052 w6. Fifteen windows
+  are detected under at least one seed.
+- The degenerate nsr029 w9 is not reproduced under either new seed.
+- **Descriptive, not registered** (`B1_K3_bounds`). With 11 or 10 detections, Phase 10's real bound U rises from
+  0.0146 to 0.0191 / 0.0171, and the primary-design f_min at π < 0.05 gets weaker:
+  - logistic r = 4.00: 0.7 to 0.9;
+  - logistic r = 3.88: 0.5 to 0.7;
+  - Hénon a = 1.40: 0.5 to 0.7 (seed 11101 only);
+  - coupled vdP (6, 4.0): 0.9 to no bound.
+  The π < 0.20 bounds are unchanged.
+
+**K1 and its components (seed pairs (11201, 11211), (11202, 11212)):**
+
+| | Phase 10 | Seed pair 1 | Seed pair 2 | Flips (1 / 2) |
+|---|---|---|---|---|
+| K1 (LLE AND UPO) | 16 | 19 | 16 | 13 / 12 (about 10-11 windows stable) |
+| LLE | 401 | 393 | 403 | 38 / 36 |
+| UPO | 31 | 34 | 28 | 19 / 25 |
+| LLE burden OR (GEE) | 1.51 [1.31, 1.75] | 1.51 [1.30, 1.76] | 1.58 [1.35, 1.85] | – |
+
+The K1 count is stable, but about a third of its detections, and most of the UPO detections, depend on the seed.
+
+## B4 (Tier 2): pending
 
 ## Exploratory: ectopy dose-response on N1 (Amendment 1): pending
 
