@@ -62,9 +62,10 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget: 0 errors; Tier 1 8.2 h + Tier 2 9.4 h = 17.6 h (no thinning) | done | |
 | PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | (this commit) |
 | Tier 1 run started 2026-11-04 (`run_tier1.log`); prep, hrt, covar, sham_win, transplant done | running | 7514b6e |
-| Tier 1 run: all parts done except rdg_seg (running, 166 tasks) | running | |
-| Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments done (summary: supports); A5 R1/R4 segments pending | partial | (this commit) |
-| Tier 2 run + analysis | todo | |
+| Tier 1 run: all 12 parts done (RUN11 DONE), 0 errors | done | |
+| Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments done (summary: supports); A5 segments done | done | (this commit) |
+| Tier 2 run started (`run_tier2.log`) | running | |
+| Tier 2 analysis | todo | |
 | Tier 3 tables / figures | todo | |
 | report docs/PHASE11_ROBUSTNESS_RESULTS.md | draft (Tier 1 windows filled; rest pending) | 5677e0a |
 | exploratory dose-response (Amendment 1, `explore11.py`) | written; runs after Tier 2 | 1cf78a6 |

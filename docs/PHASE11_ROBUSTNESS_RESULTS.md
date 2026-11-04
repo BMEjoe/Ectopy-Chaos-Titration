@@ -1,7 +1,7 @@
 # Phase 11: registered robustness analyses for "Ectopic Beats Masquerade as Chaos in Heart Rate"
 
-**Status: DRAFT, in progress.** Tier 1 results are final except the A5 segment cells. Still pending:
-the A5 segment cells, Tier 2 (B1-B4), the exploratory dose-response, and Tier 3 (tables, figures). Every number below is read from
+**Status: DRAFT, in progress.** Tier 1 results are final. Still pending:
+Tier 2 (B1-B4), the exploratory dose-response, and Tier 3 (tables, figures). Every number below is read from
 `experiments/phase11_robustness/results/conf/analysis/analysis11.json`; nothing is hand-entered.
 
 Branch `phase11-robustness` (mirrored to `claude/beautiful-hawking-i1ommp`). The preregistration
@@ -28,7 +28,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | A4 original-study metric (≥ 1 positive segment per subject) | ≈ 100 % in both groups on raw RR | NSR 54/54, CHF 29/29 | reproduced but uninformative |
 | A5 verified readings (R0, R3, R4, R6, R7) reproduce claims (i)-(iv), windows | all reproduce | all reproduce | **supports** |
 | A5 unverified readings (R1, R2, R5) | (flagged) | R1, R2 reproduce; **R5 fails (ii) and reverses (iii)** | reported, see A5 |
-| A5 segments (R1, R4) | reproduce (ii), (iii) | *pending* | *pending* |
+| A5 segments (R0, R1, R4) | reproduce (ii), (iii) | raw diff +22.4 / +20.6 / +28.3 pp (all CIs > 0); masked and Wu CIs include 0 | supports (R4 Wu +6.7 [−1.0, +14.5]) |
 | B1 seeds | small ranges | *pending* | *pending* |
 | B2 K3 at 1/128 s | ≤ 7/100 FP per condition | *pending* | *pending* |
 | B3 variance-preserving spike-ins | (descriptive bounds) | *pending* | *pending* |
@@ -274,8 +274,17 @@ The edited-arm CHF − NSR CI includes 0 in every reading. R5 is the closest to 
 - **R7 is identical to R0 on every window.** Positivity is decided by the noise-free VWK test, and the noise schedule
   only changes NL's magnitude. R7 is therefore not an independent check of the binary claims.
 
-**Segments (R1, R4): pending** (`rdg_seg`). The R0 segment cells reproduce Phase 10 exactly: raw diff +22.4 %
-[12.8, 31.7].
+**Segments** (CHF − NSR, difference of subject mean rates; R0 = Phase 10 stored results):
+
+| Reading | (ii) raw [CI] | (iii) masked [CI] | (iii) Wu [CI] | Holds |
+|---|---|---|---|---|
+| R0 | +22.4 [+12.8, +31.7] | −4.9 [−13.7, +4.3] | +2.9 [−5.3, +11.4] | yes |
+| R1 (unverified) | +20.6 [+12.1, +28.7] | +0.4 [−9.6, +10.5] | +1.0 [−8.6, +10.8] | yes |
+| R4 Mann–Whitney | +28.3 [+17.8, +38.9] | −0.0 [−7.5, +7.6] | +6.7 [−1.0, +14.5] | yes |
+
+- Claims (ii) and (iii) hold at segment level for all three readings.
+- R4 strengthens the raw difference: NSR 36 % vs CHF 64 % of segments positive.
+- Under R4, the post-Wu difference is the one that comes closest to excluding 0 (p = 0.08).
 
 ---
 
