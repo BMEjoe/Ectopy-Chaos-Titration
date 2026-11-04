@@ -32,7 +32,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 | B1 seeds | small ranges | *pending* | *pending* |
 | B2 K3 at 1/128 s, false positives | ≤ 7/100 in every FP condition | **3 of 155 conditions fail** (KTz P = 120 / 200 / 250, no ectopy: 14, 10, 10 per 100); pooled 55/10,092 vs 1/10,092 at 1/360 s | **weakens K3 claims** |
 | B2 degeneracy of the 8 real K3 detections | only nsr029 w9 degenerate | only nsr029 w9 degenerate (surrogate SD 0); other 7 SD 0.04-0.08 | supports |
-| B3 variance-preserving spike-ins | (descriptive bounds) | f_min unchanged in 14 of 16 rows at π < 0.05 and 15 of 16 at π < 0.20; logistic r = 3.88 weaker at π < 0.05 (0.5 to 0.7), vdP (8, 3.3) stronger at π < 0.20 (0.3 to 0.2) | bounds robust to the design |
+| B3 variance-preserving spike-ins | (descriptive bounds) | f_min unchanged in 15 of 16 rows at π < 0.05 and 14 of 16 at π < 0.20. Logistic r = 3.88 is weaker at π < 0.05 (0.5 to 0.7) but stronger at π < 0.20 (0.5 to 0.3); vdP (8, 3.3) is stronger at π < 0.20 (0.3 to 0.2) | bounds robust to the design |
 | B4 second base window | (descriptive bounds) | *pending* | *pending* |
 | C1 manuscript-number checks | | "7 of 8" run claim unsupported (4 windows); other items, see C1 | correct the manuscript |
 
