@@ -350,3 +350,5 @@ rdg_verify: 0 tasks to run (1680 done)
 rdg_synth: 0 tasks to run (4000 done)
 rdg_win: 0 tasks to run (6916 done)
 sham_seg: 27 tasks to run (56 done)
+  sham_seg 27/27 61.7 min; eta 0.0 min
+rdg_seg: 166 tasks to run (0 done)

@@ -62,8 +62,8 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget: 0 errors; Tier 1 8.2 h + Tier 2 9.4 h = 17.6 h (no thinning) | done | |
 | PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | (this commit) |
 | Tier 1 run started 2026-11-04 (`run_tier1.log`); prep, hrt, covar, sham_win, transplant done | running | 7514b6e |
-| Tier 1 run: rdg_verify, rdg_synth, rdg_win done; sham_seg, rdg_seg running | running | |
-| Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments, A5 R1/R4 segments pending | partial | (this commit) |
+| Tier 1 run: all parts done except rdg_seg (running, 166 tasks) | running | |
+| Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments done (summary: supports); A5 R1/R4 segments pending | partial | (this commit) |
 | Tier 2 run + analysis | todo | |
 | Tier 3 tables / figures | todo | |
 | report docs/PHASE11_ROBUSTNESS_RESULTS.md | draft (Tier 1 windows filled; rest pending) | 5677e0a |
@@ -91,6 +91,9 @@ Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line
   survived; every JSONL parsed line by line (0 bad lines, all newline-terminated); `data11 --verify` 0 mismatches;
   runner restarted 06:49:56 UTC with the same command (resumed sham_seg 27 tasks). Restarts appear to happen
   while the session is idle, so check-ins are now every ~40 min (each restarts the runner if it is not running).
+- 2026-11-04 07:34 UTC: third container restart (found at the 40-min check-in; sham_seg still 56/83, i.e. the
+  container went down soon after the turn ended). Integrity check 0 bad lines; runner restarted 07:34. From now on
+  the session stays active while runs execute (foreground waits of <= 10 min, one check each), instead of idling.
 
 ## Decisions
 - D1 (branch): `phase11-robustness` as asked; mirrored to the session branch.

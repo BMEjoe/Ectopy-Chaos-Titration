@@ -1,7 +1,7 @@
 # Phase 11: registered robustness analyses for "Ectopic Beats Masquerade as Chaos in Heart Rate"
 
-**Status: DRAFT, in progress.** Tier 1 window-level results are final. Still pending: A1 and A5 segment cells,
-Tier 2 (B1-B4), the exploratory dose-response, and Tier 3 (tables, figures). Every number below is read from
+**Status: DRAFT, in progress.** Tier 1 results are final except the A5 segment cells. Still pending:
+the A5 segment cells, Tier 2 (B1-B4), the exploratory dose-response, and Tier 3 (tables, figures). Every number below is read from
 `experiments/phase11_robustness/results/conf/analysis/analysis11.json`; nothing is hand-entered.
 
 Branch `phase11-robustness` (mirrored to `claude/beautiful-hawking-i1ommp`). The preregistration
@@ -16,7 +16,7 @@ bootstrap CIs (10,000 resamples) unless stated otherwise.
 |---|---|---|---|
 | A1 sham control, windows, masked | D > 0, Q < 0.5 | D = 0.356 [0.248, 0.469]; Q = 0.36 [0.26, 0.47] | supports, but a third of the masked-arm drop is data loss |
 | A1 sham control, windows, edited | D > 0, Q < 0.5 | D = 0.672 [0.582, 0.752]; Q = 0.01 [0.00, 0.02] | supports (weak control, see text) |
-| A1 segments (masked, edited, Wu) | same | *pending* | *pending* |
+| A1 sham control, segments, masked / edited / Wu | D > 0, Q < 0.5 | D = 0.554 [0.488, 0.615], Q = 0.20 / D = 0.591 [0.518, 0.658], Q = 0.007 / D = 0.602 [0.531, 0.668], Q = 0.007 | supports (all five cells: **A1 supports**) |
 | A2 transplant: one ventricular-type beat into 439 clean real windows | positive rate rises | 22.1 % to 86.3 %, Δ = +64.2 pp [59.2, 69.3] | **supports** |
 | A2 heart-rate turbulence as mechanism | (not predicted) | HRT alone Δ = −0.7 pp [−1.7, +0.2]; HRT added to the beat changes nothing | HRT is not the mechanism in real windows |
 | A2 synthetic single beat (N1 linear RR) | rises | 0/100 to 89/100 | supports; contrasts with Phase 10's 5/100 at 5 % density |
@@ -89,7 +89,25 @@ Supports.
    negative, and editing 7.1 % [4.5, 9.8]. Among raw-negative ectopic windows, the true mask created positives in
    3.5 % and the sham in 4.5 %.
 
-**Segments (masked, edited, Wu): pending** (`sham_seg`). The A1 summary verdict needs all five pooled cells.
+**Segments** (12-min segments, 2 shams each; pooled):
+
+| Arm | Units (subjects) | F_true | F_sham | D [CI] | Q [CI] | Verdict |
+|---|---|---|---|---|---|---|
+| masked | 3,124 (78) | 0.689 | 0.135 | 0.554 [0.488, 0.615] | 0.20 [0.17, 0.23] | supports |
+| edited | 3,308 (80) | 0.595 | 0.004 | 0.591 [0.518, 0.658] | 0.007 [0.004, 0.011] | supports |
+| Wu | 3,308 (80) | 0.606 | 0.004 | 0.602 [0.531, 0.668] | 0.007 [0.004, 0.012] | supports |
+
+- By group, masked: NSR D = 0.531 [0.446, 0.608], Q = 0.20; CHF D = 0.598 [0.496, 0.692], Q = 0.19.
+- Edited and Wu cells look the same in NSR and CHF.
+- **A1 summary verdict: supports.** All five pooled cells support.
+
+Limits at segment level:
+- **High-burden segments are excluded.** 1,349 segments had no admissible sham, and 1,372 had fewer than 2.
+- **Masking alone removes positives.** Donor masks made 17.8 % [15.8, 20.0] of raw-positive clean segments negative
+  in the masked arm (edited 4.6 %, Wu 7.3 %).
+- **Wu-style deletion of normal intervals is nearly inert** (Q ≈ 0.007), like editing. Only the masked-arm sham
+  removes enough regression rows to probe data loss. Each masked interval removes every row whose lag span contains
+  it, whereas deleting one interval removes one interval.
 
 ## A2. The single-beat result: a beat, not its turbulence
 
