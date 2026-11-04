@@ -205,7 +205,7 @@ Real detections 16/988 windows; U = 0.0245. Detected counts are out of 83 base w
 
 ## Phase 11 supplementary tables
 
-### S-A1. True vs sham handling (raw-positive ectopic units; summary verdict: incomplete (2/5 cells))
+### S-A1. True vs sham handling (raw-positive ectopic units; summary verdict: supports)
 
 | level / arm | group | units | subjects | removed by true (%) | removed by sham (%) | D [95 % CI] (points) | Q = sham/true | verdict |
 |---|---|---|---|---|---|---|---|---|
@@ -217,6 +217,18 @@ Real detections 16/988 windows; U = 0.0245. Detected counts are out of 83 base w
 | windows_edited | CHF | 104 | 23 | 73.1 | 0.6 | 72.5 [60.0, 81.8] | 0.01 [0.00, 0.02] | supports |
 | windows_edited | pooled | 258 | 68 | 67.8 | 0.6 | 67.2 [58.2, 75.2] | 0.01 [0.00, 0.02] | supports |
 | windows_edited | clean units (donor masks) | 97 | 45 | – | 7.1 | – | – | CI [4.5, 9.8] |
+| segments_masked | NSR | 2069 | 54 | 66.5 | 13.3 | 53.1 [44.6, 60.8] | 0.20 [0.17, 0.24] | supports |
+| segments_masked | CHF | 1055 | 24 | 73.6 | 13.8 | 59.8 [49.6, 69.2] | 0.19 [0.15, 0.23] | supports |
+| segments_masked | pooled | 3124 | 78 | 68.9 | 13.5 | 55.4 [48.8, 61.5] | 0.20 [0.17, 0.23] | supports |
+| segments_masked | clean units (donor masks) | 839 | 58 | – | 17.8 | – | – | CI [15.8, 20.0] |
+| segments_edited | NSR | 2159 | 54 | 58.9 | 0.4 | 58.5 [49.2, 66.9] | 0.01 [0.00, 0.01] | supports |
+| segments_edited | CHF | 1149 | 26 | 60.6 | 0.4 | 60.2 [48.1, 71.3] | 0.01 [0.00, 0.01] | supports |
+| segments_edited | pooled | 3308 | 80 | 59.5 | 0.4 | 59.1 [51.8, 65.8] | 0.01 [0.00, 0.01] | supports |
+| segments_edited | clean units (donor masks) | 873 | 58 | – | 4.6 | – | – | CI [3.0, 6.5] |
+| segments_wu | NSR | 2159 | 54 | 59.3 | 0.4 | 58.8 [49.7, 67.0] | 0.01 [0.00, 0.01] | supports |
+| segments_wu | CHF | 1149 | 26 | 63.2 | 0.4 | 62.8 [50.7, 73.8] | 0.01 [0.00, 0.02] | supports |
+| segments_wu | pooled | 3308 | 80 | 60.6 | 0.4 | 60.2 [53.1, 66.8] | 0.01 [0.00, 0.01] | supports |
+| segments_wu | clean units (donor masks) | 874 | 59 | – | 7.3 | – | – | CI [5.4, 9.6] |
 
 ### S-A2a. One ectopic event transplanted into clean confirmatory windows (raw titration)
 
@@ -351,10 +363,10 @@ not available; Poon & Merrill 1997 metric not extracted
 | reading | V1-V6 verified | (i) burden OR | (i) holds | (ii) raw CHF − NSR (windows) | (ii) holds | (iii) post-handling CHF − NSR (windows) | (iii) holds | synthetic positives /100 | (iv) holds | segments | against H |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | R0 | True | 2.31 [1.67, 3.19] | True | 23.5 [12.6, 34.3] | True | masked 1.1 [-10.5, 14.3] / edited 3.6 [-4.8, 12.4] | True | N5_linear_rr_warped:100 N1_linear_rr:0 E4_runs:93 E3_couplets_5pct:100 vdp26:100 | True | ii True, iii True | False |
-| R1 | False | 2.88 [1.68, 4.91] | True | 26.3 [15.3, 37.4] | True | masked -1.3 [-11.3, 9.0] / edited 3.7 [-6.7, 14.7] | True | N1_linear_rr:0 vdp26:100 N5_linear_rr_warped:100 E4_runs:100 E3_couplets_5pct:100 | True | – | False |
+| R1 | False | 2.88 [1.68, 4.91] | True | 26.3 [15.3, 37.4] | True | masked -1.3 [-11.3, 9.0] / edited 3.7 [-6.7, 14.7] | True | N1_linear_rr:0 vdp26:100 N5_linear_rr_warped:100 E4_runs:100 E3_couplets_5pct:100 | True | ii True, iii True | False |
 | R2 | False | 2.44 [1.63, 3.65] | True | 24.2 [13.0, 35.1] | True | masked -5.0 [-14.0, 4.1] / edited 5.6 [-3.7, 15.3] | True | E4_runs:100 E3_couplets_5pct:100 N5_linear_rr_warped:100 vdp26:100 N1_linear_rr:0 | True | – | False |
 | R3 | True | 2.33 [1.63, 3.32] | True | 25.1 [14.2, 35.9] | True | masked -2.1 [-12.8, 10.0] / edited 5.2 [-3.7, 14.4] | True | E3_couplets_5pct:100 N1_linear_rr:0 N5_linear_rr_warped:100 E4_runs:97 vdp26:100 | True | – | False |
-| R4 | True | 1.92 [1.58, 2.33] | True | 20.3 [9.6, 31.1] | True | masked -0.6 [-12.1, 12.1] / edited 2.5 [-5.5, 10.4] | True | N1_linear_rr:0 E3_couplets_5pct:100 N5_linear_rr_warped:100 E4_runs:93 vdp26:100 | True | – | False |
+| R4 | True | 1.92 [1.58, 2.33] | True | 20.3 [9.6, 31.1] | True | masked -0.6 [-12.1, 12.1] / edited 2.5 [-5.5, 10.4] | True | N1_linear_rr:0 E3_couplets_5pct:100 N5_linear_rr_warped:100 E4_runs:93 vdp26:100 | True | ii True, iii True | False |
 | R5 | False | 3.27 [1.85, 5.78] | True | 5.6 [-2.3, 13.4] | False | masked -17.4 [-31.7, -2.8] / edited -11.0 [-22.6, 0.4] | False | N1_linear_rr:0 vdp26:100 E3_couplets_5pct:100 E4_runs:93 N5_linear_rr_warped:100 | True | – | False |
 | R6 | True | 3.22 [2.19, 4.74] | True | 24.6 [13.8, 35.5] | True | masked 4.8 [-8.4, 19.5] / edited 5.3 [-4.7, 15.8] | True | E4_runs:93 vdp26:100 E3_couplets_5pct:100 N5_linear_rr_warped:100 N1_linear_rr:0 | True | – | False |
 | R7 | True | 2.31 [1.67, 3.19] | True | 23.5 [12.6, 34.3] | True | masked 1.1 [-10.5, 14.3] / edited 3.6 [-4.8, 12.4] | True | N1_linear_rr:0 E4_runs:93 E3_couplets_5pct:100 vdp26:100 N5_linear_rr_warped:100 | True | – | False |
@@ -365,18 +377,129 @@ Barahona & Poon 1996 PDF not available: definitions not extracted; R8 not run
 
 | seed | windows | raw positive | burden OR | CHF OR adjusted | flips raw/masked/edited |
 |---|---|---|---|---|---|
+| salt0_windows |  | 455 | 2.31 [1.67, 3.19] | 0.77 [0.46, 1.28] | – |
+| salt1_windows | 988 | 455 | 2.31 [1.67, 3.19] | 0.77 [0.46, 1.28] | 0/0/0 |
+| salt2_windows | 988 | 455 | 2.31 [1.67, 3.19] | 0.77 [0.46, 1.28] | 0/0/0 |
 
 ### S-B1b. Titration seed robustness (segments; CHF − NSR)
 
 | seed | raw | masked | Wu | masked change | flips raw/masked/Wu |
 |---|---|---|---|---|---|
+| salt0_segments | 22.4 [12.8, 31.7] | -4.9 [-13.7, 4.3] | 2.9 [-5.3, 11.4] | NSR -26.1 CHF -46.8 | – |
+| salt1_segments | 22.4 [12.8, 31.7] | -4.9 [-13.7, 4.3] | 2.9 [-5.3, 11.4] | NSR -26.1 CHF -46.8 | 0/0/0 of 8993 |
+| salt2_segments | 22.4 [12.8, 31.7] | -4.9 [-13.7, 4.3] | 2.9 [-5.3, 11.4] | NSR -26.1 CHF -46.8 | 0/0/0 of 8993 |
 
 ### S-B1c. K3 / K1 seed robustness
 
 | seed | windows | detected | detected (Phase 10 seed) | flips | detail |
 |---|---|---|---|---|---|
+| K3_entropy11101 | 988 | 11 | 8 | 5 | real|chf2db|chf211|7, real|chf2db|chf216|12, real|chf2db|chf216|2, real|chf2db|chf216|7, real|chf2db|chf218|12, real|nsr2db|nsr035|5, real|nsr2db|nsr048|3, real|nsr2db|nsr049|3, real|nsr2db|nsr049|5, real|nsr2db|nsr049|6, real|nsr2db|nsr052|6 |
+| K3_entropy11102 | 988 | 10 | 8 | 6 | real|chf2db|chf211|7, real|chf2db|chf218|12, real|chf2db|chf225|4, real|nsr2db|nsr014|11, real|nsr2db|nsr048|12, real|nsr2db|nsr048|3, real|nsr2db|nsr049|3, real|nsr2db|nsr049|5, real|nsr2db|nsr049|6, real|nsr2db|nsr052|6 |
+| K1_seeds11201_11211 | 988 | 19 | 16 | 13 | LLE 393 (seed0 401, flips 38); UPO 34 (seed0 31, flips 19) |
+| K1_seeds11202_11212 | 988 | 16 | 16 | 12 | LLE 403 (seed0 401, flips 36); UPO 28 (seed0 31, flips 25) |
+
+### S-B2. K3 at 1/360 s vs re-quantized 1/128 s (pass 1/128: False; pass 1/360: True; max detections in one FP condition at 1/128: 14)
+
+| group | windows | K3 1/360 s | K3 1/128 s |
+|---|---|---|---|
+| noncha_input | 1800 | 0 | 0 |
+| noncha_real | 4892 | 1 | 55 |
+| null_input | 1700 | 0 | 0 |
+| null_real | 1700 | 0 | 0 |
+| power chaos_primary | 1272 | 91 (7.2 %) | 128 (10.1 %) |
+| power chaos_second | 870 | 131 (15.1 %) | 123 (14.1 %) |
+
+### S-B2c. FP conditions above the registered 7/100 at 1/128 s
+
+| group | condition (family:params / ectopy / noise) | windows | K3 1/128 s |
+|---|---|---|---|
+| noncha_real | ktz:P=120 / none / real | 100 | 14 |
+| noncha_real | ktz:P=200 / none / real | 100 | 10 |
+| noncha_real | ktz:P=250 / none / real | 100 | 10 |
+
+Pooled FP: 55/10092 at 1/128 s (814 windows flagged degenerate overall), 1/10092 at 1/360 s. Generation errors are excluded.
+
+### S-B1d. Registered B1 rule: CI side of the null, Phase 10 vs new seed (supports (no headline conclusion changes))
+
+| headline | seed | Phase 10 | new seed | changed |
+|---|---|---|---|---|
+| P3 burden OR (windows) | salt1_windows | above | above | no |
+| P3 burden OR (windows) | salt2_windows | above | above | no |
+| P3 CHF OR (windows) | salt1_windows | includes | includes | no |
+| P3 CHF OR (windows) | salt2_windows | includes | includes | no |
+| P2 CHF-NSR raw (segments) | salt1_segments | above | above | no |
+| P2 CHF-NSR raw (segments) | salt2_segments | above | above | no |
+| P2 CHF-NSR masked (segments) | salt1_segments | includes | includes | no |
+| P2 CHF-NSR masked (segments) | salt2_segments | includes | includes | no |
+| P2 CHF-NSR wu (segments) | salt1_segments | includes | includes | no |
+| P2 CHF-NSR wu (segments) | salt2_segments | includes | includes | no |
+| P2 masked change NSR (segments) | salt1_segments | below | below | no |
+| P2 masked change NSR (segments) | salt2_segments | below | below | no |
+| P2 masked change CHF (segments) | salt1_segments | below | below | no |
+| P2 masked change CHF (segments) | salt2_segments | below | below | no |
+| LLE burden OR (windows) | K1_seeds11201_11211 | above | above | no |
+| LLE burden OR (windows) | K1_seeds11202_11212 | above | above | no |
+
+### S-B1e. K3 f_min (π < 0.05 / 0.20) with U from each K3 seed (descriptive, not registered)
+
+| family|parameter | seed0 | seed11101 | seed11102 |
+|---|---|---|---|
+| coupled_vdp|rho2_om2.7 | 0.9 / 0.7 | 0.9 / 0.7 | 0.9 / 0.7 |
+| coupled_vdp|rho6_om3.3 | none / 0.5 | none / 0.5 | none / 0.5 |
+| coupled_vdp|rho6_om4.0 | 0.9 / 0.5 | none / 0.5 | none / 0.5 |
+| coupled_vdp|rho8_om3.3 | 0.5 / 0.3 | 0.5 / 0.3 | 0.5 / 0.3 |
+| henon|a1.14 | none / 0.7 | none / 0.7 | none / 0.7 |
+| henon|a1.22 | 0.5 / 0.5 | 0.5 / 0.5 | 0.5 / 0.5 |
+| henon|a1.40 | 0.5 / 0.3 | 0.7 / 0.3 | 0.5 / 0.3 |
+| logistic|r3.88 | 0.5 / 0.5 | 0.7 / 0.5 | 0.7 / 0.5 |
+| logistic|r4.00 | 0.7 / 0.5 | 0.9 / 0.5 | 0.9 / 0.5 |
+| real K3 detections k (U) | 8 (0.0146) | 11 (0.0191) | 10 (0.0171) |
+
+### S-B2b. Degeneracy diagnostic of the real K3 detections
+
+| window | SDNN (ms) | SDNN of NN (ms) | z_max | G | m at z_max | surrogate SD at m | degenerate |
+|---|---|---|---|---|---|---|---|
+| real|nsr2db|nsr029|9 | 15.3 | 15.3 | 2e+11 | 0.40 | 5 | 0 | True |
+| real|nsr2db|nsr049|3 | 112.1 | 112.2 | 14.9 | 0.53 | 5 | 0.0422 | False |
+| real|nsr2db|nsr049|5 | 102.3 | 102.3 | 11.1 | 0.40 | 2 | 0.0502 | False |
+| real|nsr2db|nsr049|6 | 202.3 | 187.0 | 13.8 | 0.30 | 2 | 0.0448 | False |
+| real|nsr2db|nsr052|6 | 79.1 | 79.1 | 11.1 | 0.33 | 2 | 0.0696 | False |
+| real|chf2db|chf211|7 | 95.9 | 95.8 | 10 | 0.30 | 3 | 0.0795 | False |
+| real|chf2db|chf216|2 | 39.1 | 39.1 | 10.6 | 0.40 | 2 | 0.0388 | False |
+| real|chf2db|chf218|12 | 118.9 | 117.7 | 16.1 | 0.27 | 2 | 0.0472 | False |
 
 ### S-B3/B4. K3 exclusion: additive (Phase 10) vs variance-preserving (B3) vs 166 base windows (B4)
 
 | family | parameter | add: detected | add f_min .05 | add f_min .20 | varpres: detected | vp f_min .05 | vp f_min .20 | vp Wilson .20 | 166: detected | 166 f_min .05 | 166 f_min .20 | 166 Wilson .20 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+| coupled vdP | rho2_om2.7 | 0 0 0 2 6 20 63 | 0.9 | 0.7 | 0 0 0 0 3 21 47 | 0.9 | 0.7 | 0.7 | 0 0 1 3 12 39 119 | 0.9 | 0.7 | 0.7 |
+| coupled vdP | rho6_om3.3 | 0 0 0 3 10 13 23 | none | 0.5 | 0 1 0 1 8 11 18 | none | 0.5 | 0.7 | 1 3 3 5 16 26 48 | none | 0.5 | 0.7 |
+| coupled vdP | rho6_om4.0 | 0 1 2 6 13 15 27 | 0.9 | 0.5 | 1 0 1 1 12 15 27 | 0.9 | 0.5 | 0.5 | 0 2 4 7 26 30 47 | none | 0.5 | 0.5 |
+| coupled vdP | rho8_om3.3 | 1 2 5 13 33 48 71 | 0.5 | 0.3 | 0 2 7 11 33 48 60 | 0.5 | 0.2 | 0.3 | 4 5 10 24 63 105 146 | 0.5 | 0.3 | 0.3 |
+| Hénon | a1.08 | 0 1 0 0 0 0 0 | none | none | 0 0 0 0 0 0 0 | none | none | none | 0 1 0 0 0 0 0 | none | none | none |
+| Hénon | a1.14 | 0 0 0 2 2 9 8 | none | 0.7 | 0 1 1 1 3 10 13 | none | 0.7 | 0.9 | 0 0 0 4 4 19 16 | none | 0.7 | none |
+| Hénon | a1.22 | 0 0 3 6 32 58 76 | 0.5 | 0.5 | 0 1 3 6 26 53 66 | 0.5 | 0.5 | 0.5 | 1 4 10 16 68 118 149 | 0.5 | 0.3 | 0.5 |
+| Hénon | a1.40 | 0 1 4 9 29 58 76 | 0.5 | 0.3 | 0 0 3 8 27 53 71 | 0.5 | 0.3 | 0.5 | 2 4 10 14 56 118 155 | 0.5 | 0.3 | 0.5 |
+| logistic | r3.58 | 0 0 0 0 0 0 0 | none | none | 0 0 0 1 0 0 0 | none | none | none | 1 0 0 0 0 0 0 | none | none | none |
+| logistic | r3.65 | 0 0 0 0 0 1 0 | none | none | 1 0 0 0 0 1 0 | none | none | none | 0 0 0 0 0 2 0 | none | none | none |
+| logistic | r3.88 | 1 1 1 5 28 59 77 | 0.5 | 0.5 | 0 1 3 7 24 52 65 | 0.7 | 0.3 | 0.5 | 3 3 6 13 59 118 152 | 0.5 | 0.3 | 0.5 |
+| logistic | r4.00 | 0 0 0 1 9 25 73 | 0.7 | 0.5 | 0 0 0 2 7 26 62 | 0.7 | 0.5 | 0.7 | 0 1 3 6 18 54 146 | 0.7 | 0.5 | 0.7 |
+| phase-reset | tau0.58 | 0 1 1 1 1 0 0 | none | none | 0 1 1 1 0 0 0 | none | none | none | 0 1 1 1 1 0 0 | none | none | none |
+| phase-reset | tau1.14 | 0 0 0 1 0 0 0 | none | none | 0 0 0 0 0 0 0 | none | none | none | 0 0 0 1 1 0 0 | none | none | none |
+| phase-reset | tau1.16 | 0 0 0 0 2 1 5 | none | none | 0 0 0 0 0 3 3 | none | none | none | 0 0 0 0 3 2 9 | none | none | none |
+| phase-reset | tau1.20 | 0 0 0 0 2 0 0 | none | none | 0 0 0 1 1 1 0 | none | none | none | 0 0 0 0 3 1 0 | none | none | none |
+
+### S-X. EXPLORATORY (Amendment 1): titration positives vs number of isolated beats in N1 (512 intervals)
+
+| isolated beats k | windows | positive | Wilson 95 % CI (%) | mean NL of positives |
+|---|---|---|---|---|
+| 0 | 100 | 0 | [0, 4] | – |
+| 1 | 100 | 91 | [84, 95] | 0.27 |
+| 2 | 100 | 99 | [95, 100] | 0.29 |
+| 4 | 100 | 99 | [95, 100] | 0.34 |
+| 8 | 100 | 92 | [85, 96] | 0.32 |
+| 16 | 100 | 43 | [34, 53] | 0.27 |
+| 26 | 100 | 5 | [2, 11] | 0.30 |
+| 51 | 100 | 0 | [0, 4] | – |
+
+Exploratory; no prediction and no verdict. k = 26 and 51 correspond to Phase 10's S2 5 % and 10 %.

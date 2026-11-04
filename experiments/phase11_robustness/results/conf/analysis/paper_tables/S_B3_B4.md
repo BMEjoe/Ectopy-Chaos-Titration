@@ -2,3 +2,19 @@
 
 | family | parameter | add: detected | add f_min .05 | add f_min .20 | varpres: detected | vp f_min .05 | vp f_min .20 | vp Wilson .20 | 166: detected | 166 f_min .05 | 166 f_min .20 | 166 Wilson .20 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+| coupled vdP | rho2_om2.7 | 0 0 0 2 6 20 63 | 0.9 | 0.7 | 0 0 0 0 3 21 47 | 0.9 | 0.7 | 0.7 | 0 0 1 3 12 39 119 | 0.9 | 0.7 | 0.7 |
+| coupled vdP | rho6_om3.3 | 0 0 0 3 10 13 23 | none | 0.5 | 0 1 0 1 8 11 18 | none | 0.5 | 0.7 | 1 3 3 5 16 26 48 | none | 0.5 | 0.7 |
+| coupled vdP | rho6_om4.0 | 0 1 2 6 13 15 27 | 0.9 | 0.5 | 1 0 1 1 12 15 27 | 0.9 | 0.5 | 0.5 | 0 2 4 7 26 30 47 | none | 0.5 | 0.5 |
+| coupled vdP | rho8_om3.3 | 1 2 5 13 33 48 71 | 0.5 | 0.3 | 0 2 7 11 33 48 60 | 0.5 | 0.2 | 0.3 | 4 5 10 24 63 105 146 | 0.5 | 0.3 | 0.3 |
+| Hénon | a1.08 | 0 1 0 0 0 0 0 | none | none | 0 0 0 0 0 0 0 | none | none | none | 0 1 0 0 0 0 0 | none | none | none |
+| Hénon | a1.14 | 0 0 0 2 2 9 8 | none | 0.7 | 0 1 1 1 3 10 13 | none | 0.7 | 0.9 | 0 0 0 4 4 19 16 | none | 0.7 | none |
+| Hénon | a1.22 | 0 0 3 6 32 58 76 | 0.5 | 0.5 | 0 1 3 6 26 53 66 | 0.5 | 0.5 | 0.5 | 1 4 10 16 68 118 149 | 0.5 | 0.3 | 0.5 |
+| Hénon | a1.40 | 0 1 4 9 29 58 76 | 0.5 | 0.3 | 0 0 3 8 27 53 71 | 0.5 | 0.3 | 0.5 | 2 4 10 14 56 118 155 | 0.5 | 0.3 | 0.5 |
+| logistic | r3.58 | 0 0 0 0 0 0 0 | none | none | 0 0 0 1 0 0 0 | none | none | none | 1 0 0 0 0 0 0 | none | none | none |
+| logistic | r3.65 | 0 0 0 0 0 1 0 | none | none | 1 0 0 0 0 1 0 | none | none | none | 0 0 0 0 0 2 0 | none | none | none |
+| logistic | r3.88 | 1 1 1 5 28 59 77 | 0.5 | 0.5 | 0 1 3 7 24 52 65 | 0.7 | 0.3 | 0.5 | 3 3 6 13 59 118 152 | 0.5 | 0.3 | 0.5 |
+| logistic | r4.00 | 0 0 0 1 9 25 73 | 0.7 | 0.5 | 0 0 0 2 7 26 62 | 0.7 | 0.5 | 0.7 | 0 1 3 6 18 54 146 | 0.7 | 0.5 | 0.7 |
+| phase-reset | tau0.58 | 0 1 1 1 1 0 0 | none | none | 0 1 1 1 0 0 0 | none | none | none | 0 1 1 1 1 0 0 | none | none | none |
+| phase-reset | tau1.14 | 0 0 0 1 0 0 0 | none | none | 0 0 0 0 0 0 0 | none | none | none | 0 0 0 1 1 0 0 | none | none | none |
+| phase-reset | tau1.16 | 0 0 0 0 2 1 5 | none | none | 0 0 0 0 0 3 3 | none | none | none | 0 0 0 0 3 2 9 | none | none | none |
+| phase-reset | tau1.20 | 0 0 0 0 2 0 0 | none | none | 0 0 0 1 1 1 0 | none | none | none | 0 0 0 0 3 1 0 | none | none | none |

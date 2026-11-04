@@ -1,0 +1,20 @@
+### S-B1d. Registered B1 rule: CI side of the null, Phase 10 vs new seed (supports (no headline conclusion changes))
+
+| headline | seed | Phase 10 | new seed | changed |
+|---|---|---|---|---|
+| P3 burden OR (windows) | salt1_windows | above | above | no |
+| P3 burden OR (windows) | salt2_windows | above | above | no |
+| P3 CHF OR (windows) | salt1_windows | includes | includes | no |
+| P3 CHF OR (windows) | salt2_windows | includes | includes | no |
+| P2 CHF-NSR raw (segments) | salt1_segments | above | above | no |
+| P2 CHF-NSR raw (segments) | salt2_segments | above | above | no |
+| P2 CHF-NSR masked (segments) | salt1_segments | includes | includes | no |
+| P2 CHF-NSR masked (segments) | salt2_segments | includes | includes | no |
+| P2 CHF-NSR wu (segments) | salt1_segments | includes | includes | no |
+| P2 CHF-NSR wu (segments) | salt2_segments | includes | includes | no |
+| P2 masked change NSR (segments) | salt1_segments | below | below | no |
+| P2 masked change NSR (segments) | salt2_segments | below | below | no |
+| P2 masked change CHF (segments) | salt1_segments | below | below | no |
+| P2 masked change CHF (segments) | salt2_segments | below | below | no |
+| LLE burden OR (windows) | K1_seeds11201_11211 | above | above | no |
+| LLE burden OR (windows) | K1_seeds11202_11212 | above | above | no |

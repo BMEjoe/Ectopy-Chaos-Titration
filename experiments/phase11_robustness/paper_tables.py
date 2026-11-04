@@ -331,6 +331,30 @@ def s_b(B):
         out.append(write("S_B2", f"S-B2. K3 at 1/360 s vs re-quantized 1/128 s (pass 1/128: {B2.get('pass_128')}; "
                                  f"pass 1/360: {B2.get('pass_360')}; max detections in one FP condition at 1/128: "
                                  f"{B2.get('max_condition_k128')})", ["group", "windows", "K3 1/360 s", "K3 1/128 s"], rows))
+    if B2.get("fp_fail_128") is not None:
+        rows = [[r["group"], r["cond"].replace("|", " / "), r["n"], r["k128"]] for r in B2["fp_fail_128"]] or [["–", "none", "", ""]]
+        fp = B2.get("fp_pooled", {})
+        out.append(write("S_B2_fail", "S-B2c. FP conditions above the registered 7/100 at 1/128 s",
+                         ["group", "condition (family:params / ectopy / noise)", "windows", "K3 1/128 s"], rows,
+                         note=(f"Pooled FP: {fp.get('k128')}/{fp.get('n')} at 1/128 s ({fp.get('deg128')} windows flagged degenerate "
+                               f"overall), {fp.get('k360')}/{fp.get('n')} at 1/360 s. Generation errors are excluded.")))
+    C = B1.get("conclusions")
+    if C:
+        rows = [[i["headline"], i["seed"], i["salt0"], i["seed_side"], "yes" if i["changed"] else "no"] for i in C["items"]]
+        out.append(write("S_B1_conclusions", f"S-B1d. Registered B1 rule: CI side of the null, Phase 10 vs new seed ({C['verdict']})",
+                         ["headline", "seed", "Phase 10", "new seed", "changed"], rows))
+    KB = B.get("B1_K3_bounds", {})
+    if KB.get("seed0"):
+        seeds = [k for k in KB if k.startswith("seed")]
+        rows = []
+        for key in KB["seed0"]["f_min"]:
+            vals = [KB[sd]["f_min"][key] for sd in seeds]
+            if all(v["0.05"] is None and v["0.2"] is None for v in vals):
+                continue
+            rows.append([key] + [f"{v['0.05'] or 'none'} / {v['0.2'] or 'none'}" for v in vals])
+        rows.append(["real K3 detections k (U)"] + [f"{KB[sd]['k']} ({KB[sd]['U']:.4f})" for sd in seeds])
+        out.append(write("S_B1_K3_bounds", "S-B1e. K3 f_min (π < 0.05 / 0.20) with U from each K3 seed (descriptive, not registered)",
+                         ["family|parameter"] + seeds, rows))
     RK = B.get("B2_real_K3", [])
     if isinstance(RK, list) and RK:
         rows = [[r["wid"], f"{r['sdnn_ms']:.1f}", f"{r['sdnn_nn_ms']:.1f}", f"{r['zmax']:.3g}", f"{r['G']:.2f}", r["m_argmax"],
@@ -354,6 +378,18 @@ def s_b(B):
     return "\n\n".join(out)
 
 
+def s_explore():
+    p = HERE / "results" / "conf" / "analysis" / "explore_dose.json"
+    if not p.exists():
+        return ""
+    E = json.load(open(p))
+    rows = [[k, v["n"], v["k_pos"], cis(v["wilson"], 0), f"{v['mean_NL_pos']:.2f}" if v["mean_NL_pos"] else "–"]
+            for k, v in E["by_k"].items()]
+    return write("S_explore_dose", "S-X. EXPLORATORY (Amendment 1): titration positives vs number of isolated beats in N1 (512 intervals)",
+                 ["isolated beats k", "windows", "positive", "Wilson 95 % CI (%)", "mean NL of positives"], rows,
+                 note="Exploratory; no prediction and no verdict. k = 26 and 51 correspond to Phase 10's S2 5 % and 10 %.")
+
+
 def main():
     A = json.load(open(P10 / "conf" / "analysis" / "analysis.json"))
     p11 = HERE / "results" / "conf" / "analysis" / "analysis11.json"
@@ -362,7 +398,7 @@ def main():
              table_III(A), table_IV(A), table_V(A),
              _q1(A, "K3", "table_VI", "Table VI. K3 detection of additive chaos and exclusion bounds (Q1, P1)"),
              _q1(A, "K1", "table_VII", "Table VII. K1 detection of additive chaos and exclusion bounds (Q1, P1)"),
-             "## Phase 11 supplementary tables", s_a1(B), s_a2(B), s_a3(B), s_a4(B), s_a5(B), s_b(B)]
+             "## Phase 11 supplementary tables", s_a1(B), s_a2(B), s_a3(B), s_a4(B), s_a5(B), s_b(B), s_explore()]
     (OUT / "all_tables.md").write_text("\n\n".join(parts) + "\n")
     print("wrote", OUT / "all_tables.md")
 

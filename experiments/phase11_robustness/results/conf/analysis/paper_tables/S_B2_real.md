@@ -1,0 +1,12 @@
+### S-B2b. Degeneracy diagnostic of the real K3 detections
+
+| window | SDNN (ms) | SDNN of NN (ms) | z_max | G | m at z_max | surrogate SD at m | degenerate |
+|---|---|---|---|---|---|---|---|
+| real|nsr2db|nsr029|9 | 15.3 | 15.3 | 2e+11 | 0.40 | 5 | 0 | True |
+| real|nsr2db|nsr049|3 | 112.1 | 112.2 | 14.9 | 0.53 | 5 | 0.0422 | False |
+| real|nsr2db|nsr049|5 | 102.3 | 102.3 | 11.1 | 0.40 | 2 | 0.0502 | False |
+| real|nsr2db|nsr049|6 | 202.3 | 187.0 | 13.8 | 0.30 | 2 | 0.0448 | False |
+| real|nsr2db|nsr052|6 | 79.1 | 79.1 | 11.1 | 0.33 | 2 | 0.0696 | False |
+| real|chf2db|chf211|7 | 95.9 | 95.8 | 10 | 0.30 | 3 | 0.0795 | False |
+| real|chf2db|chf216|2 | 39.1 | 39.1 | 10.6 | 0.40 | 2 | 0.0388 | False |
+| real|chf2db|chf218|12 | 118.9 | 117.7 | 16.1 | 0.27 | 2 | 0.0472 | False |

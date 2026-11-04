@@ -655,6 +655,14 @@ def b1(phase):
         res = {"n": len(f), "flips_raw": int((f.TIT_s != f.TIT).sum()), "flips_masked": int((f.TITm_s != f.TITm).sum()),
                "flips_edited": int((f.TITe_s != f.TITe).sum())}
         res["headline"] = headline_windows(f.assign(TIT=f.TIT_s).reset_index())
+        nl = {}
+        for r in W:
+            if r["salt"] == s and r["raw"]["positive"]:
+                nl[r["id"].split("|", 1)[1].rsplit("|", 1)[0]] = r["raw"]["NL"]
+        dnl = np.array([nl[w] - base.loc[w, "TIT_NL"] for w in nl if w in base.index and "TIT_NL" in base.columns])
+        if len(dnl):
+            res["raw_positive_NL_change"] = {"n": int(len(dnl)), "n_identical": int((np.abs(dnl) < 1e-12).sum()),
+                                             "mean_abs": float(np.mean(np.abs(dnl))), "max_abs": float(np.max(np.abs(dnl)))}
         out[f"salt{s}_windows"] = res
     S = load(phase, "seed_seg")
     sgi = sg10.set_index(["subject", "seg"])
@@ -744,6 +752,8 @@ def b2(phase):
     rows = []
     for r in R:
         rows.append({"group": r["group"], "cond": f"{r['name']}|{r['ectopy']}|{r['level']}", "label": r["label"],
+                     "family": r.get("family"), "sdnn128": r["K3_128"].get("sdnn_nn", np.nan),
+                     "ana128": bool(r["K3_128"].get("analysable", True)),
                      "d360": bool(r["K3_360"]["detected"]), "d128": bool(r["K3_128"]["detected"]),
                      "deg128": bool(r["K3_128"].get("degenerate")), "deg360": bool(r["K3_360"].get("degenerate"))})
     df = pd.DataFrame(rows)
@@ -768,6 +778,18 @@ def b2(phase):
     pw = df[df.group.isin(["chaos_primary", "chaos_second"])]
     out["power"] = {g: {"n": int(len(d)), "k128": int(d.d128.sum()), "k360": int(d.d360.sum()),
                         "rate128": float(d.d128.mean()), "rate360": float(d.d360.mean())} for g, d in pw.groupby("group")}
+    # descriptive breakdown (where the 1/128 s detections come from)
+    det = fp[fp.d128]
+    out["fp_detail"] = {"n_errors_generation": n_errors(phase, "b2"),
+                        "det128_by_family": {k: int(v) for k, v in det.groupby("family").size().items()},
+                        "det128_degenerate": int(det.deg128.sum()),
+                        "non_ktz": {"n": int((fp.family != "ktz").sum()), "k128": int(fp[fp.family != "ktz"].d128.sum()),
+                                          "k360": int(fp[fp.family != "ktz"].d360.sum())},
+                        "ktz_sdnn_nn_ms_median_128": float(np.nanmedian(fp[fp.family == "ktz"].sdnn128)) * 1000,
+                        "not_analysable_128": int((~fp.ana128).sum())}
+    out["power_by_family"] = {f"{g}|{f}": {"n": int(len(d)), "k128": int(d.d128.sum()), "k360": int(d.d360.sum())}
+                              for (g, f), d in pw.groupby(["group", "family"])}
+    out["power_det128_degenerate"] = int(pw[pw.d128].deg128.sum())
     return out
 
 
