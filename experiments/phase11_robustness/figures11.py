@@ -226,13 +226,13 @@ def f6(B):
     cells = [(k, n) for k, n in cells if A1.get(k, {}).get("pooled")]
     if not cells:
         return
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(W2, 2.0))
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(W2, 2.2), gridspec_kw={"width_ratios": [1.15, 1], "wspace": 0.62})
     x = np.arange(len(cells))
     ft = [A1[k]["pooled"]["F_true"] for k, _ in cells]
     fs = [A1[k]["pooled"]["F_sham"] for k, _ in cells]
     a1.bar(x - 0.19, ft, 0.36, color=S[0], label="true ectopy mask")
     a1.bar(x + 0.19, fs, 0.36, color=S[3], label="sham mask (same size, shifted)", hatch="///", edgecolor="white", lw=0)
-    a1.set_xticks(x, [n for _, n in cells])
+    a1.set_xticks(x, [n for _, n in cells], fontsize=6)
     a1.set_ylabel("fraction of raw positives removed")
     a1.set_ylim(0, 1)
     a1.legend(frameon=False, loc="upper left")
@@ -250,7 +250,8 @@ def f6(B):
     a2.set_yticks(x, [n.replace("\n", " ") for _, n in cells])
     a2.invert_yaxis()
     a2.set_xlabel("D = removed (true) − removed (sham), 95 % cluster CI")
-    a2.legend(frameon=False, loc="lower right")
+    a2.set_xlim(0, None)
+    a2.legend(frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=3, handletextpad=0.3)
     _grid(a2, "x")
     save(fig, "F6_true_vs_sham")
 
@@ -278,7 +279,7 @@ def f7(B):
     p = T[vs[0]].get("pooled", {})
     ax.set_xlabel(f"Δ titration-positive rate vs untouched window (V0 = {100 * p.get('rate_a', np.nan):.0f} %)")
     ax.set_title("One ectopic event transplanted into clean real windows", loc="left")
-    ax.legend(frameon=False, loc="lower right")
+    ax.legend(frameon=False, loc="upper left", bbox_to_anchor=(0.02, 0.98), handletextpad=0.3)
     _grid(ax, "x")
     save(fig, "F7_transplant_variants")
 
