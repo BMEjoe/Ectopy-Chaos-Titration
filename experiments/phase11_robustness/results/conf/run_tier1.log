@@ -38,3 +38,12 @@ transplant: 439 tasks to run (0 done)
   transplant 400/439 11.4 min; eta 1.1 min
   transplant 439/439 12.5 min; eta 0.0 min
 synth1: 700 tasks to run (0 done)
+  synth1 50/700 3.1 min; eta 40.3 min
+  synth1 100/700 6.2 min; eta 37.1 min
+  synth1 150/700 9.0 min; eta 33.0 min
+  synth1 200/700 11.8 min; eta 29.5 min
+  synth1 250/700 14.7 min; eta 26.4 min
+  synth1 300/700 17.6 min; eta 23.4 min
+  synth1 350/700 20.6 min; eta 20.6 min
+  synth1 400/700 23.3 min; eta 17.5 min
+  synth1 450/700 26.2 min; eta 14.5 min
