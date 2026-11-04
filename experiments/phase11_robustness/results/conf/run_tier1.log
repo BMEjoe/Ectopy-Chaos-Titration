@@ -47,3 +47,4 @@ synth1: 700 tasks to run (0 done)
   synth1 350/700 20.6 min; eta 20.6 min
   synth1 400/700 23.3 min; eta 17.5 min
   synth1 450/700 26.2 min; eta 14.5 min
+  synth1 500/700 28.5 min; eta 11.4 min

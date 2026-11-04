@@ -5404,5 +5404,63 @@
    }
   },
   "verdict": "supports"
+ },
+ "C1_runs": {
+  "windows": [
+   {
+    "wid": "real|nsr2db|nsr010|4",
+    "run_length": 5,
+    "symbols": "AAAAA",
+    "TIT": true,
+    "TITm": false,
+    "TITm_ok": true,
+    "TITe": false
+   },
+   {
+    "wid": "real|nsr2db|nsr036|7",
+    "run_length": 9,
+    "symbols": "AAAAAAAAA",
+    "TIT": true,
+    "TITm": true,
+    "TITm_ok": true,
+    "TITe": true
+   },
+   {
+    "wid": "real|nsr2db|nsr046|7",
+    "run_length": 3,
+    "symbols": "AAA",
+    "TIT": true,
+    "TITm": false,
+    "TITm_ok": true,
+    "TITe": false
+   },
+   {
+    "wid": "real|chf2db|chf206|4",
+    "run_length": 513,
+    "symbols": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVA",
+    "TIT": true,
+    "TITm": false,
+    "TITm_ok": false,
+    "TITe": false
+   }
+  ],
+  "n": 4,
+  "n_positive_raw": 4,
+  "run_3": {
+   "n": 1,
+   "positive_raw": 1
+  },
+  "run_5": {
+   "n": 1,
+   "positive_raw": 1
+  },
+  "run_9": {
+   "n": 1,
+   "positive_raw": 1
+  },
+  "run_513": {
+   "n": 1,
+   "positive_raw": 1
+  }
  }
 }

@@ -840,5 +840,46 @@ def main(argv=None):
     json.dump(res, open(p, "w"), indent=1, default=A10._json_default)
 
 
+
+# ----------------------------------------------------------------------------------------------- C1 support
+def c1_runs(phase):
+    """C1: source search for the draft statement 'a single run of three premature beats was enough in 7 of 8
+    windows': windows whose only abnormal beats form exactly one run of k >= 3 consecutive abnormal beats
+    (symbol-based), with the Phase 10 raw titration outcome, by run length."""
+    from experiments.phase10_final import data10 as D
+    from experiments.phase11_robustness import run11 as R11
+    ctx = R11.Ctx(phase == "pilot")
+    df = p10_real(phase).set_index("wid")
+    rows = []
+    for w in R11.windows(ctx):
+        if w["wid"] not in df.index:
+            continue
+        sym = R11.win_data(ctx, w)["sym"]
+        ab = ~np.isin(sym, list(D.NORMAL))
+        if not ab.any():
+            continue
+        runs, k, i = [], 0, 0
+        for v in ab:
+            if v:
+                k += 1
+            elif k:
+                runs.append(k)
+                k = 0
+        if k:
+            runs.append(k)
+        if len(runs) == 1 and runs[0] >= 3:
+            r = df.loc[w["wid"]]
+            rows.append({"wid": w["wid"], "run_length": runs[0], "symbols": "".join(sym[ab]), "TIT": bool(r.TIT),
+                         "TITm": bool(r.TITm), "TITm_ok": bool(r.TITm_analysable), "TITe": bool(r.TITe)})
+    out = {"windows": rows, "n": len(rows), "n_positive_raw": int(sum(r["TIT"] for r in rows))}
+    for L in sorted({r["run_length"] for r in rows}):
+        rr = [r for r in rows if r["run_length"] == L]
+        out[f"run_{L}"] = {"n": len(rr), "positive_raw": int(sum(r["TIT"] for r in rr))}
+    return out
+
+
+SECTIONS["C1_runs"] = c1_runs
+
+
 if __name__ == "__main__":
     main()
