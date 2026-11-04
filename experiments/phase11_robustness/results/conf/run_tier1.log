@@ -1,0 +1,20 @@
+prep: 1 tasks to run (0 done)
+  prep 1/1 1.5 min; eta 0.0 min
+hrt: 83 tasks to run (0 done)
+  hrt 50/83 0.1 min; eta 0.1 min
+  hrt 83/83 0.1 min; eta 0.0 min
+covar: 83 tasks to run (0 done)
+  covar 50/83 0.1 min; eta 0.1 min
+  covar 83/83 0.1 min; eta 0.0 min
+sham_win: 988 tasks to run (0 done)
+  sham_win 50/988 0.8 min; eta 14.2 min
+  sham_win 100/988 1.5 min; eta 13.5 min
+  sham_win 150/988 2.1 min; eta 11.9 min
+  sham_win 200/988 2.9 min; eta 11.3 min
+  sham_win 250/988 3.6 min; eta 10.8 min
+  sham_win 300/988 4.3 min; eta 9.9 min
+  sham_win 350/988 5.0 min; eta 9.2 min
+  sham_win 400/988 6.0 min; eta 8.8 min
+  sham_win 450/988 6.6 min; eta 7.9 min
+  sham_win 500/988 7.4 min; eta 7.3 min
+  sham_win 550/988 8.3 min; eta 6.6 min
