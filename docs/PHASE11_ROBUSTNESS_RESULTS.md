@@ -443,7 +443,8 @@ condition) and use Phase 10's U = 0.0146.
 - The Wilson-lower variant, which accounts for the finite number of spiked windows, is up to one f step more
   conservative. It is the safer column to quote.
 - **Across B1 (K3 seed), B3 (design) and B4 (base window), only vdP (6, 4.0) at π < 0.05 is fragile.** It loses its
-  bound in all three. The other bounds move by at most one f step.
+  bound under both new K3 seeds and in the pooled base-window analysis, but keeps it (0.9) under the
+  variance-preserving design. Every other bound moves by at most one f step in either direction.
 
 ## Exploratory: ectopy dose-response on N1 (Amendment 1): pending
 
