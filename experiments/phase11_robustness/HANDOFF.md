@@ -62,7 +62,8 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget: 0 errors; Tier 1 8.2 h + Tier 2 9.4 h = 17.6 h (no thinning) | done | |
 | PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | (this commit) |
 | Tier 1 run started 2026-11-04 (`run_tier1.log`); prep, hrt, covar, sham_win, transplant done | running | 7514b6e |
-| Tier 1 analysis: A1 windows, A2 hrt / transplant / beat type, A3, A4 done (analysis11.json); A1 segments, A2 synth / extmask, A5 pending | partial | (this commit) |
+| Tier 1 run: rdg_verify, rdg_synth, rdg_win done; sham_seg, rdg_seg running | running | |
+| Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments, A5 R1/R4 segments pending | partial | (this commit) |
 | Tier 2 run + analysis | todo | |
 | Tier 3 tables / figures | todo | |
 | report docs/PHASE11_ROBUSTNESS_RESULTS.md | todo | |
@@ -93,6 +94,12 @@ Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line
 - D4 (HRT definitions): filter rules confirmed from Cygankiewicz et al. 2003 (who state they follow the Schmidt
   group's published algorithm) and the Watanabe 2003 review; Bauer 2008 full text (JACC) returned 403; details in
   METHODS.md.
+
+## Interim findings to carry into the report (not yet final)
+- A5: verified readings R0, R3, R4, R6, R7 reproduce (i)-(iv) at window level -> no against-H result. Unverified:
+  R1 (fails V2-V6), R2 (fails V3, V4, V6), R5 (fails V1, V4, V5). R5 (nested F) fails (ii) and REVERSES (iii) masked
+  (-17.4 % [-31.7, -2.8]); report prominently even though R5 fails verification. R7 decisions identical to R0 on all
+  windows: positivity is set by the base VWK test, the scheme changes only NL magnitude.
 
 ## Notes
 - Never `pkill -f <pattern>` with a pattern that also appears in the calling shell command.
