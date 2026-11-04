@@ -691,7 +691,46 @@ def b1(phase):
                                            **{f"{k}_seed0": int(f[k].sum()) for k in ("K1", "LLE", "UPO")},
                                            **{f"{k}_flips": int((f[f"{k}_s"] != f[k]).sum()) for k in ("K1", "LLE", "UPO")},
                                            "LLE_gee": headline_lle(f.assign(LLE=f.LLE_s).reset_index())}
+    out["conclusions"] = b1_conclusions(out, headline_lle(df10))
     return out
+
+
+def _side(ci, null):
+    """'above' / 'includes' / 'below' the null value (the registered B1 'conclusion' of a CI)."""
+    if ci is None or any(c is None or not np.isfinite(c) for c in ci):
+        return None
+    return "above" if ci[0] > null else ("below" if ci[1] < null else "includes")
+
+
+def b1_conclusions(out, lle0):
+    """B1 registered rule (PREREGISTRATION 7): a headline conclusion 'changes' when the CI's side of its null differs
+    from salt 0 (Phase 10).  Written before the seed results were inspected."""
+    items = []
+
+    def add(name, ci0, null, others):
+        s0 = _side(ci0, null)
+        for lab, ci in others:
+            si = _side(ci, null)
+            items.append({"headline": name, "seed": lab, "salt0": s0, "seed_side": si, "changed": si != s0})
+
+    w0 = out["salt0_windows"]
+    wk = [k for k in out if k.startswith("salt") and k.endswith("_windows") and k != "salt0_windows"]
+    add("P3 burden OR (windows)", w0["OR_ci95"], 1.0, [(k, out[k]["headline"]["OR_ci95"]) for k in wk])
+    add("P3 CHF OR (windows)", w0["CHF_OR_ci95"], 1.0, [(k, out[k]["headline"]["CHF_OR_ci95"]) for k in wk])
+    s0 = out["salt0_segments"]
+    sk = [k for k in out if k.startswith("salt") and k.endswith("_segments") and k != "salt0_segments"]
+    for arm in ("raw", "masked", "wu"):
+        add(f"P2 CHF-NSR {arm} (segments)", s0[arm]["ci95"], 0.0, [(k, out[k]["headline"][arm]["ci95"]) for k in sk])
+    for g in s0["masked_change"]:
+        add(f"P2 masked change {g} (segments)", s0["masked_change"][g]["ci95"], 0.0,
+            [(k, out[k]["headline"]["masked_change"].get(g, {}).get("ci95")) for k in sk])
+    if lle0:
+        kk = [k for k in out if k.startswith("K1_seeds")]
+        add("LLE burden OR (windows)", lle0["OR_ci95"], 1.0, [(k, (out[k]["LLE_gee"] or {}).get("OR_ci95")) for k in kk])
+    n_changed = sum(1 for i in items if i["changed"])
+    return {"items": items, "n_changed": n_changed,
+            "verdict": "weakens (a headline conclusion changes under a new seed)" if n_changed else
+                       "supports (no headline conclusion changes)"}
 
 
 def headline_lle(f):
