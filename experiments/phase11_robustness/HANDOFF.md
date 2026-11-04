@@ -1,5 +1,7 @@
 # Phase 11 handoff (living document; update after every step)
 
+**STATUS: COMPLETE (2026-11-04).** Report: `docs/PHASE11_ROBUSTNESS_RESULTS.md`. Nothing is running.
+
 Read this first when resuming. Phase 11 = registered SECONDARY robustness analyses for the manuscript
 "Ectopic Beats Masquerade as Chaos in Heart Rate ...". Never merge into main, never open a pull request.
 Commit and push after every step.
@@ -60,16 +62,19 @@ P2 raw NSR 51.7 %, CHF 74.2 %, diff +22.4 % [12.8, 31.7]; masked diff -4.9 % [-1
 | sanity check analysis10 conf identical | done | |
 | code: titration11 (+ exactness test, 20 series), hrt11 (+ tests), harness11 (+ tests), run11, data11 | done | |
 | pilot (dev data nsrdb/chfdb, pilot seeds 11900+) for runtime budget: 0 errors; Tier 1 8.2 h + Tier 2 9.4 h = 17.6 h (no thinning) | done | |
-| PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | (this commit) |
+| PREREGISTRATION.md committed + pushed (before any Phase 11 run on confirmatory data) | done | 2b0e459 |
+| Amendment 1 (exploratory dose-response), dated, pushed before running | done | 1cf78a6 |
 | Tier 1 run started 2026-11-04 (`run_tier1.log`) | done | 7514b6e |
 | Tier 1 run: all 12 parts done (RUN11 DONE), 0 errors | done | |
-| Tier 1 analysis: A1 windows, A2 (all), A3, A4, A5 windows/synthetic done (analysis11.json); A1 segments done (summary: supports); A5 segments done | done | (this commit) |
-| Tier 2 run started (`run_tier2.log`) | running | |
-| Tier 2 analysis | todo | |
-| Tier 3 tables / figures | todo | |
-| report docs/PHASE11_ROBUSTNESS_RESULTS.md | draft (Tier 1 windows filled; rest pending) | 5677e0a |
-| exploratory dose-response (Amendment 1, `explore11.py`) | written; runs after Tier 2 | 1cf78a6 |
-| paper_tables.py test run on partial JSON | ok (Table VI = Phase 10 §5.1) | |
+| Tier 1 analysis: A1-A5 (windows and segments) | done | 2f829d1 |
+| Tier 2 run (`run_tier2.log`): seed_win, k3seed, b2, b3, seed_seg, k1seed, b4 (RUN11 DONE); 0 errors except 56 b2 generation errors (known Phase 9 limit) | done | 2769134 |
+| Tier 2 analysis: B1, B2, B2_real_K3, B3_B4 (+ descriptive B1_K3_bounds) | done | 2769134 |
+| b3k1 (optional K1 on B3) | NOT RUN (budget; D5) | |
+| exploratory dose-response (`explore11.py`) | done (0 errors) | 0bdbc8f |
+| full analysis11 rerun from scratch = incremental JSON (0 differences) | done | b466389 |
+| Tier 3: paper_tables.py (Tables I-VII + supplementary), figures11.py (F1-F7 PDF + 300 dpi PNG) | done | b466389 |
+| Phase 11 tests: 34 passed | done | |
+| report docs/PHASE11_ROBUSTNESS_RESULTS.md | **complete** | a6a6177 |
 
 ## Resume commands
 All runs are resumable (finished task ids skipped). Run from branch `phase11-robustness` (the guard checks
@@ -78,6 +83,7 @@ All runs are resumable (finished task ids skipped). Run from branch `phase11-rob
 cd /home/user/arrhythmia-detection-pipeline
 nohup env OMP_NUM_THREADS=1 PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.run11 --part tier1 --workers 4 >> experiments/phase11_robustness/results/conf/run_tier1.log 2>&1 &
 nohup env OMP_NUM_THREADS=1 PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.run11 --part tier2 --workers 4 >> experiments/phase11_robustness/results/conf/run_tier2.log 2>&1 &
+PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.explore11 --workers 4      # then --analyse
 # optional, last: --part b3k1
 PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.analysis11 --phase conf [--only A1,A2_hrt,...]
 PYTHONPATH=. /root/venv313/bin/python -m experiments.phase11_robustness.paper_tables
@@ -104,8 +110,16 @@ Progress: `tail experiments/phase11_robustness/results/conf/run_tier1.log`; line
 - D4 (HRT definitions): filter rules confirmed from Cygankiewicz et al. 2003 (who state they follow the Schmidt
   group's published algorithm) and the Watanabe 2003 review; Bauer 2008 full text (JACC) returned 403; details in
   METHODS.md.
+- D5 (b3k1 not run): the preregistration runs it last and only if budget remains (about 4.5 h, outside the 17.6 h
+  budget). Tiers 1-2 took about 20 h wall-clock (three container restarts), so it would have passed the 24 h ceiling.
+- D6 (session kept active): after three container restarts while idle, the session stayed active during runs
+  (foreground waits of <= 10 min, one check each). There were no further restarts.
+- D7 (B1 conclusion rule coded before seeing seed results, commit edd9fe5). Descriptive, not registered:
+  `B1_K3_bounds` (Table VI bounds with each K3 seed's U) and the B1/B2 breakdowns. Each is labelled in the report.
+- D8 (report numbers from JSON only): every number in the report is in `analysis11.json` or `explore_dose.json`.
+  The ad hoc B1/B2 breakdowns were moved into `analysis11.py` before the report was finalised.
 
-## Interim findings to carry into the report (not yet final)
+## Findings noted during the run (all carried into the report)
 - A5: verified readings R0, R3, R4, R6, R7 reproduce (i)-(iv) at window level -> no against-H result. Unverified:
   R1 (fails V2-V6), R2 (fails V3, V4, V6), R5 (fails V1, V4, V5). R5 (nested F) fails (ii) and REVERSES (iii) masked
   (-17.4 % [-31.7, -2.8]); report prominently even though R5 fails verification. R7 decisions identical to R0 on all
