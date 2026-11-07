@@ -1,0 +1,36 @@
+........................................................................ [ 14%]
+........................................................................ [ 28%]
+........................................................................ [ 43%]
+........................................................................ [ 57%]
+........................................................................ [ 72%]
+........................................................................ [ 86%]
+......................................................F..........        [100%]
+=================================== FAILURES ===================================
+_ test_hybrid_period1_stability_matches_analytic_henon_multipliers[1-prl_norm] _
+
+form = 'prl_norm', which = 1
+
+    @pytest.mark.parametrize("form", ["prl_norm", "pre_tensor"])
+    @pytest.mark.parametrize("which", [0, 1])
+    def test_hybrid_period1_stability_matches_analytic_henon_multipliers(form, which):
+        """Validates the HYBRID PRL/PRE stability (PRE Eq. 20 Jacobians), not the
+        literal PRL temporal-S_n procedure."""
+        fpnt = us.henon_fixed_points()[which]
+        peaks = us.henon_period1(form)["source_peak_candidates"]
+        c = min(peaks, key=lambda c: abs(c["scalar_location"] - fpnt))
+        st = c["source_stability"]
+        exact = _analytic_moduli(fpnt)
+>       assert abs(st["lyapunov_numbers"][0] - exact[0]) / exact[0] < 0.15
+E       assert (np.float64(15.14803941007208) / np.float64(2.0926695753165023)) < 0.15
+E        +  where np.float64(15.14803941007208) = abs((np.float64(17.240708985388583) - np.float64(2.0926695753165023)))
+
+tests/test_upo_stability.py:40: AssertionError
+=============================== warnings summary ===============================
+tests/test_phase5_combined_chaos.py::test_upo_failure_status_counts_as_not_detected
+  /home/user/arrhythmia-detection-pipeline/final_pipeline.py:1006: RuntimeWarning: Mean of empty slice
+    y = np.nanmean(log_div, axis=0)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_upo_stability.py::test_hybrid_period1_stability_matches_analytic_henon_multipliers[1-prl_norm]
+1 failed, 496 passed, 1 warning in 191.50s (0:03:11)
