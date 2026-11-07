@@ -28,7 +28,7 @@ CURRENT branch's origin copy, so run from `phase12-original-methods`.
 | pilot (synthetic 12900+ and mitdb only): projected 0.19 h, no thinning | done | (this commit) |
 | PREREGISTRATION.md committed + pushed before any run on nsr2db/chf2db/nsrdb/chfdb | done | (this commit) |
 | Tier 1B run (b1, b2, b4a, b4v, b4s, b4t, b4w; 0 errors) + B3 Santa Fe A; analysis12 Tier 1B sections | done | (this commit) |
-| Tier 1C PM97 replication (pm97, pm97nl) | running | |
+| Tier 1C PM97 replication (pm97, pm97nl; 0 errors; 33 subjects, none excluded) + analysis12 PM97 | done | (this commit) |
 | Tier 2 tables, figures, numbers ledger | todo | |
 | report docs/PHASE12_ORIGINAL_METHODS_RESULTS.md | todo | |
 
@@ -69,6 +69,13 @@ PYTHONPATH=. /root/venv313/bin/python -m experiments.phase12_original.analysis12
   N5 rule -> 'no verified surrogate reading removes N5' (Phase 10 N5 100/100 under all readings; AAFT removes most
   AR(1) static-transform positives). Transplant V1-V0: R0 +64.2, BP96 +27.8, S-AAFT +29.8, S-FT +61.0.
   S2 isolated 5 %: R0 4/100 but R0-BP96F 39, R0-BP96 46.
+
+- PM97 (nsrdb/chfdb; 30 midnight blocks, 3 lowest-mean-HR fallbacks): raw R0 NSR 52.6 % vs CHF 69.2 %
+  (+16.5 [-1.9, 33.3]): PM97 pattern NOT reproduced (healthy not ~100 %, CHF not lower). R0-BP96 raw: -9.6 [-27, 7].
+  AFTER ectopy handling CHF is LOWER: masked -45.6 [-57.0, -33.7], edited -26.4 [-42.8, -8.2], Wu -27.9 [-44.1, -10.3]
+  -> registered 'against my claims' criterion (PM97 decrease survives handling) is MET on these databases.
+  Within-subject ectopy OR 2.35 [1.78, 3.10]. Post hoc (labelled): ectopy-free segments NSR 53 % vs CHF 19 % (8 CHF
+  subjects) -34 [-56, -6]. CHF masked-arm analysable fraction 34 % (NSR 98 %).
 
 ## Notes
 - Never `pkill -f <pattern>` with a pattern that also appears in the calling shell command.

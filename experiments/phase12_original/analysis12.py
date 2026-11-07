@@ -438,6 +438,20 @@ def sec_pm97():
     cl = d5.assign(pos=d5["raw|R0"].astype(float), x=np.log2(1 + d5.ectopy.astype(float)))
     out["clogit_ectopy"] = A11.clogit(cl, "pos", ["x"])
     out["ectopy_by_group"] = {g: q(d5[d5.group == g].groupby("subject").ectopy.sum().values) for g in GROUPS}
+    # DESCRIPTIVE / POST HOC (not registered; added after the PM97 outputs were seen, labelled as such)
+    out["descriptive_handling"] = {
+        "label": "descriptive, not registered (added after the outputs were seen)",
+        "analysable_fraction_500": {g: {arm: float(d5[d5.group == g][f"{arm}|R0|ok"].mean())
+                                        for arm in ("raw", "rawf", "masked", "edited", "wu")} for g in GROUPS},
+        "segments_with_ectopy_fraction_500": {g: float((d5[d5.group == g].ectopy > 0).mean()) for g in GROUPS},
+        "ectopic_beats_per_segment_500": {g: q(d5[d5.group == g].ectopy.values) for g in GROUPS}}
+    clean = d5[(d5.ectopy == 0) & (d5.n_out == 0)]
+    out["exploratory_clean_segments"] = {
+        "label": "EXPLORATORY / POST HOC (not registered): 500-beat segments with no non-normal beat and no out-of-range "
+                 "interval, so raw = every handled arm; raw decision",
+        "n_segments": {g: int((clean.group == g).sum()) for g in GROUPS},
+        "n_subjects": {g: int(clean[clean.group == g].subject.nunique()) for g in GROUPS},
+        **{rd: A10.group_rates(clean, f"raw|{rd}") for rd in ("R0", "R0-BP96")}}
     # Fig. 3 reading: mean SD of the first 80 nonlinear coefficients across positive raw 500-beat segments
     vals = {}
     for sid, g in d5[d5["raw|R0"] & d5.coef80.notna()].groupby("subject"):

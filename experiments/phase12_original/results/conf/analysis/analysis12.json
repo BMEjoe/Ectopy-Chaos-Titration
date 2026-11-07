@@ -5962,6 +5962,5616 @@
   "b4t": 0,
   "b4w": 0,
   "pm97": 0,
-  "pm97nl": null
+  "pm97nl": 0
+ },
+ "PM97": {
+  "subjects": [
+   {
+    "subject": "nsrdb:16272",
+    "db": "nsrdb",
+    "rec": "16272",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 49359,
+    "end_beat": 69359,
+    "t_start_h": 13.250075954861112,
+    "t_end_h": 18.743450520833335,
+    "base_time": "10:45:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 10,
+    "sd_segment_means": 0.06587440139920782
+   },
+   {
+    "subject": "nsrdb:16795",
+    "db": "nsrdb",
+    "rec": "16795",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 59880,
+    "end_beat": 79880,
+    "t_start_h": 12.750232204861112,
+    "t_end_h": 18.8090625,
+    "base_time": "11:15:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.1437075584463501
+   },
+   {
+    "subject": "chfdb:chf01",
+    "db": "chfdb",
+    "rec": "chf01",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 54558,
+    "end_beat": 74558,
+    "t_start_h": 14.000212222222222,
+    "t_end_h": 19.714597777777776,
+    "base_time": "10:00:00",
+    "fs": 250.0,
+    "n_nonnormal": 272,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.051594123629214644
+   },
+   {
+    "subject": "chfdb:chf05",
+    "db": "chfdb",
+    "rec": "chf05",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 96129,
+    "end_beat": 116129,
+    "t_start_h": 15.566773333333332,
+    "t_end_h": 19.221315555555556,
+    "base_time": "08:26:00",
+    "fs": 250.0,
+    "n_nonnormal": 220,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.017552107537710894
+   },
+   {
+    "subject": "nsrdb:19088",
+    "db": "nsrdb",
+    "rec": "19088",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 68250,
+    "end_beat": 88250,
+    "t_start_h": 13.033407118055555,
+    "t_end_h": 17.87306857638889,
+    "base_time": "10:58:00",
+    "fs": 128.0,
+    "n_nonnormal": 2,
+    "n_out_of_range": 13,
+    "sd_segment_means": 0.04545446618373735
+   },
+   {
+    "subject": "chfdb:chf09",
+    "db": "chfdb",
+    "rec": "chf09",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 92007,
+    "end_beat": 112007,
+    "t_start_h": 15.916711111111113,
+    "t_end_h": 19.26027,
+    "base_time": "08:05:00",
+    "fs": 250.0,
+    "n_nonnormal": 164,
+    "n_out_of_range": 2,
+    "sd_segment_means": 0.008922407012639562
+   },
+   {
+    "subject": "chfdb:chf11",
+    "db": "chfdb",
+    "rec": "chf11",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 92161,
+    "end_beat": 112161,
+    "t_start_h": 15.100066666666667,
+    "t_end_h": 19.24655,
+    "base_time": "08:54:00",
+    "fs": 250.0,
+    "n_nonnormal": 72,
+    "n_out_of_range": 1,
+    "sd_segment_means": 0.055394312141872376
+   },
+   {
+    "subject": "nsrdb:19090",
+    "db": "nsrdb",
+    "rec": "19090",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 45066,
+    "end_beat": 65066,
+    "t_start_h": 10.166686197916667,
+    "t_end_h": 15.329568142361111,
+    "base_time": "13:50:00",
+    "fs": 128.0,
+    "n_nonnormal": 1,
+    "n_out_of_range": 8,
+    "sd_segment_means": 0.050064097422858014
+   },
+   {
+    "subject": "chfdb:chf15",
+    "db": "chfdb",
+    "rec": "chf15",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 89144,
+    "end_beat": 109144,
+    "t_start_h": 14.83343,
+    "t_end_h": 18.755705555555554,
+    "base_time": "09:10:00",
+    "fs": 250.0,
+    "n_nonnormal": 794,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.04622706049812588
+   },
+   {
+    "subject": "chfdb:chf14",
+    "db": "chfdb",
+    "rec": "chf14",
+    "group": "CHF",
+    "rule": "lowest_mean_hr",
+    "start_beat": 73000,
+    "end_beat": 93000,
+    "t_start_h": 15.057961111111112,
+    "t_end_h": 19.85255888888889,
+    "base_time": "08:14:00",
+    "fs": 250.0,
+    "n_nonnormal": 39,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.05506748192703835
+   },
+   {
+    "subject": "chfdb:chf10",
+    "db": "chfdb",
+    "rec": "chf10",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 117835,
+    "end_beat": 137835,
+    "t_start_h": 15.716762222222222,
+    "t_end_h": 18.47653,
+    "base_time": "08:17:00",
+    "fs": 250.0,
+    "n_nonnormal": 168,
+    "n_out_of_range": 4,
+    "sd_segment_means": 0.026170658299870312
+   },
+   {
+    "subject": "chfdb:chf04",
+    "db": "chfdb",
+    "rec": "chf04",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 54057,
+    "end_beat": 74057,
+    "t_start_h": 9.500066666666665,
+    "t_end_h": 12.995614444444444,
+    "base_time": "14:30:00",
+    "fs": 250.0,
+    "n_nonnormal": 182,
+    "n_out_of_range": 7,
+    "sd_segment_means": 0.038189610862606554
+   },
+   {
+    "subject": "chfdb:chf08",
+    "db": "chfdb",
+    "rec": "chf08",
+    "group": "CHF",
+    "rule": "lowest_mean_hr",
+    "start_beat": 70000,
+    "end_beat": 90000,
+    "t_start_h": 15.194462222222223,
+    "t_end_h": 19.788506666666667,
+    "base_time": "08:19:00",
+    "fs": 250.0,
+    "n_nonnormal": 185,
+    "n_out_of_range": 1,
+    "sd_segment_means": 0.03569947572397274
+   },
+   {
+    "subject": "nsrdb:16773",
+    "db": "nsrdb",
+    "rec": "16773",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 60777,
+    "end_beat": 80777,
+    "t_start_h": 14.16681640625,
+    "t_end_h": 21.27857204861111,
+    "base_time": "09:50:00",
+    "fs": 128.0,
+    "n_nonnormal": 14,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.04552108186130762
+   },
+   {
+    "subject": "nsrdb:16273",
+    "db": "nsrdb",
+    "rec": "16273",
+    "group": "NSR",
+    "rule": "lowest_mean_hr",
+    "start_beat": 69000,
+    "end_beat": 89000,
+    "t_start_h": 14.99101779513889,
+    "t_end_h": 20.435796440972222,
+    "base_time": "08:00:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.05971028085764761
+   },
+   {
+    "subject": "nsrdb:18177",
+    "db": "nsrdb",
+    "rec": "18177",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 71114,
+    "end_beat": 91114,
+    "t_start_h": 12.500021701388889,
+    "t_end_h": 16.756961805555555,
+    "base_time": "11:30:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 6,
+    "sd_segment_means": 0.10215191632309249
+   },
+   {
+    "subject": "nsrdb:16420",
+    "db": "nsrdb",
+    "rec": "16420",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 69544,
+    "end_beat": 89544,
+    "t_start_h": 14.083504774305556,
+    "t_end_h": 18.75039279513889,
+    "base_time": "09:55:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 2,
+    "sd_segment_means": 0.034607859459316166
+   },
+   {
+    "subject": "nsrdb:19140",
+    "db": "nsrdb",
+    "rec": "19140",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 62926,
+    "end_beat": 82926,
+    "t_start_h": 12.350173611111112,
+    "t_end_h": 16.83265407986111,
+    "base_time": "11:39:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 4,
+    "sd_segment_means": 0.05276981757441877
+   },
+   {
+    "subject": "nsrdb:16786",
+    "db": "nsrdb",
+    "rec": "16786",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 56669,
+    "end_beat": 76669,
+    "t_start_h": 12.200162760416667,
+    "t_end_h": 17.411684027777778,
+    "base_time": "11:48:00",
+    "fs": 128.0,
+    "n_nonnormal": 7,
+    "n_out_of_range": 1,
+    "sd_segment_means": 0.03164228559491697
+   },
+   {
+    "subject": "nsrdb:16265",
+    "db": "nsrdb",
+    "rec": "16265",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 77744,
+    "end_beat": 97744,
+    "t_start_h": 15.933350694444444,
+    "t_end_h": 21.567378472222224,
+    "base_time": "08:04:00",
+    "fs": 128.0,
+    "n_nonnormal": 2,
+    "n_out_of_range": 3,
+    "sd_segment_means": 0.03980003070460755
+   },
+   {
+    "subject": "nsrdb:17052",
+    "db": "nsrdb",
+    "rec": "17052",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 54820,
+    "end_beat": 74820,
+    "t_start_h": 12.9000390625,
+    "t_end_h": 18.581942274305554,
+    "base_time": "11:06:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 3,
+    "sd_segment_means": 0.07982784421746146
+   },
+   {
+    "subject": "nsrdb:18184",
+    "db": "nsrdb",
+    "rec": "18184",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 73494,
+    "end_beat": 93494,
+    "t_start_h": 14.433444010416666,
+    "t_end_h": 18.79486111111111,
+    "base_time": "09:34:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 1,
+    "sd_segment_means": 0.04278403151498809
+   },
+   {
+    "subject": "chfdb:chf12",
+    "db": "chfdb",
+    "rec": "chf12",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 87873,
+    "end_beat": 107873,
+    "t_start_h": 14.166667777777779,
+    "t_end_h": 18.18939111111111,
+    "base_time": "09:50:00",
+    "fs": 250.0,
+    "n_nonnormal": 4,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.015367663685104536
+   },
+   {
+    "subject": "nsrdb:19093",
+    "db": "nsrdb",
+    "rec": "19093",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 50943,
+    "end_beat": 70943,
+    "t_start_h": 13.300305989583334,
+    "t_end_h": 18.95608072916667,
+    "base_time": "10:42:00",
+    "fs": 128.0,
+    "n_nonnormal": 2,
+    "n_out_of_range": 2,
+    "sd_segment_means": 0.06361306679394263
+   },
+   {
+    "subject": "chfdb:chf02",
+    "db": "chfdb",
+    "rec": "chf02",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 61836,
+    "end_beat": 81836,
+    "t_start_h": 10.633441111111111,
+    "t_end_h": 13.980676666666668,
+    "base_time": "13:22:00",
+    "fs": 250.0,
+    "n_nonnormal": 5938,
+    "n_out_of_range": 1,
+    "sd_segment_means": 0.012912424988089262
+   },
+   {
+    "subject": "chfdb:chf06",
+    "db": "chfdb",
+    "rec": "chf06",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 58196,
+    "end_beat": 78196,
+    "t_start_h": 9.41678888888889,
+    "t_end_h": 13.072024444444445,
+    "base_time": "14:35:00",
+    "fs": 250.0,
+    "n_nonnormal": 1685,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.01648864380733418
+   },
+   {
+    "subject": "chfdb:chf07",
+    "db": "chfdb",
+    "rec": "chf07",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 57100,
+    "end_beat": 77100,
+    "t_start_h": 11.800152222222223,
+    "t_end_h": 16.43316777777778,
+    "base_time": "12:12:00",
+    "fs": 250.0,
+    "n_nonnormal": 477,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.038805240969851176
+   },
+   {
+    "subject": "nsrdb:19830",
+    "db": "nsrdb",
+    "rec": "19830",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 79618,
+    "end_beat": 99618,
+    "t_start_h": 14.066872829861111,
+    "t_end_h": 18.835249565972223,
+    "base_time": "09:56:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 21,
+    "sd_segment_means": 0.040489476263829455
+   },
+   {
+    "subject": "chfdb:chf03",
+    "db": "chfdb",
+    "rec": "chf03",
+    "group": "CHF",
+    "rule": "lowest_mean_hr",
+    "start_beat": 61000,
+    "end_beat": 81000,
+    "t_start_h": 14.887627777777778,
+    "t_end_h": 19.921521111111108,
+    "base_time": "08:35:00",
+    "fs": 250.0,
+    "n_nonnormal": 881,
+    "n_out_of_range": 29,
+    "sd_segment_means": 0.03156532034097512
+   },
+   {
+    "subject": "chfdb:chf13",
+    "db": "chfdb",
+    "rec": "chf13",
+    "group": "CHF",
+    "rule": "midnight",
+    "start_beat": 88878,
+    "end_beat": 108878,
+    "t_start_h": 15.166792222222222,
+    "t_end_h": 18.728403333333333,
+    "base_time": "08:50:00",
+    "fs": 250.0,
+    "n_nonnormal": 98,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.020667373043345545
+   },
+   {
+    "subject": "nsrdb:16483",
+    "db": "nsrdb",
+    "rec": "16483",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 73362,
+    "end_beat": 93362,
+    "t_start_h": 14.100106336805556,
+    "t_end_h": 18.625674913194445,
+    "base_time": "09:54:00",
+    "fs": 128.0,
+    "n_nonnormal": 1,
+    "n_out_of_range": 1,
+    "sd_segment_means": 0.018796158492368653
+   },
+   {
+    "subject": "nsrdb:16539",
+    "db": "nsrdb",
+    "rec": "16539",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 75046,
+    "end_beat": 95046,
+    "t_start_h": 15.333372395833333,
+    "t_end_h": 20.019420572916665,
+    "base_time": "08:40:00",
+    "fs": 128.0,
+    "n_nonnormal": 2,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.04276810042550591
+   },
+   {
+    "subject": "nsrdb:17453",
+    "db": "nsrdb",
+    "rec": "17453",
+    "group": "NSR",
+    "rule": "midnight",
+    "start_beat": 75050,
+    "end_beat": 95050,
+    "t_start_h": 14.666753472222222,
+    "t_end_h": 19.3592578125,
+    "base_time": "09:20:00",
+    "fs": 128.0,
+    "n_nonnormal": 0,
+    "n_out_of_range": 0,
+    "sd_segment_means": 0.038948052141281206
+   }
+  ],
+  "n_excluded": 0,
+  "pm97_like_selection": [
+   "nsrdb:16420",
+   "nsrdb:17453",
+   "nsrdb:19830",
+   "nsrdb:16483",
+   "nsrdb:18184",
+   "nsrdb:19140",
+   "nsrdb:16273",
+   "nsrdb:16786",
+   "chfdb:chf12",
+   "chfdb:chf09",
+   "chfdb:chf13",
+   "chfdb:chf10",
+   "chfdb:chf05",
+   "chfdb:chf14",
+   "chfdb:chf02",
+   "chfdb:chf04",
+   "chfdb:chf08",
+   "chfdb:chf06",
+   "chfdb:chf11"
+  ],
+  "cells": {
+   "500|all|raw|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.5263888888888889,
+      "ci95": [
+       0.4375,
+       0.6208333333333333
+      ],
+      "positive_segments": 379
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 600,
+      "mean_subject_rate": 0.6916666666666668,
+      "ci95": [
+       0.5283333333333333,
+       0.8316666666666668
+      ],
+      "positive_segments": 415
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.16527777777777786,
+      "ci95": [
+       -0.019166666666666665,
+       0.33305555555555544
+      ],
+      "perm_p": 0.0744925507449255
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.5263888888888889,
+     "median": 0.5375000000000001
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.6916666666666668,
+     "median": 0.775
+    },
+    "mw_p": 0.03416806069118416,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.95,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 0.925,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.85,
+     "chfdb:chf06": 0.775,
+     "chfdb:chf07": 0.8,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.525,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.625,
+     "chfdb:chf12": 0.025,
+     "chfdb:chf13": 0.675,
+     "chfdb:chf14": 0.375,
+     "chfdb:chf15": 0.975,
+     "nsrdb:16265": 0.575,
+     "nsrdb:16272": 0.575,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.35,
+     "nsrdb:16539": 0.625,
+     "nsrdb:16773": 0.65,
+     "nsrdb:16786": 0.525,
+     "nsrdb:16795": 0.525,
+     "nsrdb:17052": 0.75,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.6,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19088": 0.35,
+     "nsrdb:19090": 0.15,
+     "nsrdb:19093": 0.425,
+     "nsrdb:19140": 0.325,
+     "nsrdb:19830": 0.55
+    }
+   },
+   "500|all|raw|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.7902777777777779,
+      "ci95": [
+       0.7305555555555555,
+       0.848611111111111
+      ],
+      "positive_segments": 569
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 600,
+      "mean_subject_rate": 0.7366666666666666,
+      "ci95": [
+       0.5866666666666667,
+       0.8683333333333334
+      ],
+      "positive_segments": 442
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.053611111111111276,
+      "ci95": [
+       -0.2091666666666666,
+       0.0888888888888889
+      ],
+      "perm_p": 0.48255174482551744
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7902777777777779,
+     "median": 0.825
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.7366666666666666,
+     "median": 0.875
+    },
+    "mw_p": 0.7718590525653657,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 0.9,
+     "chfdb:chf04": 0.875,
+     "chfdb:chf05": 0.875,
+     "chfdb:chf06": 0.925,
+     "chfdb:chf07": 0.825,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.55,
+     "chfdb:chf10": 0.175,
+     "chfdb:chf11": 0.725,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.65,
+     "chfdb:chf14": 0.4,
+     "chfdb:chf15": 0.975,
+     "nsrdb:16265": 0.8,
+     "nsrdb:16272": 0.875,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.675,
+     "nsrdb:16483": 0.575,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.85,
+     "nsrdb:16786": 0.9,
+     "nsrdb:16795": 0.875,
+     "nsrdb:17052": 0.925,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.825,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19088": 0.7,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.825,
+     "nsrdb:19140": 0.75,
+     "nsrdb:19830": 0.675
+    }
+   },
+   "500|all|raw|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.7430555555555556,
+      "ci95": [
+       0.676388888888889,
+       0.8055555555555555
+      ],
+      "positive_segments": 535
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 600,
+      "mean_subject_rate": 0.6466666666666666,
+      "ci95": [
+       0.48666666666666664,
+       0.8000000000000002
+      ],
+      "positive_segments": 388
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.09638888888888897,
+      "ci95": [
+       -0.2702777777777776,
+       0.06972222222222235
+      ],
+      "perm_p": 0.2536746325367463
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7430555555555556,
+     "median": 0.7375
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.6466666666666666,
+     "median": 0.675
+    },
+    "mw_p": 0.7305272641313281,
+    "chf_20_80pp_below_nsr_mean": 6,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.9,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 0.9,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.675,
+     "chfdb:chf06": 0.525,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 0.925,
+     "chfdb:chf09": 0.25,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.675,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.525,
+     "chfdb:chf14": 0.275,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 0.825,
+     "nsrdb:16272": 0.725,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.625,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.825,
+     "nsrdb:16786": 0.9,
+     "nsrdb:16795": 0.825,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.7,
+     "nsrdb:18184": 0.675,
+     "nsrdb:19088": 0.625,
+     "nsrdb:19090": 0.6,
+     "nsrdb:19093": 0.85,
+     "nsrdb:19140": 0.675,
+     "nsrdb:19830": 0.625
+    }
+   },
+   "500|all|rawf|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.538888888888889,
+      "ci95": [
+       0.4527777777777777,
+       0.6319444444444444
+      ],
+      "positive_segments": 388
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 600,
+      "mean_subject_rate": 0.6883333333333334,
+      "ci95": [
+       0.5249583333333334,
+       0.8283333333333334
+      ],
+      "positive_segments": 413
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.14944444444444438,
+      "ci95": [
+       -0.0338958333333334,
+       0.31638888888888894
+      ],
+      "perm_p": 0.10638936106389361
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.538888888888889,
+     "median": 0.5375000000000001
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.6883333333333334,
+     "median": 0.775
+    },
+    "mw_p": 0.0464046800624938,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.95,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 0.9,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.85,
+     "chfdb:chf06": 0.775,
+     "chfdb:chf07": 0.8,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.5,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.625,
+     "chfdb:chf12": 0.025,
+     "chfdb:chf13": 0.675,
+     "chfdb:chf14": 0.375,
+     "chfdb:chf15": 0.975,
+     "nsrdb:16265": 0.6,
+     "nsrdb:16272": 0.6,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.35,
+     "nsrdb:16539": 0.625,
+     "nsrdb:16773": 0.65,
+     "nsrdb:16786": 0.525,
+     "nsrdb:16795": 0.525,
+     "nsrdb:17052": 0.775,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.625,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19088": 0.4,
+     "nsrdb:19090": 0.175,
+     "nsrdb:19093": 0.45,
+     "nsrdb:19140": 0.35,
+     "nsrdb:19830": 0.55
+    }
+   },
+   "500|all|rawf|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.8208333333333333,
+      "ci95": [
+       0.7638541666666665,
+       0.8722222222222222
+      ],
+      "positive_segments": 591
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 600,
+      "mean_subject_rate": 0.735,
+      "ci95": [
+       0.5850000000000001,
+       0.8666666666666667
+      ],
+      "positive_segments": 441
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.08583333333333332,
+      "ci95": [
+       -0.24139583333333342,
+       0.05638888888888882
+      ],
+      "perm_p": 0.25937406259374063
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8208333333333333,
+     "median": 0.8374999999999999
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.735,
+     "median": 0.875
+    },
+    "mw_p": 1.0,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 0.9,
+     "chfdb:chf04": 0.875,
+     "chfdb:chf05": 0.875,
+     "chfdb:chf06": 0.925,
+     "chfdb:chf07": 0.825,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.525,
+     "chfdb:chf10": 0.175,
+     "chfdb:chf11": 0.725,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.65,
+     "chfdb:chf14": 0.4,
+     "chfdb:chf15": 0.975,
+     "nsrdb:16265": 0.825,
+     "nsrdb:16272": 0.875,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.55,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.85,
+     "nsrdb:16786": 0.925,
+     "nsrdb:16795": 0.875,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.85,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19088": 0.825,
+     "nsrdb:19090": 0.575,
+     "nsrdb:19093": 0.875,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.825
+    }
+   },
+   "500|all|rawf|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.7638888888888888,
+      "ci95": [
+       0.6986111111111111,
+       0.823611111111111
+      ],
+      "positive_segments": 550
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 600,
+      "mean_subject_rate": 0.6416666666666667,
+      "ci95": [
+       0.485,
+       0.7916666666666667
+      ],
+      "positive_segments": 385
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.12222222222222212,
+      "ci95": [
+       -0.29027777777777763,
+       0.039722222222222325
+      ],
+      "perm_p": 0.14408559144085592
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7638888888888888,
+     "median": 0.7875
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.6416666666666667,
+     "median": 0.675
+    },
+    "mw_p": 0.44648095874087035,
+    "chf_20_80pp_below_nsr_mean": 6,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.9,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 0.8,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.675,
+     "chfdb:chf06": 0.525,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 0.925,
+     "chfdb:chf09": 0.25,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.675,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.525,
+     "chfdb:chf14": 0.275,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 0.825,
+     "nsrdb:16272": 0.825,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.65,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.825,
+     "nsrdb:16786": 0.9,
+     "nsrdb:16795": 0.825,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.725,
+     "nsrdb:18184": 0.65,
+     "nsrdb:19088": 0.75,
+     "nsrdb:19090": 0.575,
+     "nsrdb:19093": 0.85,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.75
+    }
+   },
+   "500|all|masked|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 708,
+      "mean_subject_rate": 0.5331750103679929,
+      "ci95": [
+       0.44689459913692375,
+       0.6241085679133923
+      ],
+      "positive_segments": 378
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 203,
+      "mean_subject_rate": 0.07684080625257096,
+      "ci95": [
+       0.004662004662004662,
+       0.15864561908679556
+      ],
+      "positive_segments": 17
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4563342041154219,
+      "ci95": [
+       -0.5702297962221208,
+       -0.33691161803261915
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.5331750103679929,
+     "median": 0.5445512820512821
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.07684080625257096,
+     "median": 0.0
+    },
+    "mw_p": 2.825890921937766e-05,
+    "chf_20_80pp_below_nsr_mean": 10,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.3,
+     "chfdb:chf03": 0.0,
+     "chfdb:chf04": 0.16666666666666666,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.35294117647058826,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.02564102564102564,
+     "nsrdb:16265": 0.5641025641025641,
+     "nsrdb:16272": 0.6,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.35,
+     "nsrdb:16539": 0.625,
+     "nsrdb:16773": 0.5789473684210527,
+     "nsrdb:16786": 0.5,
+     "nsrdb:16795": 0.525,
+     "nsrdb:17052": 0.75,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.5897435897435898,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19088": 0.3888888888888889,
+     "nsrdb:19090": 0.15384615384615385,
+     "nsrdb:19093": 0.475,
+     "nsrdb:19140": 0.375,
+     "nsrdb:19830": 0.6216216216216216
+    }
+   },
+   "500|all|masked|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 708,
+      "mean_subject_rate": 0.8203482159622512,
+      "ci95": [
+       0.7676879354894706,
+       0.8696478120326805
+      ],
+      "positive_segments": 581
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 203,
+      "mean_subject_rate": 0.17902554961378492,
+      "ci95": [
+       0.06837378307966543,
+       0.31157308377896614
+      ],
+      "positive_segments": 44
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6413226663484662,
+      "ci95": [
+       -0.7647387778889327,
+       -0.4968633627028235
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8203482159622512,
+     "median": 0.831418918918919
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.17902554961378492,
+     "median": 0.15384615384615385
+    },
+    "mw_p": 1.4073976013001772e-05,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.6,
+     "chfdb:chf03": 0.0,
+     "chfdb:chf04": 0.16666666666666666,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.16666666666666666,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.05555555555555555,
+     "chfdb:chf11": 0.5882352941176471,
+     "chfdb:chf12": 0.1794871794871795,
+     "chfdb:chf13": 0.058823529411764705,
+     "chfdb:chf14": 0.15384615384615385,
+     "nsrdb:16265": 0.7948717948717948,
+     "nsrdb:16272": 0.875,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.675,
+     "nsrdb:16483": 0.575,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.8421052631578947,
+     "nsrdb:16786": 0.925,
+     "nsrdb:16795": 0.875,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8205128205128205,
+     "nsrdb:18184": 0.725,
+     "nsrdb:19088": 0.8055555555555556,
+     "nsrdb:19090": 0.6153846153846154,
+     "nsrdb:19093": 0.875,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.8378378378378378
+    }
+   },
+   "500|all|masked|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 708,
+      "mean_subject_rate": 0.7682117846591531,
+      "ci95": [
+       0.7068729382216224,
+       0.8246101364522417
+      ],
+      "positive_segments": 544
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 203,
+      "mean_subject_rate": 0.14682572329631152,
+      "ci95": [
+       0.03448512272041684,
+       0.2836418483477307
+      ],
+      "positive_segments": 36
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6213860613628416,
+      "ci95": [
+       -0.7482720957604859,
+       -0.46616442903207606
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7682117846591531,
+     "median": 0.7893277893277892
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.14682572329631152,
+     "median": 0.058823529411764705
+    },
+    "mw_p": 1.3632980827045158e-05,
+    "chf_20_80pp_below_nsr_mean": 10,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.6,
+     "chfdb:chf03": 0.0,
+     "chfdb:chf04": 0.16666666666666666,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.5588235294117647,
+     "chfdb:chf12": 0.15384615384615385,
+     "chfdb:chf13": 0.058823529411764705,
+     "chfdb:chf14": 0.07692307692307693,
+     "nsrdb:16265": 0.7948717948717948,
+     "nsrdb:16272": 0.85,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.625,
+     "nsrdb:16483": 0.45,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.8421052631578947,
+     "nsrdb:16786": 0.9,
+     "nsrdb:16795": 0.825,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.6666666666666666,
+     "nsrdb:18184": 0.675,
+     "nsrdb:19088": 0.75,
+     "nsrdb:19090": 0.6153846153846154,
+     "nsrdb:19093": 0.85,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.7837837837837838
+    }
+   },
+   "500|all|edited|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.5333333333333333,
+      "ci95": [
+       0.4444444444444444,
+       0.6277777777777778
+      ],
+      "positive_segments": 384
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 549,
+      "mean_subject_rate": 0.2698232323232323,
+      "ci95": [
+       0.13392857142857145,
+       0.4243695887445887
+      ],
+      "positive_segments": 143
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.263510101010101,
+      "ci95": [
+       -0.42837346681096683,
+       -0.08159632034632044
+      ],
+      "perm_p": 0.004899510048995101
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.5333333333333333,
+     "median": 0.55
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.2698232323232323,
+     "median": 0.1
+    },
+    "mw_p": 0.007296595566753628,
+    "chf_20_80pp_below_nsr_mean": 10,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.75,
+     "chfdb:chf03": 0.8055555555555556,
+     "chfdb:chf04": 0.425,
+     "chfdb:chf05": 0.075,
+     "chfdb:chf06": 0.696969696969697,
+     "chfdb:chf07": 0.075,
+     "chfdb:chf08": 0.1,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.325,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "chfdb:chf15": 0.3,
+     "nsrdb:16265": 0.575,
+     "nsrdb:16272": 0.575,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.325,
+     "nsrdb:16539": 0.625,
+     "nsrdb:16773": 0.625,
+     "nsrdb:16786": 0.525,
+     "nsrdb:16795": 0.525,
+     "nsrdb:17052": 0.775,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.625,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19088": 0.4,
+     "nsrdb:19090": 0.15,
+     "nsrdb:19093": 0.45,
+     "nsrdb:19140": 0.35,
+     "nsrdb:19830": 0.575
+    }
+   },
+   "500|all|edited|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.8194444444444444,
+      "ci95": [
+       0.7597222222222222,
+       0.8722222222222222
+      ],
+      "positive_segments": 590
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 549,
+      "mean_subject_rate": 0.36331168831168836,
+      "ci95": [
+       0.20319264069264073,
+       0.5442654220779222
+      ],
+      "positive_segments": 193
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.45613275613275606,
+      "ci95": [
+       -0.6275793650793651,
+       -0.26503832972582975
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8194444444444444,
+     "median": 0.8374999999999999
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.36331168831168836,
+     "median": 0.2
+    },
+    "mw_p": 0.001461983360559827,
+    "chf_20_80pp_below_nsr_mean": 10,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.825,
+     "chfdb:chf03": 0.9166666666666666,
+     "chfdb:chf04": 0.55,
+     "chfdb:chf05": 0.1,
+     "chfdb:chf06": 0.9696969696969697,
+     "chfdb:chf07": 0.15,
+     "chfdb:chf08": 0.2,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.15,
+     "chfdb:chf15": 0.3,
+     "nsrdb:16265": 0.825,
+     "nsrdb:16272": 0.875,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.525,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.875,
+     "nsrdb:16786": 0.9,
+     "nsrdb:16795": 0.875,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.85,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19088": 0.825,
+     "nsrdb:19090": 0.575,
+     "nsrdb:19093": 0.875,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.825
+    }
+   },
+   "500|all|edited|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.7611111111111111,
+      "ci95": [
+       0.6958333333333333,
+       0.8194444444444443
+      ],
+      "positive_segments": 548
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 549,
+      "mean_subject_rate": 0.2568001443001443,
+      "ci95": [
+       0.13035714285714287,
+       0.399315927128427
+      ],
+      "positive_segments": 137
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.5043109668109668,
+      "ci95": [
+       -0.6474242424242423,
+       -0.3461196789321789
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7611111111111111,
+     "median": 0.7875
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.2568001443001443,
+     "median": 0.1
+    },
+    "mw_p": 2.2674851520846774e-05,
+    "chf_20_80pp_below_nsr_mean": 11,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.75,
+     "chfdb:chf03": 0.6944444444444444,
+     "chfdb:chf04": 0.35,
+     "chfdb:chf05": 0.075,
+     "chfdb:chf06": 0.5757575757575758,
+     "chfdb:chf07": 0.1,
+     "chfdb:chf08": 0.1,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.075,
+     "chfdb:chf11": 0.55,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.05,
+     "chfdb:chf15": 0.1,
+     "nsrdb:16265": 0.825,
+     "nsrdb:16272": 0.825,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.65,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.825,
+     "nsrdb:16786": 0.875,
+     "nsrdb:16795": 0.825,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.725,
+     "nsrdb:18184": 0.65,
+     "nsrdb:19088": 0.75,
+     "nsrdb:19090": 0.575,
+     "nsrdb:19093": 0.825,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.75
+    }
+   },
+   "500|all|wu|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.5319444444444446,
+      "ci95": [
+       0.4444097222222222,
+       0.6250347222222218
+      ],
+      "positive_segments": 383
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 549,
+      "mean_subject_rate": 0.2532647907647908,
+      "ci95": [
+       0.12142857142857143,
+       0.40671040764790767
+      ],
+      "positive_segments": 134
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.27867965367965375,
+      "ci95": [
+       -0.4413780663780663,
+       -0.10250180375180382
+      ],
+      "perm_p": 0.0030996900309969004
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.5319444444444446,
+     "median": 0.5375000000000001
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.2532647907647908,
+     "median": 0.125
+    },
+    "mw_p": 0.004335269973133359,
+    "chf_20_80pp_below_nsr_mean": 9,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.8,
+     "chfdb:chf03": 0.4722222222222222,
+     "chfdb:chf04": 0.425,
+     "chfdb:chf05": 0.05,
+     "chfdb:chf06": 0.8484848484848485,
+     "chfdb:chf07": 0.05,
+     "chfdb:chf08": 0.15,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.075,
+     "chfdb:chf11": 0.35,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "chfdb:chf15": 0.2,
+     "nsrdb:16265": 0.575,
+     "nsrdb:16272": 0.575,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.325,
+     "nsrdb:16539": 0.625,
+     "nsrdb:16773": 0.625,
+     "nsrdb:16786": 0.525,
+     "nsrdb:16795": 0.525,
+     "nsrdb:17052": 0.775,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.625,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19088": 0.4,
+     "nsrdb:19090": 0.15,
+     "nsrdb:19093": 0.45,
+     "nsrdb:19140": 0.35,
+     "nsrdb:19830": 0.55
+    }
+   },
+   "500|all|wu|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.8138888888888889,
+      "ci95": [
+       0.7513888888888889,
+       0.8694444444444445
+      ],
+      "positive_segments": 586
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 549,
+      "mean_subject_rate": 0.3656926406926407,
+      "ci95": [
+       0.2125,
+       0.5373944805194804
+      ],
+      "positive_segments": 195
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4481962481962482,
+      "ci95": [
+       -0.6134744769119769,
+       -0.26565160533910537
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8138888888888889,
+     "median": 0.85
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.3656926406926407,
+     "median": 0.225
+    },
+    "mw_p": 0.0008676324928152797,
+    "chf_20_80pp_below_nsr_mean": 9,
+    "chf_relative_reduction_20_80pct": 6,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.875,
+     "chfdb:chf03": 0.75,
+     "chfdb:chf04": 0.625,
+     "chfdb:chf05": 0.1,
+     "chfdb:chf06": 0.9696969696969697,
+     "chfdb:chf07": 0.15,
+     "chfdb:chf08": 0.25,
+     "chfdb:chf09": 0.05,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.55,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.175,
+     "chfdb:chf15": 0.3,
+     "nsrdb:16265": 0.8,
+     "nsrdb:16272": 0.85,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.525,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.85,
+     "nsrdb:16786": 0.925,
+     "nsrdb:16795": 0.875,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.85,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19088": 0.8,
+     "nsrdb:19090": 0.525,
+     "nsrdb:19093": 0.875,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.85
+    }
+   },
+   "500|all|wu|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 720,
+      "mean_subject_rate": 0.7569444444444444,
+      "ci95": [
+       0.688888888888889,
+       0.8180555555555555
+      ],
+      "positive_segments": 545
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 549,
+      "mean_subject_rate": 0.27582972582972587,
+      "ci95": [
+       0.15396825396825395,
+       0.41377164502164493
+      ],
+      "positive_segments": 148
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.48111471861471855,
+      "ci95": [
+       -0.621031746031746,
+       -0.3275063131313133
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7569444444444444,
+     "median": 0.7875000000000001
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.27582972582972587,
+     "median": 0.16249999999999998
+    },
+    "mw_p": 5.0637892625449836e-05,
+    "chf_20_80pp_below_nsr_mean": 12,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.825,
+     "chfdb:chf03": 0.5555555555555556,
+     "chfdb:chf04": 0.425,
+     "chfdb:chf05": 0.075,
+     "chfdb:chf06": 0.6060606060606061,
+     "chfdb:chf07": 0.15,
+     "chfdb:chf08": 0.15,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.075,
+     "chfdb:chf11": 0.525,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.075,
+     "chfdb:chf15": 0.2,
+     "nsrdb:16265": 0.8,
+     "nsrdb:16272": 0.825,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.65,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16539": 0.825,
+     "nsrdb:16773": 0.8,
+     "nsrdb:16786": 0.9,
+     "nsrdb:16795": 0.825,
+     "nsrdb:17052": 0.95,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18177": 0.725,
+     "nsrdb:18184": 0.65,
+     "nsrdb:19088": 0.7,
+     "nsrdb:19090": 0.525,
+     "nsrdb:19093": 0.85,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.775
+    }
+   },
+   "500|selected|raw|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.53125,
+      "ci95": [
+       0.384375,
+       0.703125
+      ],
+      "positive_segments": 170
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 440,
+      "mean_subject_rate": 0.6113636363636364,
+      "ci95": [
+       0.4227272727272728,
+       0.7863636363636364
+      ],
+      "positive_segments": 269
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.08011363636363644,
+      "ci95": [
+       -0.1744389204545454,
+       0.3139346590909089
+      ],
+      "perm_p": 0.5674432556744325
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.53125,
+     "median": 0.4375
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.6113636363636364,
+     "median": 0.675
+    },
+    "mw_p": 0.40772464637313754,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.85,
+     "chfdb:chf06": 0.775,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.525,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.625,
+     "chfdb:chf12": 0.025,
+     "chfdb:chf13": 0.675,
+     "chfdb:chf14": 0.375,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.35,
+     "nsrdb:16786": 0.525,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19140": 0.325,
+     "nsrdb:19830": 0.55
+    }
+   },
+   "500|selected|raw|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.778125,
+      "ci95": [
+       0.684375,
+       0.878125
+      ],
+      "positive_segments": 249
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 440,
+      "mean_subject_rate": 0.6681818181818182,
+      "ci95": [
+       0.49318181818181817,
+       0.8318181818181817
+      ],
+      "positive_segments": 294
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.10994318181818175,
+      "ci95": [
+       -0.3090909090909091,
+       0.08096590909090906
+      ],
+      "perm_p": 0.3675632436756324
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.778125,
+     "median": 0.725
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.6681818181818182,
+     "median": 0.725
+    },
+    "mw_p": 0.508324308112601,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.875,
+     "chfdb:chf05": 0.875,
+     "chfdb:chf06": 0.925,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.55,
+     "chfdb:chf10": 0.175,
+     "chfdb:chf11": 0.725,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.65,
+     "chfdb:chf14": 0.4,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.675,
+     "nsrdb:16483": 0.575,
+     "nsrdb:16786": 0.9,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19140": 0.75,
+     "nsrdb:19830": 0.675
+    }
+   },
+   "500|selected|raw|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.703125,
+      "ci95": [
+       0.590625,
+       0.81875
+      ],
+      "positive_segments": 225
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 440,
+      "mean_subject_rate": 0.5363636363636365,
+      "ci95": [
+       0.36590909090909096,
+       0.7090909090909091
+      ],
+      "positive_segments": 236
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.1667613636363635,
+      "ci95": [
+       -0.36931818181818177,
+       0.04490056818181811
+      ],
+      "perm_p": 0.1862813718628137
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.703125,
+     "median": 0.675
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.5363636363636365,
+     "median": 0.525
+    },
+    "mw_p": 0.299442725677058,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.675,
+     "chfdb:chf06": 0.525,
+     "chfdb:chf08": 0.925,
+     "chfdb:chf09": 0.25,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.675,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.525,
+     "chfdb:chf14": 0.275,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.625,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16786": 0.9,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.675,
+     "nsrdb:19140": 0.675,
+     "nsrdb:19830": 0.625
+    }
+   },
+   "500|selected|rawf|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.534375,
+      "ci95": [
+       0.390625,
+       0.703125
+      ],
+      "positive_segments": 171
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 440,
+      "mean_subject_rate": 0.6090909090909091,
+      "ci95": [
+       0.4227272727272728,
+       0.7840909090909091
+      ],
+      "positive_segments": 268
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.07471590909090908,
+      "ci95": [
+       -0.17955255681818194,
+       0.3065482954545452
+      ],
+      "perm_p": 0.5946405359464053
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.534375,
+     "median": 0.4375
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.6090909090909091,
+     "median": 0.675
+    },
+    "mw_p": 0.43136605649852555,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.85,
+     "chfdb:chf06": 0.775,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.5,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.625,
+     "chfdb:chf12": 0.025,
+     "chfdb:chf13": 0.675,
+     "chfdb:chf14": 0.375,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.35,
+     "nsrdb:16786": 0.525,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19140": 0.35,
+     "nsrdb:19830": 0.55
+    }
+   },
+   "500|selected|rawf|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.80625,
+      "ci95": [
+       0.70625,
+       0.8999999999999999
+      ],
+      "positive_segments": 258
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 440,
+      "mean_subject_rate": 0.6659090909090909,
+      "ci95": [
+       0.49090909090909096,
+       0.8295454545454546
+      ],
+      "positive_segments": 293
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.14034090909090913,
+      "ci95": [
+       -0.33580255681818183,
+       0.05255681818181834
+      ],
+      "perm_p": 0.26017398260173985
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.80625,
+     "median": 0.8125
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.6659090909090909,
+     "median": 0.725
+    },
+    "mw_p": 0.43197498712756843,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.875,
+     "chfdb:chf05": 0.875,
+     "chfdb:chf06": 0.925,
+     "chfdb:chf08": 0.975,
+     "chfdb:chf09": 0.525,
+     "chfdb:chf10": 0.175,
+     "chfdb:chf11": 0.725,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.65,
+     "chfdb:chf14": 0.4,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.55,
+     "nsrdb:16786": 0.925,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.825
+    }
+   },
+   "500|selected|rawf|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.721875,
+      "ci95": [
+       0.6062500000000001,
+       0.83125
+      ],
+      "positive_segments": 231
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 440,
+      "mean_subject_rate": 0.5386363636363637,
+      "ci95": [
+       0.3704545454545455,
+       0.7113636363636364
+      ],
+      "positive_segments": 237
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.18323863636363635,
+      "ci95": [
+       -0.3812571022727273,
+       0.024438920454545335
+      ],
+      "perm_p": 0.1441855814418558
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.721875,
+     "median": 0.725
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.5386363636363637,
+     "median": 0.525
+    },
+    "mw_p": 0.2303708302520775,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.775,
+     "chfdb:chf05": 0.675,
+     "chfdb:chf06": 0.525,
+     "chfdb:chf08": 0.925,
+     "chfdb:chf09": 0.25,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.675,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.525,
+     "chfdb:chf14": 0.275,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.65,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16786": 0.9,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.65,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.75
+    }
+   },
+   "500|selected|masked|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 317,
+      "mean_subject_rate": 0.5433277027027027,
+      "ci95": [
+       0.39638513513513524,
+       0.7120777027027027
+      ],
+      "positive_segments": 172
+     },
+     "CHF": {
+      "n_subjects": 9,
+      "n_segments": 192,
+      "mean_subject_rate": 0.06058320764203118,
+      "ci95": [
+       0.0,
+       0.14186358304005361
+      ],
+      "positive_segments": 14
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4827444950606715,
+      "ci95": [
+       -0.6725570094274138,
+       -0.31441567946623095
+      ],
+      "perm_p": 0.0005999400059994001
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.5433277027027027,
+     "median": 0.4375
+    },
+    "CHF": {
+     "n_subjects": 9,
+     "mean": 0.06058320764203118,
+     "median": 0.0
+    },
+    "mw_p": 0.00138063726609711,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 9,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.16666666666666666,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.35294117647058826,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.02564102564102564,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.35,
+     "nsrdb:16786": 0.5,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19140": 0.375,
+     "nsrdb:19830": 0.6216216216216216
+    }
+   },
+   "500|selected|masked|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 317,
+      "mean_subject_rate": 0.8109797297297298,
+      "ci95": [
+       0.715625,
+       0.9016047297297298
+      ],
+      "positive_segments": 257
+     },
+     "CHF": {
+      "n_subjects": 9,
+      "n_segments": 192,
+      "mean_subject_rate": 0.1521423384168482,
+      "ci95": [
+       0.06209150326797386,
+       0.2763253449527959
+      ],
+      "positive_segments": 38
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6588373913128815,
+      "ci95": [
+       -0.7961547138201549,
+       -0.5029371779632198
+      ],
+      "perm_p": 0.00039996000399960006
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8109797297297298,
+     "median": 0.818918918918919
+    },
+    "CHF": {
+     "n_subjects": 9,
+     "mean": 0.1521423384168482,
+     "median": 0.15384615384615385
+    },
+    "mw_p": 0.0008878715792390565,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 9,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.16666666666666666,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.16666666666666666,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.05555555555555555,
+     "chfdb:chf11": 0.5882352941176471,
+     "chfdb:chf12": 0.1794871794871795,
+     "chfdb:chf13": 0.058823529411764705,
+     "chfdb:chf14": 0.15384615384615385,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.675,
+     "nsrdb:16483": 0.575,
+     "nsrdb:16786": 0.925,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.725,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.8378378378378378
+    }
+   },
+   "500|selected|masked|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 317,
+      "mean_subject_rate": 0.7323479729729729,
+      "ci95": [
+       0.6260747466216217,
+       0.835472972972973
+      ],
+      "positive_segments": 232
+     },
+     "CHF": {
+      "n_subjects": 9,
+      "n_segments": 192,
+      "mean_subject_rate": 0.11278699513993631,
+      "ci95": [
+       0.025054466230936816,
+       0.23697000167588397
+      ],
+      "positive_segments": 30
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6195609778330367,
+      "ci95": [
+       -0.7628528655918362,
+       -0.45612776627022955
+      ],
+      "perm_p": 0.00039996000399960006
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.7323479729729729,
+     "median": 0.725
+    },
+    "CHF": {
+     "n_subjects": 9,
+     "mean": 0.11278699513993631,
+     "median": 0.058823529411764705
+    },
+    "mw_p": 0.0008368955150315771,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 9,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.16666666666666666,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.5588235294117647,
+     "chfdb:chf12": 0.15384615384615385,
+     "chfdb:chf13": 0.058823529411764705,
+     "chfdb:chf14": 0.07692307692307693,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.625,
+     "nsrdb:16483": 0.45,
+     "nsrdb:16786": 0.9,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.675,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.7837837837837838
+    }
+   },
+   "500|selected|edited|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.534375,
+      "ci95": [
+       0.38749999999999996,
+       0.7062499999999999
+      ],
+      "positive_segments": 171
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 393,
+      "mean_subject_rate": 0.1846969696969697,
+      "ci95": [
+       0.06749999999999999,
+       0.33159090909090916
+      ],
+      "positive_segments": 69
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.34967803030303035,
+      "ci95": [
+       -0.5634360795454546,
+       -0.13810606060606062
+      ],
+      "perm_p": 0.0072992700729927005
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.534375,
+     "median": 0.4375
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.1846969696969697,
+     "median": 0.1
+    },
+    "mw_p": 0.01091338716340658,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.425,
+     "chfdb:chf05": 0.075,
+     "chfdb:chf06": 0.696969696969697,
+     "chfdb:chf08": 0.1,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.325,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.325,
+     "nsrdb:16786": 0.525,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19140": 0.35,
+     "nsrdb:19830": 0.575
+    }
+   },
+   "500|selected|edited|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.8,
+      "ci95": [
+       0.696875,
+       0.89375
+      ],
+      "positive_segments": 256
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 393,
+      "mean_subject_rate": 0.289469696969697,
+      "ci95": [
+       0.125,
+       0.4914526515151514
+      ],
+      "positive_segments": 109
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.510530303030303,
+      "ci95": [
+       -0.7050000000000001,
+       -0.28355823863636354
+      ],
+      "perm_p": 0.0021997800219978004
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8,
+     "median": 0.8125
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.289469696969697,
+     "median": 0.175
+    },
+    "mw_p": 0.006643585858031817,
+    "chf_20_80pp_below_nsr_mean": 9,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.55,
+     "chfdb:chf05": 0.1,
+     "chfdb:chf06": 0.9696969696969697,
+     "chfdb:chf08": 0.2,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.15,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.525,
+     "nsrdb:16786": 0.9,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.825
+    }
+   },
+   "500|selected|edited|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.71875,
+      "ci95": [
+       0.606171875,
+       0.825
+      ],
+      "positive_segments": 230
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 393,
+      "mean_subject_rate": 0.1950757575757576,
+      "ci95": [
+       0.07749999999999999,
+       0.33286174242424166
+      ],
+      "positive_segments": 74
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.5236742424242424,
+      "ci95": [
+       -0.6843011363636364,
+       -0.3461723484848485
+      ],
+      "perm_p": 0.00039996000399960006
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.71875,
+     "median": 0.725
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.1950757575757576,
+     "median": 0.0875
+    },
+    "mw_p": 0.0008412267140281804,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.35,
+     "chfdb:chf05": 0.075,
+     "chfdb:chf06": 0.5757575757575758,
+     "chfdb:chf08": 0.1,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.075,
+     "chfdb:chf11": 0.55,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.05,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.65,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16786": 0.875,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.65,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.75
+    }
+   },
+   "500|selected|wu|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.53125,
+      "ci95": [
+       0.384375,
+       0.703125
+      ],
+      "positive_segments": 170
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 393,
+      "mean_subject_rate": 0.20234848484848483,
+      "ci95": [
+       0.06749999999999999,
+       0.3795454545454545
+      ],
+      "positive_segments": 75
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.32890151515151517,
+      "ci95": [
+       -0.5568749999999999,
+       -0.1001212121212123
+      ],
+      "perm_p": 0.018698130186981302
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.53125,
+     "median": 0.4375
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.20234848484848483,
+     "median": 0.0875
+    },
+    "mw_p": 0.01818102793196664,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.425,
+     "chfdb:chf05": 0.05,
+     "chfdb:chf06": 0.8484848484848485,
+     "chfdb:chf08": 0.15,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.075,
+     "chfdb:chf11": 0.35,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "nsrdb:16273": 0.85,
+     "nsrdb:16420": 0.325,
+     "nsrdb:16483": 0.325,
+     "nsrdb:16786": 0.525,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.35,
+     "nsrdb:19140": 0.35,
+     "nsrdb:19830": 0.55
+    }
+   },
+   "500|selected|wu|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.8062499999999999,
+      "ci95": [
+       0.7,
+       0.903125
+      ],
+      "positive_segments": 258
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 393,
+      "mean_subject_rate": 0.304469696969697,
+      "ci95": [
+       0.14,
+       0.5019924242424239
+      ],
+      "positive_segments": 115
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.501780303030303,
+      "ci95": [
+       -0.6943882575757576,
+       -0.27845501893939406
+      ],
+      "perm_p": 0.0022997700229977
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8062499999999999,
+     "median": 0.825
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.304469696969697,
+     "median": 0.1875
+    },
+    "mw_p": 0.0067000647285024,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.625,
+     "chfdb:chf05": 0.1,
+     "chfdb:chf06": 0.9696969696969697,
+     "chfdb:chf08": 0.25,
+     "chfdb:chf09": 0.05,
+     "chfdb:chf10": 0.125,
+     "chfdb:chf11": 0.55,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.175,
+     "nsrdb:16273": 0.95,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.525,
+     "nsrdb:16786": 0.925,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.7,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.85
+    }
+   },
+   "500|selected|wu|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 320,
+      "mean_subject_rate": 0.7250000000000001,
+      "ci95": [
+       0.6062500000000001,
+       0.834375
+      ],
+      "positive_segments": 232
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 393,
+      "mean_subject_rate": 0.21310606060606063,
+      "ci95": [
+       0.095,
+       0.3518181818181818
+      ],
+      "positive_segments": 81
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.5118939393939395,
+      "ci95": [
+       -0.675034090909091,
+       -0.33191761363636385
+      ],
+      "perm_p": 0.0004999500049995
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.7250000000000001,
+     "median": 0.725
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.21310606060606063,
+     "median": 0.11249999999999999
+    },
+    "mw_p": 0.00114793824809759,
+    "chf_20_80pp_below_nsr_mean": 9,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.425,
+     "chfdb:chf05": 0.075,
+     "chfdb:chf06": 0.6060606060606061,
+     "chfdb:chf08": 0.15,
+     "chfdb:chf09": 0.025,
+     "chfdb:chf10": 0.075,
+     "chfdb:chf11": 0.525,
+     "chfdb:chf12": 0.175,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.075,
+     "nsrdb:16273": 0.75,
+     "nsrdb:16420": 0.65,
+     "nsrdb:16483": 0.4,
+     "nsrdb:16786": 0.9,
+     "nsrdb:17453": 0.975,
+     "nsrdb:18184": 0.65,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.775
+    }
+   },
+   "2000|all|raw|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.8166666666666667,
+      "ci95": [
+       0.7277777777777779,
+       0.8944444444444445
+      ],
+      "positive_segments": 147
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.8800000000000001,
+      "ci95": [
+       0.7333333333333333,
+       0.9866666666666667
+      ],
+      "positive_segments": 132
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.06333333333333346,
+      "ci95": [
+       -0.0978055555555556,
+       0.20336111111111085
+      ],
+      "perm_p": 0.44155584441555845
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8166666666666667,
+     "median": 0.8500000000000001
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.8800000000000001,
+     "median": 1.0
+    },
+    "mw_p": 0.07610698078121088,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 0.8,
+     "nsrdb:16272": 0.9,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.7,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 0.9,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 0.6,
+     "nsrdb:19090": 0.4,
+     "nsrdb:19093": 0.9,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.5
+    }
+   },
+   "2000|all|raw|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.8666666666666667,
+      "ci95": [
+       0.7833333333333333,
+       0.9388888888888888
+      ],
+      "positive_segments": 156
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.8800000000000001,
+      "ci95": [
+       0.7333333333333333,
+       0.9866666666666667
+      ],
+      "positive_segments": 132
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.01333333333333342,
+      "ci95": [
+       -0.14669444444444446,
+       0.15222222222222215
+      ],
+      "perm_p": 0.8839116088391161
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8666666666666667,
+     "median": 0.9
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.8800000000000001,
+     "median": 1.0
+    },
+    "mw_p": 0.2574311620310784,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 0.9,
+     "nsrdb:16272": 0.9,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.9,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 0.6,
+     "nsrdb:19090": 0.4,
+     "nsrdb:19093": 1.0,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.6
+    }
+   },
+   "2000|all|raw|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.7444444444444445,
+      "ci95": [
+       0.5944444444444446,
+       0.8722222222222222
+      ],
+      "positive_segments": 134
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.7133333333333333,
+      "ci95": [
+       0.5333333333333333,
+       0.88
+      ],
+      "positive_segments": 107
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.0311111111111112,
+      "ci95": [
+       -0.2566666666666666,
+       0.188888888888889
+      ],
+      "perm_p": 0.793020697930207
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7444444444444445,
+     "median": 0.8500000000000001
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.7133333333333333,
+     "median": 0.9
+    },
+    "mw_p": 0.8963576049651087,
+    "chf_20_80pp_below_nsr_mean": 5,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.9,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 0.9,
+     "chfdb:chf05": 0.9,
+     "chfdb:chf06": 0.5,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.1,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.8,
+     "chfdb:chf14": 0.5,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 0.9,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.1,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18177": 0.3,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19088": 0.8,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.8,
+     "nsrdb:19140": 0.4,
+     "nsrdb:19830": 1.0
+    }
+   },
+   "2000|all|rawf|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.8777777777777778,
+      "ci95": [
+       0.8111111111111111,
+       0.9388888888888888
+      ],
+      "positive_segments": 158
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.8800000000000001,
+      "ci95": [
+       0.7333333333333333,
+       0.9866666666666667
+      ],
+      "positive_segments": 132
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.0022222222222223476,
+      "ci95": [
+       -0.1499999999999998,
+       0.12777777777777777
+      ],
+      "perm_p": 1.0
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8777777777777778,
+     "median": 0.9
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.8800000000000001,
+     "median": 1.0
+    },
+    "mw_p": 0.23393345689509792,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 0.9,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 0.9,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 1.0,
+     "nsrdb:19090": 0.6,
+     "nsrdb:19093": 0.9,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.8
+    }
+   },
+   "2000|all|rawf|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.9277777777777777,
+      "ci95": [
+       0.8666666666666667,
+       0.9777777777777779
+      ],
+      "positive_segments": 167
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.8800000000000001,
+      "ci95": [
+       0.7333333333333333,
+       0.9866666666666667
+      ],
+      "positive_segments": 132
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.047777777777777586,
+      "ci95": [
+       -0.19777777777777783,
+       0.07333333333333347
+      ],
+      "perm_p": 0.543945605439456
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.9277777777777777,
+     "median": 1.0
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.8800000000000001,
+     "median": 1.0
+    },
+    "mw_p": 0.9655485353952166,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.8,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 1.0,
+     "nsrdb:19090": 0.6,
+     "nsrdb:19093": 1.0,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|all|rawf|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.7166666666666667,
+      "ci95": [
+       0.5666666666666667,
+       0.8444444444444446
+      ],
+      "positive_segments": 129
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.7066666666666667,
+      "ci95": [
+       0.5199999999999999,
+       0.8733333333333334
+      ],
+      "positive_segments": 106
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.010000000000000009,
+      "ci95": [
+       -0.24111111111111116,
+       0.21444444444444455
+      ],
+      "perm_p": 0.9595040495950405
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7166666666666667,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.7066666666666667,
+     "median": 0.9
+    },
+    "mw_p": 0.9116408156046751,
+    "chf_20_80pp_below_nsr_mean": 5,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.9,
+     "chfdb:chf02": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 0.9,
+     "chfdb:chf05": 0.9,
+     "chfdb:chf06": 0.5,
+     "chfdb:chf07": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.1,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.8,
+     "chfdb:chf14": 0.5,
+     "chfdb:chf15": 1.0,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 0.7,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18177": 0.3,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19088": 0.8,
+     "nsrdb:19090": 0.6,
+     "nsrdb:19093": 0.8,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|all|masked|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.8722222222222222,
+      "ci95": [
+       0.8,
+       0.9333333333333333
+      ],
+      "positive_segments": 157
+     },
+     "CHF": {
+      "n_subjects": 12,
+      "n_segments": 108,
+      "mean_subject_rate": 0.2238095238095238,
+      "ci95": [
+       0.05833333333333333,
+       0.4226190476190476
+      ],
+      "positive_segments": 26
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6484126984126984,
+      "ci95": [
+       -0.8261904761904763,
+       -0.43529761904761943
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8722222222222222,
+     "median": 0.9
+    },
+    "CHF": {
+     "n_subjects": 12,
+     "mean": 0.2238095238095238,
+     "median": 0.0
+    },
+    "mw_p": 0.00010344506015483754,
+    "chf_20_80pp_below_nsr_mean": 3,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 12,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf03": 0.2857142857142857,
+     "chfdb:chf04": 0.7,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf07": 0.0,
+     "chfdb:chf08": 0.2,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.5,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16265": 0.9,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 0.9,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 0.9,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.9,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|all|masked|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.9333333333333333,
+      "ci95": [
+       0.8666666666666667,
+       0.9833333333333333
+      ],
+      "positive_segments": 168
+     },
+     "CHF": {
+      "n_subjects": 12,
+      "n_segments": 108,
+      "mean_subject_rate": 0.24404761904761904,
+      "ci95": [
+       0.07976190476190476,
+       0.4333333333333333
+      ],
+      "positive_segments": 28
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6892857142857143,
+      "ci95": [
+       -0.8615079365079366,
+       -0.4861111111111111
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.9333333333333333,
+     "median": 1.0
+    },
+    "CHF": {
+     "n_subjects": 12,
+     "mean": 0.24404761904761904,
+     "median": 0.05
+    },
+    "mw_p": 3.0232432085612218e-05,
+    "chf_20_80pp_below_nsr_mean": 4,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 12,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf03": 0.42857142857142855,
+     "chfdb:chf04": 0.6,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf07": 0.0,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.5,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.1,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.9,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.9,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 1.0,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 1.0,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|all|masked|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.7055555555555555,
+      "ci95": [
+       0.55,
+       0.838888888888889
+      ],
+      "positive_segments": 127
+     },
+     "CHF": {
+      "n_subjects": 12,
+      "n_segments": 108,
+      "mean_subject_rate": 0.16547619047619047,
+      "ci95": [
+       0.024999999999999998,
+       0.3393154761904758
+      ],
+      "positive_segments": 19
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.540079365079365,
+      "ci95": [
+       -0.7444444444444444,
+       -0.31388888888888894
+      ],
+      "perm_p": 0.0004999500049995
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7055555555555555,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 12,
+     "mean": 0.16547619047619047,
+     "median": 0.0
+    },
+    "mw_p": 0.0004379291511846707,
+    "chf_20_80pp_below_nsr_mean": 11,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 12,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.9,
+     "chfdb:chf03": 0.2857142857142857,
+     "chfdb:chf04": 0.5,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf07": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.3,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 0.7,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18177": 0.2,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19088": 0.8,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.8,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|all|edited|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.8722222222222222,
+      "ci95": [
+       0.8,
+       0.9388888888888888
+      ],
+      "positive_segments": 157
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 138,
+      "mean_subject_rate": 0.4196428571428571,
+      "ci95": [
+       0.23571428571428574,
+       0.619642857142857
+      ],
+      "positive_segments": 57
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.45257936507936514,
+      "ci95": [
+       -0.6510069444444443,
+       -0.23987599206349217
+      ],
+      "perm_p": 0.00029997000299970003
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.8722222222222222,
+     "median": 0.9
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.4196428571428571,
+     "median": 0.25
+    },
+    "mw_p": 0.0014066235491519618,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 6,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 0.8,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 0.875,
+     "chfdb:chf07": 0.2,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "chfdb:chf15": 0.6,
+     "nsrdb:16265": 0.9,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 0.9,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 1.0,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.9,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.8
+    }
+   },
+   "2000|all|edited|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.9277777777777777,
+      "ci95": [
+       0.8611111111111112,
+       0.9777777777777779
+      ],
+      "positive_segments": 167
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 138,
+      "mean_subject_rate": 0.4125,
+      "ci95": [
+       0.23392857142857143,
+       0.6071428571428571
+      ],
+      "positive_segments": 56
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.5152777777777777,
+      "ci95": [
+       -0.7087301587301587,
+       -0.3091121031746034
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.9277777777777777,
+     "median": 1.0
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.4125,
+     "median": 0.25
+    },
+    "mw_p": 0.0001735046270129004,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 7,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf03": 1.0,
+     "chfdb:chf04": 0.7,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 0.875,
+     "chfdb:chf07": 0.2,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "chfdb:chf15": 0.6,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.8,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.9,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 1.0,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 1.0,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|all|edited|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.7111111111111111,
+      "ci95": [
+       0.5611111111111111,
+       0.8444444444444444
+      ],
+      "positive_segments": 128
+     },
+     "CHF": {
+      "n_subjects": 14,
+      "n_segments": 138,
+      "mean_subject_rate": 0.1910714285714286,
+      "ci95": [
+       0.07857142857142858,
+       0.3125
+      ],
+      "positive_segments": 26
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.5200396825396826,
+      "ci95": [
+       -0.697638888888889,
+       -0.3238095238095238
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7111111111111111,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 14,
+     "mean": 0.1910714285714286,
+     "median": 0.05
+    },
+    "mw_p": 0.00017754149652015233,
+    "chf_20_80pp_below_nsr_mean": 13,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 14,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.5,
+     "chfdb:chf03": 0.6,
+     "chfdb:chf04": 0.5,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf06": 0.375,
+     "chfdb:chf07": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.4,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "chfdb:chf15": 0.1,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 0.7,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18177": 0.3,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19088": 0.8,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.8,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|all|wu|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.861111111111111,
+      "ci95": [
+       0.7888888888888889,
+       0.9277777777777777
+      ],
+      "positive_segments": 155
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.4333333333333333,
+      "ci95": [
+       0.24666666666666667,
+       0.6266666666666666
+      ],
+      "positive_segments": 65
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.42777777777777776,
+      "ci95": [
+       -0.6222222222222222,
+       -0.22555555555555573
+      ],
+      "perm_p": 0.00019998000199980003
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.861111111111111,
+     "median": 0.9
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.4333333333333333,
+     "median": 0.3
+    },
+    "mw_p": 0.0018321052686275808,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 0.7,
+     "chfdb:chf03": 0.9,
+     "chfdb:chf04": 0.8,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf07": 0.1,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "chfdb:chf15": 0.6,
+     "nsrdb:16265": 0.9,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 0.9,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.8,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 0.9,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.9,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|all|wu|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.9277777777777777,
+      "ci95": [
+       0.8611111111111112,
+       0.9777777777777779
+      ],
+      "positive_segments": 167
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.44,
+      "ci95": [
+       0.2598333333333334,
+       0.6266666666666667
+      ],
+      "positive_segments": 66
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4877777777777777,
+      "ci95": [
+       -0.6777777777777776,
+       -0.2921944444444447
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.9277777777777777,
+     "median": 1.0
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.44,
+     "median": 0.3
+    },
+    "mw_p": 0.00016378421265440932,
+    "chf_20_80pp_below_nsr_mean": 7,
+    "chf_relative_reduction_20_80pct": 7,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 1.0,
+     "chfdb:chf02": 0.7,
+     "chfdb:chf03": 0.9,
+     "chfdb:chf04": 0.8,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf07": 0.1,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.2,
+     "chfdb:chf15": 0.6,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 1.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.8,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18177": 0.9,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19088": 1.0,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 1.0,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|all|wu|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 18,
+      "n_segments": 180,
+      "mean_subject_rate": 0.7111111111111111,
+      "ci95": [
+       0.5611111111111111,
+       0.8444444444444444
+      ],
+      "positive_segments": 128
+     },
+     "CHF": {
+      "n_subjects": 15,
+      "n_segments": 150,
+      "mean_subject_rate": 0.21333333333333335,
+      "ci95": [
+       0.09333333333333332,
+       0.34016666666666434
+      ],
+      "positive_segments": 32
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.49777777777777776,
+      "ci95": [
+       -0.68,
+       -0.2977777777777777
+      ],
+      "perm_p": 9.999000099990002e-05
+     }
+    },
+    "NSR": {
+     "n_subjects": 18,
+     "mean": 0.7111111111111111,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "mean": 0.21333333333333335,
+     "median": 0.1
+    },
+    "mw_p": 0.00017681892878229914,
+    "chf_20_80pp_below_nsr_mean": 13,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 15,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf01": 0.6,
+     "chfdb:chf02": 0.2,
+     "chfdb:chf03": 0.5,
+     "chfdb:chf04": 0.5,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf06": 0.7,
+     "chfdb:chf07": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.4,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "chfdb:chf15": 0.1,
+     "nsrdb:16265": 1.0,
+     "nsrdb:16272": 0.7,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16539": 1.0,
+     "nsrdb:16773": 1.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:16795": 1.0,
+     "nsrdb:17052": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18177": 0.3,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19088": 0.8,
+     "nsrdb:19090": 0.5,
+     "nsrdb:19093": 0.8,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|selected|raw|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.8,
+      "ci95": [
+       0.6875,
+       0.925
+      ],
+      "positive_segments": 64
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.8363636363636364,
+      "ci95": [
+       0.6454545454545455,
+       0.9818181818181819
+      ],
+      "positive_segments": 92
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.036363636363636376,
+      "ci95": [
+       -0.17499999999999993,
+       0.22843749999999968
+      ],
+      "perm_p": 0.7905209479052094
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8,
+     "median": 0.75
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.8363636363636364,
+     "median": 1.0
+    },
+    "mw_p": 0.4050880349568823,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.7,
+     "nsrdb:16483": 0.7,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.5
+    }
+   },
+   "2000|selected|raw|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.875,
+      "ci95": [
+       0.775,
+       0.9624999999999999
+      ],
+      "positive_segments": 70
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.8363636363636364,
+      "ci95": [
+       0.6454545454545455,
+       0.9818181818181819
+      ],
+      "positive_segments": 92
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.03863636363636358,
+      "ci95": [
+       -0.23409090909090913,
+       0.13863636363636367
+      ],
+      "perm_p": 0.7578242175782421
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.875,
+     "median": 0.9
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.8363636363636364,
+     "median": 1.0
+    },
+    "mw_p": 0.5664099622694699,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.9,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.6
+    }
+   },
+   "2000|selected|raw|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.6375,
+      "ci95": [
+       0.4,
+       0.8500000000000001
+      ],
+      "positive_segments": 51
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.6181818181818182,
+      "ci95": [
+       0.4,
+       0.8181818181818182
+      ],
+      "positive_segments": 68
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.01931818181818179,
+      "ci95": [
+       -0.3284090909090909,
+       0.29772727272727273
+      ],
+      "perm_p": 0.9508049195080492
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.6375,
+     "median": 0.75
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.6181818181818182,
+     "median": 0.8
+    },
+    "mw_p": 0.9667157584193758,
+    "chf_20_80pp_below_nsr_mean": 3,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.9,
+     "chfdb:chf05": 0.9,
+     "chfdb:chf06": 0.5,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.1,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.8,
+     "chfdb:chf14": 0.5,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.1,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19140": 0.4,
+     "nsrdb:19830": 1.0
+    }
+   },
+   "2000|selected|rawf|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.8375,
+      "ci95": [
+       0.7375,
+       0.925
+      ],
+      "positive_segments": 67
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.8363636363636364,
+      "ci95": [
+       0.6454545454545455,
+       0.9818181818181819
+      ],
+      "positive_segments": 92
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.001136363636363602,
+      "ci95": [
+       -0.20340909090909087,
+       0.17613636363636354
+      ],
+      "perm_p": 1.0
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8375,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.8363636363636364,
+     "median": 1.0
+    },
+    "mw_p": 0.4050880349568823,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.8
+    }
+   },
+   "2000|selected|rawf|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.9125,
+      "ci95": [
+       0.8500000000000001,
+       0.975
+      ],
+      "positive_segments": 73
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.8363636363636364,
+      "ci95": [
+       0.6454545454545455,
+       0.9818181818181819
+      ],
+      "positive_segments": 92
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.07613636363636356,
+      "ci95": [
+       -0.2670454545454545,
+       0.0818181818181819
+      ],
+      "perm_p": 0.4958504149585041
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.9125,
+     "median": 0.95
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.8363636363636364,
+     "median": 1.0
+    },
+    "mw_p": 0.8572558365091352,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 1.0,
+     "chfdb:chf05": 1.0,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.9,
+     "chfdb:chf10": 0.3,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.2,
+     "chfdb:chf13": 1.0,
+     "chfdb:chf14": 0.9,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.8,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|selected|rawf|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.5875,
+      "ci95": [
+       0.3375,
+       0.8125
+      ],
+      "positive_segments": 47
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.6090909090909091,
+      "ci95": [
+       0.38181818181818183,
+       0.8181818181818182
+      ],
+      "positive_segments": 67
+     },
+     "CHF_minus_NSR": {
+      "diff": 0.021590909090909105,
+      "ci95": [
+       -0.29886363636363633,
+       0.3511363636363636
+      ],
+      "perm_p": 0.9475052494750525
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.5875,
+     "median": 0.7
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.6090909090909091,
+     "median": 0.8
+    },
+    "mw_p": 0.8672041892741502,
+    "chf_20_80pp_below_nsr_mean": 3,
+    "chf_relative_reduction_20_80pct": 0,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": false,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 1.0,
+     "chfdb:chf04": 0.9,
+     "chfdb:chf05": 0.9,
+     "chfdb:chf06": 0.5,
+     "chfdb:chf08": 1.0,
+     "chfdb:chf09": 0.1,
+     "chfdb:chf10": 0.1,
+     "chfdb:chf11": 0.9,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.8,
+     "chfdb:chf14": 0.5,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|selected|masked|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.8500000000000001,
+      "ci95": [
+       0.75,
+       0.9375
+      ],
+      "positive_segments": 68
+     },
+     "CHF": {
+      "n_subjects": 9,
+      "n_segments": 90,
+      "mean_subject_rate": 0.15555555555555556,
+      "ci95": [
+       0.0,
+       0.3333333333333333
+      ],
+      "positive_segments": 14
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.6944444444444445,
+      "ci95": [
+       -0.8652777777777777,
+       -0.49305555555555564
+      ],
+      "perm_p": 0.0004999500049995
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8500000000000001,
+     "median": 0.8500000000000001
+    },
+    "CHF": {
+     "n_subjects": 9,
+     "mean": 0.15555555555555556,
+     "median": 0.0
+    },
+    "mw_p": 0.0007877124969599491,
+    "chf_20_80pp_below_nsr_mean": 2,
+    "chf_relative_reduction_20_80pct": 2,
+    "n_chf": 9,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.7,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.2,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.5,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|selected|masked|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.925,
+      "ci95": [
+       0.8625,
+       0.975
+      ],
+      "positive_segments": 74
+     },
+     "CHF": {
+      "n_subjects": 9,
+      "n_segments": 90,
+      "mean_subject_rate": 0.16666666666666666,
+      "ci95": [
+       0.03333333333333333,
+       0.3222222222222222
+      ],
+      "positive_segments": 15
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.7583333333333334,
+      "ci95": [
+       -0.9014236111111112,
+       -0.5902777777777779
+      ],
+      "perm_p": 0.00029997000299970003
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.925,
+     "median": 0.95
+    },
+    "CHF": {
+     "n_subjects": 9,
+     "mean": 0.16666666666666666,
+     "median": 0.0
+    },
+    "mw_p": 0.0004921261065026525,
+    "chf_20_80pp_below_nsr_mean": 3,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 9,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.6,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.5,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.1,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.9,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|selected|masked|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.5875,
+      "ci95": [
+       0.3375,
+       0.8125
+      ],
+      "positive_segments": 47
+     },
+     "CHF": {
+      "n_subjects": 9,
+      "n_segments": 90,
+      "mean_subject_rate": 0.08888888888888889,
+      "ci95": [
+       0.0,
+       0.21111111111111114
+      ],
+      "positive_segments": 8
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4986111111111111,
+      "ci95": [
+       -0.75,
+       -0.23190972222222267
+      ],
+      "perm_p": 0.004899510048995101
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.5875,
+     "median": 0.7
+    },
+    "CHF": {
+     "n_subjects": 9,
+     "mean": 0.08888888888888889,
+     "median": 0.0
+    },
+    "mw_p": 0.006979211893323492,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 1,
+    "n_chf": 9,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.5,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.0,
+     "chfdb:chf11": 0.3,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|selected|edited|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.8375,
+      "ci95": [
+       0.7375,
+       0.925
+      ],
+      "positive_segments": 67
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 98,
+      "mean_subject_rate": 0.3075,
+      "ci95": [
+       0.1275,
+       0.5125
+      ],
+      "positive_segments": 29
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.53,
+      "ci95": [
+       -0.74,
+       -0.30000000000000004
+      ],
+      "perm_p": 0.0021997800219978004
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8375,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.3075,
+     "median": 0.2
+    },
+    "mw_p": 0.006173826485982958,
+    "chf_20_80pp_below_nsr_mean": 5,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.8,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 0.875,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.8
+    }
+   },
+   "2000|selected|edited|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.9125,
+      "ci95": [
+       0.8500000000000001,
+       0.975
+      ],
+      "positive_segments": 73
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 98,
+      "mean_subject_rate": 0.2975,
+      "ci95": [
+       0.12000000000000002,
+       0.49499999999999994
+      ],
+      "positive_segments": 28
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.615,
+      "ci95": [
+       -0.8,
+       -0.4075000000000001
+      ],
+      "perm_p": 0.0004999500049995
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.9125,
+     "median": 0.95
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.2975,
+     "median": 0.2
+    },
+    "mw_p": 0.001055196887999895,
+    "chf_20_80pp_below_nsr_mean": 5,
+    "chf_relative_reduction_20_80pct": 5,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.7,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 0.875,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.8,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|selected|edited|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.5875,
+      "ci95": [
+       0.3375,
+       0.8125
+      ],
+      "positive_segments": 47
+     },
+     "CHF": {
+      "n_subjects": 10,
+      "n_segments": 98,
+      "mean_subject_rate": 0.14750000000000002,
+      "ci95": [
+       0.04,
+       0.275
+      ],
+      "positive_segments": 14
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.44,
+      "ci95": [
+       -0.6975,
+       -0.16499999999999998
+      ],
+      "perm_p": 0.0072992700729927005
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.5875,
+     "median": 0.7
+    },
+    "CHF": {
+     "n_subjects": 10,
+     "mean": 0.14750000000000002,
+     "median": 0.0
+    },
+    "mw_p": 0.017131448342428007,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 10,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf04": 0.5,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf06": 0.375,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.4,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|selected|wu|R0": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.8250000000000001,
+      "ci95": [
+       0.725,
+       0.925
+      ],
+      "positive_segments": 66
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.35454545454545455,
+      "ci95": [
+       0.16363636363636364,
+       0.5636363636363636
+      ],
+      "positive_segments": 39
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4704545454545455,
+      "ci95": [
+       -0.6897727272727273,
+       -0.23977272727272725
+      ],
+      "perm_p": 0.005599440055994401
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.8250000000000001,
+     "median": 0.8
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.35454545454545455,
+     "median": 0.2
+    },
+    "mw_p": 0.01091555232981903,
+    "chf_20_80pp_below_nsr_mean": 5,
+    "chf_relative_reduction_20_80pct": 4,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 0.7,
+     "chfdb:chf04": 0.8,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.1,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 0.8,
+     "nsrdb:16483": 0.6,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.7,
+     "nsrdb:19830": 0.7
+    }
+   },
+   "2000|selected|wu|R0-BP96F": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.9125,
+      "ci95": [
+       0.8500000000000001,
+       0.975
+      ],
+      "positive_segments": 73
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.36363636363636365,
+      "ci95": [
+       0.17272727272727273,
+       0.5727272727272728
+      ],
+      "positive_segments": 40
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.5488636363636363,
+      "ci95": [
+       -0.7488636363636363,
+       -0.3295454545454546
+      ],
+      "perm_p": 0.0016998300169983002
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.9125,
+     "median": 0.95
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.36363636363636365,
+     "median": 0.2
+    },
+    "mw_p": 0.002499354653217727,
+    "chf_20_80pp_below_nsr_mean": 6,
+    "chf_relative_reduction_20_80pct": 6,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": true,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": false,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 0.7,
+     "chfdb:chf04": 0.8,
+     "chfdb:chf05": 0.2,
+     "chfdb:chf06": 1.0,
+     "chfdb:chf08": 0.3,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.6,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.2,
+     "nsrdb:16273": 1.0,
+     "nsrdb:16420": 1.0,
+     "nsrdb:16483": 0.8,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 1.0,
+     "nsrdb:18184": 0.8,
+     "nsrdb:19140": 0.8,
+     "nsrdb:19830": 0.9
+    }
+   },
+   "2000|selected|wu|R0-BP96": {
+    "group_rates": {
+     "NSR": {
+      "n_subjects": 8,
+      "n_segments": 80,
+      "mean_subject_rate": 0.5875,
+      "ci95": [
+       0.3375,
+       0.8125
+      ],
+      "positive_segments": 47
+     },
+     "CHF": {
+      "n_subjects": 11,
+      "n_segments": 110,
+      "mean_subject_rate": 0.18181818181818182,
+      "ci95": [
+       0.05454545454545456,
+       0.3272727272727273
+      ],
+      "positive_segments": 20
+     },
+     "CHF_minus_NSR": {
+      "diff": -0.4056818181818182,
+      "ci95": [
+       -0.6693181818181818,
+       -0.12045454545454548
+      ],
+      "perm_p": 0.014098590140985901
+     }
+    },
+    "NSR": {
+     "n_subjects": 8,
+     "mean": 0.5875,
+     "median": 0.7
+    },
+    "CHF": {
+     "n_subjects": 11,
+     "mean": 0.18181818181818182,
+     "median": 0.0
+    },
+    "mw_p": 0.019367519571997737,
+    "chf_20_80pp_below_nsr_mean": 8,
+    "chf_relative_reduction_20_80pct": 3,
+    "n_chf": 11,
+    "pattern": {
+     "a_nsr_mean_ge_0.90": false,
+     "b_diff_ci_below_0": true,
+     "c_ge_2_3_chf_20_80pp": true,
+     "reproduced": false
+    },
+    "per_subject": {
+     "chfdb:chf02": 0.2,
+     "chfdb:chf04": 0.5,
+     "chfdb:chf05": 0.0,
+     "chfdb:chf06": 0.7,
+     "chfdb:chf08": 0.0,
+     "chfdb:chf09": 0.0,
+     "chfdb:chf10": 0.2,
+     "chfdb:chf11": 0.4,
+     "chfdb:chf12": 0.0,
+     "chfdb:chf13": 0.0,
+     "chfdb:chf14": 0.0,
+     "nsrdb:16273": 0.7,
+     "nsrdb:16420": 0.9,
+     "nsrdb:16483": 0.0,
+     "nsrdb:16786": 1.0,
+     "nsrdb:17453": 0.9,
+     "nsrdb:18184": 0.2,
+     "nsrdb:19140": 0.3,
+     "nsrdb:19830": 0.7
+    }
+   }
+  },
+  "primary": {
+   "pattern": {
+    "a_nsr_mean_ge_0.90": false,
+    "b_diff_ci_below_0": false,
+    "c_ge_2_3_chf_20_80pp": false,
+    "reproduced": false
+   },
+   "NSR": {
+    "n_subjects": 18,
+    "mean": 0.5263888888888889,
+    "median": 0.5375000000000001
+   },
+   "CHF": {
+    "n_subjects": 15,
+    "mean": 0.6916666666666668,
+    "median": 0.775
+   },
+   "diff": {
+    "diff": 0.16527777777777786,
+    "ci95": [
+     -0.019166666666666665,
+     0.33305555555555544
+    ],
+    "perm_p": 0.0744925507449255
+   },
+   "mw_p": 0.03416806069118416
+  },
+  "after_handling": {
+   "masked": {
+    "diff": -0.4563342041154219,
+    "ci95": [
+     -0.5702297962221208,
+     -0.33691161803261915
+    ],
+    "perm_p": 9.999000099990002e-05
+   },
+   "edited": {
+    "diff": -0.263510101010101,
+    "ci95": [
+     -0.42837346681096683,
+     -0.08159632034632044
+    ],
+    "perm_p": 0.004899510048995101
+   },
+   "wu": {
+    "diff": -0.27867965367965375,
+    "ci95": [
+     -0.4413780663780663,
+     -0.10250180375180382
+    ],
+    "perm_p": 0.0030996900309969004
+   }
+  },
+  "against_claims_decrease_survives_handling": true,
+  "clogit_ectopy": {
+   "outcome": "pos",
+   "covariates": [
+    "x"
+   ],
+   "n": 1320,
+   "n_pos": 794,
+   "n_subjects": 33,
+   "n_informative_subjects": 32,
+   "n_informative_units": 1280,
+   "estimated": true,
+   "coef": {
+    "x": {
+     "beta": 0.8546329538973446,
+     "se": 0.14053839336654214,
+     "OR": 2.35051147614517,
+     "OR_ci95": [
+      1.7845703801956325,
+      3.0959295642262545
+     ],
+     "p": 1.1933470218286622e-09
+    }
+   }
+  },
+  "ectopy_by_group": {
+   "NSR": {
+    "median": 0.0,
+    "q25": 0.0,
+    "q75": 2.0,
+    "n": 18
+   },
+   "CHF": {
+    "median": 185.0,
+    "q25": 131.0,
+    "q75": 635.5,
+    "n": 15
+   }
+  },
+  "descriptive_handling": {
+   "label": "descriptive, not registered (added after the outputs were seen)",
+   "analysable_fraction_500": {
+    "NSR": {
+     "raw": 1.0,
+     "rawf": 1.0,
+     "masked": 0.9833333333333333,
+     "edited": 1.0,
+     "wu": 1.0
+    },
+    "CHF": {
+     "raw": 1.0,
+     "rawf": 1.0,
+     "masked": 0.3383333333333333,
+     "edited": 0.915,
+     "wu": 0.915
+    }
+   },
+   "segments_with_ectopy_fraction_500": {
+    "NSR": 0.030555555555555555,
+    "CHF": 0.7966666666666666
+   },
+   "ectopic_beats_per_segment_500": {
+    "NSR": {
+     "median": 0.0,
+     "q25": 0.0,
+     "q75": 0.0,
+     "n": 720
+    },
+    "CHF": {
+     "median": 5.0,
+     "q25": 1.0,
+     "q75": 14.0,
+     "n": 600
+    }
+   }
+  },
+  "exploratory_clean_segments": {
+   "label": "EXPLORATORY / POST HOC (not registered): 500-beat segments with no non-normal beat and no out-of-range interval, so raw = every handled arm; raw decision",
+   "n_segments": {
+    "NSR": 638,
+    "CHF": 122
+   },
+   "n_subjects": {
+    "NSR": 18,
+    "CHF": 8
+   },
+   "R0": {
+    "NSR": {
+     "n_subjects": 18,
+     "n_segments": 638,
+     "mean_subject_rate": 0.5342177984368137,
+     "ci95": [
+      0.44567192232355646,
+      0.6283375093227598
+     ],
+     "positive_segments": 342
+    },
+    "CHF": {
+     "n_subjects": 8,
+     "n_segments": 122,
+     "mean_subject_rate": 0.19046442687747034,
+     "ci95": [
+      0.005681818181818182,
+      0.44046442687747034
+     ],
+     "positive_segments": 13
+    },
+    "CHF_minus_NSR": {
+     "diff": -0.3437533715593434,
+     "ci95": [
+      -0.562819072351472,
+      -0.06106304910246763
+     ],
+     "perm_p": 0.004899510048995101
+    }
+   },
+   "R0-BP96": {
+    "NSR": {
+     "n_subjects": 18,
+     "n_segments": 638,
+     "mean_subject_rate": 0.7587333642370429,
+     "ci95": [
+      0.6945701645995223,
+      0.8176779340936458
+     ],
+     "positive_segments": 484
+    },
+    "CHF": {
+     "n_subjects": 8,
+     "n_segments": 122,
+     "mean_subject_rate": 0.21797884841363102,
+     "ci95": [
+      0.016891891891891893,
+      0.4848707403055229
+     ],
+     "positive_segments": 20
+    },
+    "CHF_minus_NSR": {
+     "diff": -0.5407545158234118,
+     "ci95": [
+      -0.7618374808099624,
+      -0.26328026833765356
+     ],
+     "perm_p": 9.999000099990002e-05
+    }
+   }
+  },
+  "fig3": {
+   "per_subject": {
+    "chfdb:chf01": 1.7270346975813133,
+    "chfdb:chf02": 1.2862220263533417,
+    "chfdb:chf03": 6.359393431856351,
+    "chfdb:chf04": 1.2749320923868865,
+    "chfdb:chf05": 0.9344092952905065,
+    "chfdb:chf06": 0.2036661743814133,
+    "chfdb:chf07": 8.173725871938958,
+    "chfdb:chf08": 2.7926920145114154,
+    "chfdb:chf09": 0.6068837920615632,
+    "chfdb:chf10": 41.67718911612245,
+    "chfdb:chf11": 1.4643481577584878,
+    "chfdb:chf13": 0.6990646106894769,
+    "chfdb:chf14": 1.0940953713354014,
+    "chfdb:chf15": 1.9399589539861437,
+    "nsrdb:16265": 0.6822464806523035,
+    "nsrdb:16272": 87.12756372368221,
+    "nsrdb:16273": 0.599757595041648,
+    "nsrdb:16420": 0.7474835451408767,
+    "nsrdb:16483": 0.9664949413779148,
+    "nsrdb:16539": 0.4829945352296584,
+    "nsrdb:16773": 0.3170357004344479,
+    "nsrdb:16786": 0.3701351213989682,
+    "nsrdb:16795": 0.35635896284047475,
+    "nsrdb:17052": 67.01583516310457,
+    "nsrdb:17453": 0.9264652158811723,
+    "nsrdb:18177": 136.753042508527,
+    "nsrdb:18184": 1.7010853474314789,
+    "nsrdb:19088": 2.009015895257718,
+    "nsrdb:19090": 1.2089628438977278,
+    "nsrdb:19093": 0.6991002661922148,
+    "nsrdb:19140": 7.875920354288567,
+    "nsrdb:19830": 42.37802467757923
+   },
+   "NSR": {
+    "n": 18,
+    "mean": 19.567640159886565,
+    "se": 9.175529550831344
+   },
+   "CHF": {
+    "n": 14,
+    "mean": 5.016686829018123,
+    "se": 2.8850102510358955
+   },
+   "CHF_minus_NSR": {
+    "diff": -14.550953330868442,
+    "ci95": [
+     -34.074272522174006,
+     1.8040878905978535
+    ],
+    "mw_p": 0.5817643034169409
+   },
+   "reading": "full kappa = 7, d = 3 model, first 80 nonlinear coefficients, positive raw R0 500-beat segments"
+  },
+  "titration": {
+   "positive_rate": {
+    "NSR": {
+     "n_subjects": 18,
+     "n_segments": 720,
+     "mean_subject_rate": 0.5263888888888889,
+     "ci95": [
+      0.4375,
+      0.6208333333333333
+     ],
+     "positive_segments": 379
+    },
+    "CHF": {
+     "n_subjects": 15,
+     "n_segments": 600,
+     "mean_subject_rate": 0.6916666666666668,
+     "ci95": [
+      0.5283333333333333,
+      0.8316666666666668
+     ],
+     "positive_segments": 415
+    },
+    "CHF_minus_NSR": {
+     "diff": 0.16527777777777786,
+     "ci95": [
+      -0.019166666666666665,
+      0.33305555555555544
+     ],
+     "perm_p": 0.0744925507449255
+    }
+   },
+   "mean_NL_positive": {
+    "NSR": {
+     "median": 0.1728515625,
+     "q25": 0.10537109375,
+     "q75": 0.26777343750000004,
+     "n": 379
+    },
+    "CHF": {
+     "median": 0.601171875,
+     "q25": 0.40654296875,
+     "q75": 0.74345703125,
+     "n": 415
+    }
+   },
+   "agreement_with_noise_free_decision": {
+    "agree": 1320,
+    "n": 1320
+   }
+  }
  }
 }
