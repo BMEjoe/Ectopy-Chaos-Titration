@@ -1,0 +1,9 @@
+### Table 12-11. PM97 replication: ectopy association, coefficient variability, ectopy-free segments
+
+| quantity | value | n |
+|---|---|---|
+| within-subject OR of ectopy (per doubling), conditional logit | 2.35 [1.78, 3.10] | 1320 segments, 32 informative subjects |
+| Fig. 3 reading: mean SD of the first 80 nonlinear coefficients, NSR | 19.57 ± 9.18 (s.e.) | 18 subjects |
+| same, CHF | 5.02 ± 2.89 | 14 subjects |
+| same, CHF − NSR | -14.55 [-34.07, 1.80], MW p 0.58 | descriptive |
+| EXPLORATORY: ectopy-free segments, CHF − NSR (R0) | -34.4 [-56.3, -6.1] pp | 18 NSR / 8 CHF subjects |

@@ -1,0 +1,13 @@
+### Table 12-5. Phase 10 synthetic conditions (512 intervals, seeds 12000–12099): positive / 100
+
+| condition | R0 | R0-BP96F | R0-BP96 | R0-S-FT | R0-S-AAFT |
+|---|---|---|---|---|---|
+| N1_linear_rr | 0 | 0 | 0 | 0 | 0 |
+| N2_power_law | 0 | 0 | 0 | 0 | 0 |
+| N3_linear_rr_trend | 0 | 0 | 0 | 0 | 0 |
+| N4_linear_rr_step | 5 | 29 | 0 | 5 | 5 |
+| N5_linear_rr_warped | 100 | 100 | 100 | 100 | 100 |
+| N6_noisy_rsa | 0 | 0 | 0 | 0 | 0 |
+| E3_couplets_5pct | 100 | 100 | 100 | 100 | 100 |
+| E4_runs | 91 | 91 | 91 | 91 | 91 |
+| S2_ectopic_5pct | 4 | 39 | 46 | 3 | 4 |
