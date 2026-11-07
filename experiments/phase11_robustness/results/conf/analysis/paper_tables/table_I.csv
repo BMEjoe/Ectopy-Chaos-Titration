@@ -1,0 +1,18 @@
+method,parameter,value,source
+K1,LLE test: IAAFT surrogates,99,final_pipeline / phase7 detector.DETECTOR
+K1,LLE test: alpha,0.05,
+K1,LLE test: embedding m,2,
+K1,UPO test: surrogates,50,
+K1,keep_upo_on_short_lle_embedding,True,
+K1,detrend method (D2),linear,PHASE6_DETREND
+K1,detrend gate: trend change / residual SD >=,0.7,PHASE6_DETREND
+K3,z threshold (masked_growth_z),9.4521,PipelineConfig
+K3,growth gate G (masked_growth_g),0.25,
+K3,IAAFT surrogates,39,
+K3,minimum valid delay vectors,100,
+TIT,nonlinear memory kappa <=,6,titration10
+TIT,degree d <=,3,
+TIT,linear memory <=,83,
+TIT,test level,0.01,variance-ratio F-test
+TIT,noise realisations,10,"bisection, 10 halvings"
+TIT,eps power in C(r),0.5,0.5 = RMS

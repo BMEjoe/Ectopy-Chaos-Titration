@@ -1,0 +1,23 @@
+#,point,source location,verdict,decision-relevant
+F1,Model form and term order,"BP96 p. 215, Eq. 1",matches,
+F2,Truncated models (leading r terms),"BP96 p. 216, Eq. 3; Fig. 1b",matches,
+F3,Constant term counted in r,"BP96 p. 215, Eq. 1; Figs. 1b, 2a",matches,
+F4,Least-squares (Korenberg Gram-Schmidt) estimation,BP96 p. 215,matches,
+F5,eps^2 = normalised residual variance (eps RMS-like),"BP96 p. 215, Eq. 2; p. 216",matches,
+F6,C(r) = ln eps(r) + r/N (natural log),"BP96 p. 216, Eq. 3; PM97 p. 494, Fig. 2 legend",matches,
+F7,N = series length (code: number of regression rows),"BP96 p. 217, Fig. 2 df; PM97 p. 494",deviates,yes
+F8,Linear search over the same term range (kappa_lin <= 83),"BP96 p. 216; Figs. 1b, 2a",matches,
+F9,"kappa, d ranges (code kappa <= 6, d <= 3)","BP96 Figs. 1b, 1c, 2a (d up to 5 and 8)",not specified,
+F10,Nonlinear family d > 1,BP96 p. 216,matches,
+F11,Decision: d_opt > 1 corroborated by the test,BP96 p. 216; Figs. 1-2,matches,
+F12,F_calc = eps_lin^2/eps_nl^2 (code: df-adjusted ratio),"BP96 p. 216, Fig. 1 legend",deviates,yes
+F13,df = N - r (code: N = rows),"BP96 p. 217, Fig. 2a/2b; p. 216, Fig. 1",deviates (via F7),yes
+F14,1 % level,BP96 Figs. 1-2 legends; Table 1 legend,matches,
+F15,One-sided F-test,"BP96 p. 216, Fig. 1 legend",matches,
+F16,"chi-square Gaussianity check (99 %), Mann-Whitney alternative",BP96 p. 216,deviates (absent),yes
+F17,Mann-Whitney one-sided; ranked quantity,"BP96 p. 216; Figs. 1, 2a",sidedness matches; quantity not specified,
+F18,"Surrogate step (FT-type, confirmatory)",BP96 p. 216,deviates (absent),yes
+F19,No preprocessing (code standardises: decision-invariant),BP96 p. 217,matches in effect,
+F20,Handling of the first kappa points,"BP96 p. 215, Eq. 2",not specified,
+F21,Minimum series length,-,not specified,
+F22,Noise titration (NL),absent from BP96 and PM97 (Poon & Barahona 2001),outside BP96/PM97,

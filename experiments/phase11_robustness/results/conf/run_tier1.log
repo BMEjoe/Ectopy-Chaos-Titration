@@ -1,0 +1,359 @@
+prep: 1 tasks to run (0 done)
+  prep 1/1 1.5 min; eta 0.0 min
+hrt: 83 tasks to run (0 done)
+  hrt 50/83 0.1 min; eta 0.1 min
+  hrt 83/83 0.1 min; eta 0.0 min
+covar: 83 tasks to run (0 done)
+  covar 50/83 0.1 min; eta 0.1 min
+  covar 83/83 0.1 min; eta 0.0 min
+sham_win: 988 tasks to run (0 done)
+  sham_win 50/988 0.8 min; eta 14.2 min
+  sham_win 100/988 1.5 min; eta 13.5 min
+  sham_win 150/988 2.1 min; eta 11.9 min
+  sham_win 200/988 2.9 min; eta 11.3 min
+  sham_win 250/988 3.6 min; eta 10.8 min
+  sham_win 300/988 4.3 min; eta 9.9 min
+  sham_win 350/988 5.0 min; eta 9.2 min
+  sham_win 400/988 6.0 min; eta 8.8 min
+  sham_win 450/988 6.6 min; eta 7.9 min
+  sham_win 500/988 7.4 min; eta 7.3 min
+  sham_win 550/988 8.3 min; eta 6.6 min
+  sham_win 600/988 9.2 min; eta 6.0 min
+  sham_win 650/988 9.8 min; eta 5.1 min
+  sham_win 700/988 10.3 min; eta 4.3 min
+  sham_win 750/988 11.1 min; eta 3.5 min
+  sham_win 800/988 11.8 min; eta 2.8 min
+  sham_win 850/988 12.3 min; eta 2.0 min
+  sham_win 900/988 13.3 min; eta 1.3 min
+  sham_win 950/988 13.7 min; eta 0.5 min
+  sham_win 988/988 14.2 min; eta 0.0 min
+transplant: 439 tasks to run (0 done)
+  transplant 50/439 1.5 min; eta 11.4 min
+  transplant 100/439 2.9 min; eta 9.9 min
+  transplant 150/439 4.4 min; eta 8.4 min
+  transplant 200/439 5.8 min; eta 6.9 min
+  transplant 250/439 7.2 min; eta 5.4 min
+  transplant 300/439 8.6 min; eta 4.0 min
+  transplant 350/439 10.0 min; eta 2.5 min
+  transplant 400/439 11.4 min; eta 1.1 min
+  transplant 439/439 12.5 min; eta 0.0 min
+synth1: 700 tasks to run (0 done)
+  synth1 50/700 3.1 min; eta 40.3 min
+  synth1 100/700 6.2 min; eta 37.1 min
+  synth1 150/700 9.0 min; eta 33.0 min
+  synth1 200/700 11.8 min; eta 29.5 min
+  synth1 250/700 14.7 min; eta 26.4 min
+  synth1 300/700 17.6 min; eta 23.4 min
+  synth1 350/700 20.6 min; eta 20.6 min
+  synth1 400/700 23.3 min; eta 17.5 min
+  synth1 450/700 26.2 min; eta 14.5 min
+  synth1 500/700 28.5 min; eta 11.4 min
+  synth1 550/700 30.3 min; eta 8.3 min
+  synth1 600/700 32.3 min; eta 5.4 min
+  synth1 650/700 34.3 min; eta 2.6 min
+  synth1 700/700 36.4 min; eta 0.0 min
+extmask: 232 tasks to run (0 done)
+  extmask 50/232 0.1 min; eta 0.4 min
+  extmask 100/232 0.2 min; eta 0.3 min
+  extmask 150/232 0.4 min; eta 0.2 min
+  extmask 200/232 0.5 min; eta 0.1 min
+  extmask 232/232 0.7 min; eta 0.0 min
+rdg_verify: 1680 tasks to run (0 done)
+  rdg_verify 50/1680 0.2 min; eta 7.7 min
+  rdg_verify 100/1680 0.5 min; eta 7.2 min
+  rdg_verify 150/1680 0.7 min; eta 6.9 min
+  rdg_verify 200/1680 1.0 min; eta 7.3 min
+  rdg_verify 250/1680 1.3 min; eta 7.5 min
+  rdg_verify 300/1680 1.5 min; eta 7.1 min
+  rdg_verify 350/1680 1.8 min; eta 6.8 min
+  rdg_verify 400/1680 2.2 min; eta 6.9 min
+  rdg_verify 450/1680 2.4 min; eta 6.5 min
+  rdg_verify 500/1680 2.7 min; eta 6.3 min
+  rdg_verify 550/1680 3.0 min; eta 6.1 min
+  rdg_verify 600/1680 3.2 min; eta 5.8 min
+  rdg_verify 650/1680 3.5 min; eta 5.5 min
+  rdg_verify 700/1680 3.8 min; eta 5.3 min
+  rdg_verify 750/1680 4.0 min; eta 4.9 min
+  rdg_verify 800/1680 4.2 min; eta 4.6 min
+  rdg_verify 850/1680 4.4 min; eta 4.3 min
+  rdg_verify 900/1680 4.7 min; eta 4.1 min
+  rdg_verify 950/1680 4.9 min; eta 3.8 min
+  rdg_verify 1000/1680 5.2 min; eta 3.5 min
+  rdg_verify 1050/1680 5.5 min; eta 3.3 min
+  rdg_verify 1100/1680 5.8 min; eta 3.1 min
+  rdg_verify 1150/1680 6.1 min; eta 2.8 min
+  rdg_verify 1200/1680 6.3 min; eta 2.5 min
+  rdg_verify 1250/1680 6.6 min; eta 2.3 min
+  rdg_verify 1300/1680 6.8 min; eta 2.0 min
+  rdg_verify 1350/1680 7.1 min; eta 1.7 min
+  rdg_verify 1400/1680 7.5 min; eta 1.5 min
+  rdg_verify 1450/1680 7.8 min; eta 1.2 min
+  rdg_verify 1500/1680 8.0 min; eta 1.0 min
+  rdg_verify 1550/1680 8.3 min; eta 0.7 min
+  rdg_verify 1600/1680 8.5 min; eta 0.4 min
+  rdg_verify 1650/1680 8.8 min; eta 0.2 min
+  rdg_verify 1680/1680 9.1 min; eta 0.0 min
+rdg_synth: 4000 tasks to run (0 done)
+  rdg_synth 50/4000 0.5 min; eta 37.5 min
+  rdg_synth 100/4000 0.8 min; eta 32.7 min
+  rdg_synth 150/4000 1.3 min; eta 34.3 min
+  rdg_synth 200/4000 1.8 min; eta 34.2 min
+  rdg_synth 250/4000 2.2 min; eta 32.7 min
+  rdg_synth 300/4000 2.6 min; eta 32.6 min
+  rdg_synth 350/4000 3.0 min; eta 31.3 min
+  rdg_synth 400/4000 3.5 min; eta 31.3 min
+  rdg_synth 450/4000 3.9 min; eta 30.5 min
+  rdg_synth 500/4000 4.5 min; eta 31.2 min
+  rdg_synth 550/4000 4.9 min; eta 30.7 min
+  rdg_synth 600/4000 5.3 min; eta 30.2 min
+  rdg_synth 650/4000 5.8 min; eta 30.0 min
+  rdg_synth 700/4000 6.4 min; eta 30.3 min
+  rdg_synth 750/4000 6.8 min; eta 29.6 min
+  rdg_synth 800/4000 7.4 min; eta 29.5 min
+  rdg_synth 850/4000 7.9 min; eta 29.4 min
+  rdg_synth 900/4000 8.4 min; eta 29.0 min
+  rdg_synth 950/4000 8.8 min; eta 28.3 min
+  rdg_synth 1000/4000 9.3 min; eta 28.0 min
+  rdg_synth 1050/4000 9.7 min; eta 27.3 min
+  rdg_synth 1100/4000 10.3 min; eta 27.3 min
+  rdg_synth 1150/4000 10.8 min; eta 26.7 min
+  rdg_synth 1200/4000 11.2 min; eta 26.2 min
+  rdg_synth 1250/4000 11.8 min; eta 25.9 min
+  rdg_synth 1300/4000 12.2 min; eta 25.3 min
+  rdg_synth 1350/4000 12.6 min; eta 24.8 min
+  rdg_synth 1400/4000 13.1 min; eta 24.4 min
+  rdg_synth 1450/4000 13.6 min; eta 23.8 min
+  rdg_synth 1500/4000 14.2 min; eta 23.6 min
+  rdg_synth 1550/4000 14.6 min; eta 23.0 min
+  rdg_synth 1600/4000 14.9 min; eta 22.4 min
+  rdg_synth 1650/4000 15.4 min; eta 21.9 min
+  rdg_synth 1700/4000 15.8 min; eta 21.3 min
+  rdg_synth 1750/4000 16.2 min; eta 20.8 min
+  rdg_synth 1800/4000 16.6 min; eta 20.3 min
+  rdg_synth 1850/4000 17.0 min; eta 19.7 min
+  rdg_synth 1900/4000 17.3 min; eta 19.1 min
+  rdg_synth 1950/4000 17.8 min; eta 18.7 min
+  rdg_synth 2000/4000 18.2 min; eta 18.2 min
+  rdg_synth 2050/4000 18.5 min; eta 17.6 min
+  rdg_synth 2100/4000 18.8 min; eta 17.0 min
+  rdg_synth 2150/4000 19.2 min; eta 16.5 min
+  rdg_synth 2200/4000 19.6 min; eta 16.0 min
+  rdg_synth 2250/4000 20.0 min; eta 15.5 min
+  rdg_synth 2300/4000 20.3 min; eta 15.0 min
+  rdg_synth 2350/4000 20.8 min; eta 14.6 min
+=== container restart 2026-11-04T01:57:49Z: runner restarted (resumable) ===
+prep: 0 tasks to run (1 done)
+hrt: 0 tasks to run (83 done)
+covar: 0 tasks to run (83 done)
+sham_win: 0 tasks to run (988 done)
+transplant: 0 tasks to run (439 done)
+synth1: 0 tasks to run (700 done)
+extmask: 0 tasks to run (232 done)
+rdg_verify: 0 tasks to run (1680 done)
+rdg_synth: 1648 tasks to run (2352 done)
+  rdg_synth 50/1648 0.5 min; eta 17.4 min
+  rdg_synth 100/1648 0.9 min; eta 14.4 min
+  rdg_synth 150/1648 1.5 min; eta 14.8 min
+  rdg_synth 200/1648 1.9 min; eta 14.0 min
+  rdg_synth 250/1648 2.5 min; eta 14.0 min
+  rdg_synth 300/1648 2.9 min; eta 13.1 min
+  rdg_synth 350/1648 3.7 min; eta 13.8 min
+  rdg_synth 400/1648 4.1 min; eta 12.9 min
+  rdg_synth 450/1648 4.7 min; eta 12.4 min
+  rdg_synth 500/1648 5.3 min; eta 12.2 min
+  rdg_synth 550/1648 5.8 min; eta 11.6 min
+  rdg_synth 600/1648 6.3 min; eta 11.0 min
+  rdg_synth 650/1648 6.9 min; eta 10.6 min
+  rdg_synth 700/1648 7.5 min; eta 10.1 min
+  rdg_synth 750/1648 8.1 min; eta 9.7 min
+  rdg_synth 800/1648 8.7 min; eta 9.2 min
+  rdg_synth 850/1648 9.1 min; eta 8.6 min
+  rdg_synth 900/1648 9.6 min; eta 8.0 min
+  rdg_synth 950/1648 10.3 min; eta 7.5 min
+  rdg_synth 1000/1648 10.7 min; eta 7.0 min
+  rdg_synth 1050/1648 11.3 min; eta 6.4 min
+  rdg_synth 1100/1648 11.9 min; eta 5.9 min
+  rdg_synth 1150/1648 12.4 min; eta 5.4 min
+  rdg_synth 1200/1648 12.8 min; eta 4.8 min
+  rdg_synth 1250/1648 13.4 min; eta 4.3 min
+  rdg_synth 1300/1648 13.7 min; eta 3.7 min
+  rdg_synth 1350/1648 14.2 min; eta 3.1 min
+  rdg_synth 1400/1648 14.6 min; eta 2.6 min
+  rdg_synth 1450/1648 15.1 min; eta 2.1 min
+  rdg_synth 1500/1648 15.5 min; eta 1.5 min
+  rdg_synth 1550/1648 15.9 min; eta 1.0 min
+  rdg_synth 1600/1648 16.4 min; eta 0.5 min
+  rdg_synth 1648/1648 16.8 min; eta 0.0 min
+rdg_win: 6916 tasks to run (0 done)
+  rdg_win 50/6916 0.4 min; eta 52.4 min
+  rdg_win 100/6916 0.9 min; eta 58.7 min
+  rdg_win 150/6916 1.3 min; eta 60.9 min
+  rdg_win 200/6916 1.7 min; eta 56.2 min
+  rdg_win 250/6916 2.1 min; eta 56.7 min
+  rdg_win 300/6916 2.6 min; eta 57.1 min
+  rdg_win 350/6916 3.1 min; eta 57.8 min
+  rdg_win 400/6916 3.5 min; eta 57.0 min
+  rdg_win 450/6916 3.9 min; eta 55.6 min
+  rdg_win 500/6916 4.3 min; eta 55.6 min
+  rdg_win 550/6916 4.8 min; eta 55.1 min
+  rdg_win 600/6916 5.2 min; eta 54.5 min
+  rdg_win 650/6916 5.6 min; eta 54.3 min
+  rdg_win 700/6916 6.0 min; eta 53.4 min
+  rdg_win 750/6916 6.4 min; eta 52.8 min
+  rdg_win 800/6916 6.8 min; eta 52.2 min
+  rdg_win 850/6916 7.2 min; eta 51.2 min
+  rdg_win 900/6916 7.6 min; eta 51.1 min
+  rdg_win 950/6916 8.1 min; eta 51.0 min
+  rdg_win 1000/6916 8.5 min; eta 50.2 min
+  rdg_win 1050/6916 8.9 min; eta 49.5 min
+  rdg_win 1100/6916 9.3 min; eta 49.1 min
+  rdg_win 1150/6916 9.7 min; eta 48.5 min
+  rdg_win 1200/6916 10.1 min; eta 48.2 min
+  rdg_win 1250/6916 10.5 min; eta 47.4 min
+  rdg_win 1300/6916 10.8 min; eta 46.5 min
+  rdg_win 1350/6916 11.4 min; eta 46.9 min
+  rdg_win 1400/6916 11.9 min; eta 46.7 min
+  rdg_win 1450/6916 12.3 min; eta 46.2 min
+  rdg_win 1500/6916 12.6 min; eta 45.5 min
+  rdg_win 1550/6916 13.1 min; eta 45.5 min
+  rdg_win 1600/6916 13.6 min; eta 45.1 min
+  rdg_win 1650/6916 14.0 min; eta 44.5 min
+  rdg_win 1700/6916 14.4 min; eta 44.2 min
+  rdg_win 1750/6916 14.8 min; eta 43.6 min
+  rdg_win 1800/6916 15.2 min; eta 43.1 min
+  rdg_win 1850/6916 15.7 min; eta 43.0 min
+  rdg_win 1900/6916 16.1 min; eta 42.6 min
+  rdg_win 1950/6916 16.5 min; eta 42.1 min
+  rdg_win 2000/6916 17.1 min; eta 42.0 min
+  rdg_win 2050/6916 17.5 min; eta 41.5 min
+  rdg_win 2100/6916 17.9 min; eta 41.1 min
+  rdg_win 2150/6916 18.3 min; eta 40.6 min
+  rdg_win 2200/6916 18.8 min; eta 40.2 min
+  rdg_win 2250/6916 19.4 min; eta 40.2 min
+  rdg_win 2300/6916 19.8 min; eta 39.7 min
+  rdg_win 2350/6916 20.2 min; eta 39.2 min
+  rdg_win 2400/6916 20.8 min; eta 39.1 min
+  rdg_win 2450/6916 21.2 min; eta 38.6 min
+  rdg_win 2500/6916 21.6 min; eta 38.2 min
+  rdg_win 2550/6916 22.1 min; eta 37.8 min
+  rdg_win 2600/6916 22.5 min; eta 37.3 min
+  rdg_win 2650/6916 23.0 min; eta 36.9 min
+  rdg_win 2700/6916 23.3 min; eta 36.5 min
+  rdg_win 2750/6916 23.7 min; eta 35.9 min
+  rdg_win 2800/6916 24.2 min; eta 35.5 min
+  rdg_win 2850/6916 24.5 min; eta 34.9 min
+  rdg_win 2900/6916 24.9 min; eta 34.4 min
+  rdg_win 2950/6916 25.4 min; eta 34.1 min
+  rdg_win 3000/6916 25.6 min; eta 33.4 min
+  rdg_win 3050/6916 26.2 min; eta 33.2 min
+  rdg_win 3100/6916 26.6 min; eta 32.7 min
+  rdg_win 3150/6916 27.1 min; eta 32.4 min
+  rdg_win 3200/6916 27.4 min; eta 31.9 min
+  rdg_win 3250/6916 27.9 min; eta 31.5 min
+  rdg_win 3300/6916 28.4 min; eta 31.1 min
+  rdg_win 3350/6916 28.9 min; eta 30.7 min
+  rdg_win 3400/6916 29.2 min; eta 30.2 min
+  rdg_win 3450/6916 29.6 min; eta 29.8 min
+  rdg_win 3500/6916 29.9 min; eta 29.2 min
+  rdg_win 3550/6916 30.4 min; eta 28.8 min
+  rdg_win 3600/6916 30.9 min; eta 28.4 min
+  rdg_win 3650/6916 31.4 min; eta 28.1 min
+  rdg_win 3700/6916 31.9 min; eta 27.7 min
+  rdg_win 3750/6916 32.2 min; eta 27.2 min
+  rdg_win 3800/6916 32.6 min; eta 26.7 min
+  rdg_win 3850/6916 32.9 min; eta 26.2 min
+  rdg_win 3900/6916 33.5 min; eta 25.9 min
+  rdg_win 3950/6916 33.9 min; eta 25.5 min
+  rdg_win 4000/6916 34.4 min; eta 25.0 min
+  rdg_win 4050/6916 34.8 min; eta 24.6 min
+  rdg_win 4100/6916 35.2 min; eta 24.2 min
+  rdg_win 4150/6916 35.5 min; eta 23.7 min
+  rdg_win 4200/6916 35.9 min; eta 23.2 min
+  rdg_win 4250/6916 36.4 min; eta 22.8 min
+  rdg_win 4300/6916 36.8 min; eta 22.4 min
+  rdg_win 4350/6916 37.2 min; eta 21.9 min
+  rdg_win 4400/6916 37.5 min; eta 21.5 min
+  rdg_win 4450/6916 38.0 min; eta 21.1 min
+  rdg_win 4500/6916 38.5 min; eta 20.7 min
+  rdg_win 4550/6916 39.0 min; eta 20.3 min
+  rdg_win 4600/6916 39.3 min; eta 19.8 min
+  rdg_win 4650/6916 39.7 min; eta 19.4 min
+  rdg_win 4700/6916 40.1 min; eta 18.9 min
+  rdg_win 4750/6916 40.4 min; eta 18.4 min
+  rdg_win 4800/6916 40.8 min; eta 18.0 min
+  rdg_win 4850/6916 41.2 min; eta 17.5 min
+  rdg_win 4900/6916 41.5 min; eta 17.1 min
+  rdg_win 4950/6916 42.0 min; eta 16.7 min
+  rdg_win 5000/6916 42.4 min; eta 16.2 min
+  rdg_win 5050/6916 42.8 min; eta 15.8 min
+  rdg_win 5100/6916 43.2 min; eta 15.4 min
+  rdg_win 5150/6916 43.6 min; eta 15.0 min
+  rdg_win 5200/6916 44.2 min; eta 14.6 min
+  rdg_win 5250/6916 44.6 min; eta 14.2 min
+  rdg_win 5300/6916 45.0 min; eta 13.7 min
+  rdg_win 5350/6916 45.3 min; eta 13.3 min
+  rdg_win 5400/6916 45.7 min; eta 12.8 min
+  rdg_win 5450/6916 46.1 min; eta 12.4 min
+  rdg_win 5500/6916 46.6 min; eta 12.0 min
+  rdg_win 5550/6916 47.1 min; eta 11.6 min
+  rdg_win 5600/6916 47.5 min; eta 11.2 min
+  rdg_win 5650/6916 48.0 min; eta 10.8 min
+  rdg_win 5700/6916 48.5 min; eta 10.3 min
+  rdg_win 5750/6916 48.9 min; eta 9.9 min
+  rdg_win 5800/6916 49.3 min; eta 9.5 min
+  rdg_win 5850/6916 49.8 min; eta 9.1 min
+  rdg_win 5900/6916 50.2 min; eta 8.6 min
+  rdg_win 5950/6916 50.5 min; eta 8.2 min
+  rdg_win 6000/6916 51.0 min; eta 7.8 min
+  rdg_win 6050/6916 51.4 min; eta 7.4 min
+  rdg_win 6100/6916 51.8 min; eta 6.9 min
+  rdg_win 6150/6916 52.3 min; eta 6.5 min
+  rdg_win 6200/6916 52.5 min; eta 6.1 min
+  rdg_win 6250/6916 53.0 min; eta 5.6 min
+  rdg_win 6300/6916 53.2 min; eta 5.2 min
+  rdg_win 6350/6916 53.8 min; eta 4.8 min
+  rdg_win 6400/6916 54.2 min; eta 4.4 min
+  rdg_win 6450/6916 54.7 min; eta 4.0 min
+  rdg_win 6500/6916 55.0 min; eta 3.5 min
+  rdg_win 6550/6916 55.3 min; eta 3.1 min
+  rdg_win 6600/6916 55.8 min; eta 2.7 min
+  rdg_win 6650/6916 56.3 min; eta 2.3 min
+  rdg_win 6700/6916 56.6 min; eta 1.8 min
+  rdg_win 6750/6916 57.1 min; eta 1.4 min
+  rdg_win 6800/6916 57.3 min; eta 1.0 min
+  rdg_win 6850/6916 57.6 min; eta 0.6 min
+  rdg_win 6900/6916 58.2 min; eta 0.1 min
+  rdg_win 6916/6916 58.4 min; eta 0.0 min
+sham_seg: 83 tasks to run (0 done)
+  sham_seg 50/83 118.6 min; eta 78.3 min
+=== restart after container restart 2026-11-04T06:49:56Z
+prep: 0 tasks to run (1 done)
+hrt: 0 tasks to run (83 done)
+covar: 0 tasks to run (83 done)
+sham_win: 0 tasks to run (988 done)
+transplant: 0 tasks to run (439 done)
+synth1: 0 tasks to run (700 done)
+extmask: 0 tasks to run (232 done)
+rdg_verify: 0 tasks to run (1680 done)
+rdg_synth: 0 tasks to run (4000 done)
+rdg_win: 0 tasks to run (6916 done)
+sham_seg: 27 tasks to run (56 done)
+=== restart after container restart 2026-11-04T07:34:29Z
+prep: 0 tasks to run (1 done)
+hrt: 0 tasks to run (83 done)
+covar: 0 tasks to run (83 done)
+sham_win: 0 tasks to run (988 done)
+transplant: 0 tasks to run (439 done)
+synth1: 0 tasks to run (700 done)
+extmask: 0 tasks to run (232 done)
+rdg_verify: 0 tasks to run (1680 done)
+rdg_synth: 0 tasks to run (4000 done)
+rdg_win: 0 tasks to run (6916 done)
+sham_seg: 27 tasks to run (56 done)
+  sham_seg 27/27 61.7 min; eta 0.0 min
+rdg_seg: 166 tasks to run (0 done)
+  rdg_seg 50/166 46.2 min; eta 107.1 min
+  rdg_seg 100/166 90.7 min; eta 59.8 min
+  rdg_seg 150/166 133.5 min; eta 14.2 min
+  rdg_seg 166/166 150.3 min; eta 0.0 min
+RUN11 DONE ('prep', 'hrt', 'covar', 'sham_win', 'transplant', 'synth1', 'extmask', 'rdg_verify', 'rdg_synth', 'rdg_win', 'sham_seg', 'rdg_seg')

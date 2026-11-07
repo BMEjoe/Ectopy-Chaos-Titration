@@ -1,0 +1,37 @@
+### Table 12-8. PM97 replication: the 20,000-beat block of each subject
+
+| subject | group | rule | start beat | end beat | header start time | block start (h after record start) | non-normal beats | intervals outside 0.25–3 s | PM97-like selection |
+|---|---|---|---|---|---|---|---|---|---|
+| chfdb:chf01 | CHF | midnight | 54558 | 74558 | 10:00:00 | 14.00 | 272 | 0 |  |
+| chfdb:chf02 | CHF | midnight | 61836 | 81836 | 13:22:00 | 10.63 | 5938 | 1 | yes |
+| chfdb:chf03 | CHF | lowest_mean_hr | 61000 | 81000 | 08:35:00 | 14.89 | 881 | 29 |  |
+| chfdb:chf04 | CHF | midnight | 54057 | 74057 | 14:30:00 | 9.50 | 182 | 7 | yes |
+| chfdb:chf05 | CHF | midnight | 96129 | 116129 | 08:26:00 | 15.57 | 220 | 0 | yes |
+| chfdb:chf06 | CHF | midnight | 58196 | 78196 | 14:35:00 | 9.42 | 1685 | 0 | yes |
+| chfdb:chf07 | CHF | midnight | 57100 | 77100 | 12:12:00 | 11.80 | 477 | 0 |  |
+| chfdb:chf08 | CHF | lowest_mean_hr | 70000 | 90000 | 08:19:00 | 15.19 | 185 | 1 | yes |
+| chfdb:chf09 | CHF | midnight | 92007 | 112007 | 08:05:00 | 15.92 | 164 | 2 | yes |
+| chfdb:chf10 | CHF | midnight | 117835 | 137835 | 08:17:00 | 15.72 | 168 | 4 | yes |
+| chfdb:chf11 | CHF | midnight | 92161 | 112161 | 08:54:00 | 15.10 | 72 | 1 | yes |
+| chfdb:chf12 | CHF | midnight | 87873 | 107873 | 09:50:00 | 14.17 | 4 | 0 | yes |
+| chfdb:chf13 | CHF | midnight | 88878 | 108878 | 08:50:00 | 15.17 | 98 | 0 | yes |
+| chfdb:chf14 | CHF | lowest_mean_hr | 73000 | 93000 | 08:14:00 | 15.06 | 39 | 0 | yes |
+| chfdb:chf15 | CHF | midnight | 89144 | 109144 | 09:10:00 | 14.83 | 794 | 0 |  |
+| nsrdb:16265 | NSR | midnight | 77744 | 97744 | 08:04:00 | 15.93 | 2 | 3 |  |
+| nsrdb:16272 | NSR | midnight | 49359 | 69359 | 10:45:00 | 13.25 | 0 | 10 |  |
+| nsrdb:16273 | NSR | lowest_mean_hr | 69000 | 89000 | 08:00:00 | 14.99 | 0 | 0 | yes |
+| nsrdb:16420 | NSR | midnight | 69544 | 89544 | 09:55:00 | 14.08 | 0 | 2 | yes |
+| nsrdb:16483 | NSR | midnight | 73362 | 93362 | 09:54:00 | 14.10 | 1 | 1 | yes |
+| nsrdb:16539 | NSR | midnight | 75046 | 95046 | 08:40:00 | 15.33 | 2 | 0 |  |
+| nsrdb:16773 | NSR | midnight | 60777 | 80777 | 09:50:00 | 14.17 | 14 | 0 |  |
+| nsrdb:16786 | NSR | midnight | 56669 | 76669 | 11:48:00 | 12.20 | 7 | 1 | yes |
+| nsrdb:16795 | NSR | midnight | 59880 | 79880 | 11:15:00 | 12.75 | 0 | 0 |  |
+| nsrdb:17052 | NSR | midnight | 54820 | 74820 | 11:06:00 | 12.90 | 0 | 3 |  |
+| nsrdb:17453 | NSR | midnight | 75050 | 95050 | 09:20:00 | 14.67 | 0 | 0 | yes |
+| nsrdb:18177 | NSR | midnight | 71114 | 91114 | 11:30:00 | 12.50 | 0 | 6 |  |
+| nsrdb:18184 | NSR | midnight | 73494 | 93494 | 09:34:00 | 14.43 | 0 | 1 | yes |
+| nsrdb:19088 | NSR | midnight | 68250 | 88250 | 10:58:00 | 13.03 | 2 | 13 |  |
+| nsrdb:19090 | NSR | midnight | 45066 | 65066 | 13:50:00 | 10.17 | 1 | 8 |  |
+| nsrdb:19093 | NSR | midnight | 50943 | 70943 | 10:42:00 | 13.30 | 2 | 2 |  |
+| nsrdb:19140 | NSR | midnight | 62926 | 82926 | 11:39:00 | 12.35 | 0 | 4 | yes |
+| nsrdb:19830 | NSR | midnight | 79618 | 99618 | 09:56:00 | 14.07 | 0 | 21 | yes |

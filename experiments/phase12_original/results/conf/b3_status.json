@@ -1,0 +1,77 @@
+{
+ "series_A": {
+  "source": "github.com/shubhomoydas/ad_examples@4f20369 datasets/SantaFeCompetition/SF_A.dat",
+  "n": 1000,
+  "first_values": [
+   86.0,
+   141.0,
+   95.0,
+   41.0,
+   22.0
+  ],
+  "BP96": {
+   "F_calc": 10.23,
+   "F_crit": 1.16,
+   "df": [
+    968,
+    944
+   ],
+   "MW_Z": -24.6
+  },
+  "R0": {
+   "nonlinear": true,
+   "d_opt_gt1": true,
+   "F_calc_plain": 10.508760813311795,
+   "F": 9.987469408818313,
+   "df1": 887,
+   "df2": 843,
+   "F_crit": 1.1717772531849273,
+   "MW_Z": -22.107135214794592,
+   "kappa_nl": 6,
+   "d_nl": 3,
+   "r_lin": 30,
+   "r_nl": 74,
+   "test": "F",
+   "p": 5.8369842338375776e-207,
+   "inv_F_calc": 0.09515869832466516
+  },
+  "R0-BP96F": {
+   "nonlinear": true,
+   "d_opt_gt1": true,
+   "F_calc_plain": 10.734532971871884,
+   "F": 10.734532971871884,
+   "df1": 970,
+   "df2": 916,
+   "F_crit": 1.1639716373123943,
+   "MW_Z": -22.270721604208596,
+   "kappa_nl": 6,
+   "d_nl": 3,
+   "r_lin": 30,
+   "r_nl": 84,
+   "test": "F",
+   "p": 7.691725458231001e-237,
+   "inv_F_calc": 0.0931572898998344
+  },
+  "R0-BP96": {
+   "nonlinear": true,
+   "d_opt_gt1": true,
+   "F_calc_plain": 10.734532971871884,
+   "F": 10.734532971871884,
+   "df1": 970,
+   "df2": 916,
+   "F_crit": 1.1639716373123943,
+   "MW_Z": -22.270721604208596,
+   "kappa_nl": 6,
+   "d_nl": 3,
+   "r_lin": 30,
+   "r_nl": 84,
+   "test": "MWW",
+   "p": 3.5558931235221074e-110,
+   "inv_F_calc": 0.0931572898998344
+  }
+ },
+ "series_E": {
+  "status": "not obtainable (no copy found on PyPI or GitHub via the allowed routes)"
+ },
+ "status": "series A run; series E not obtainable"
+}
