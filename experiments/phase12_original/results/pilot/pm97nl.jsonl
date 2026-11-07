@@ -1,0 +1,2 @@
+{"id": "pm97nl|mitdb|101", "part": "pm97nl", "db": "mitdb", "rec": "101", "excluded": "fewer than 2000 beat intervals (1864)", "t_wall": 0.19913172721862793, "t_cpu": 0.19587892199999998}
+{"id": "pm97nl|mitdb|100", "part": "pm97nl", "db": "mitdb", "rec": "100", "segments": [{"k": 0, "NL": 0.0, "positive": false}, {"k": 1, "NL": 0.0, "positive": false}, {"k": 2, "NL": 0.0, "positive": false}, {"k": 3, "NL": 0.271875, "positive": true}], "t_wall": 1.5064990520477295, "t_cpu": 1.501895076}
