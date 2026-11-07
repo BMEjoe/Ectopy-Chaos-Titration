@@ -1,11 +1,13 @@
 # arrhythmia-detection-pipeline
 
-Code, preregistrations, results and reports of a ten-phase study that asks whether deterministic chaos can be
+Code, preregistrations, results and reports of a twelve-phase study that asks whether deterministic chaos can be
 detected in human heart-rate (RR-interval) data, and how ectopic beats, noise and detector design produce false
 detections. The work runs from a reconstructed R-peak and unstable-periodic-orbit pipeline (Phases 1-2E) through
 validated detectors on synthetic and cardiac-model data (Phases 3-9) to a final confirmatory analysis on two
-PhysioNet databases (Phase 10). Every confirmatory analysis was preregistered and committed before its data were
-analysed (`experiments/final_refinement/PREREG_INTEGRITY.md`).
+PhysioNet databases (Phase 10). Two later phases add registered robustness analyses (Phase 11) and check the noise
+titration implementation against the original papers, including a replication of Poon & Merrill (1997) (Phase 12).
+Every confirmatory analysis was preregistered and committed before its data were analysed
+(`experiments/final_refinement/PREREG_INTEGRITY.md` for Phases 3-10; each later phase's own preregistration).
 
 Release `paper-v1` adds independent verification, errata, publication figures and tables, and this
 reproducibility package (`docs/FINAL_SUMMARY.md`).
@@ -16,7 +18,7 @@ reproducibility package (`docs/FINAL_SUMMARY.md`).
 |---|---|
 | `final_pipeline.py` | the pipeline: Pan-Tompkins R peaks, delay embedding, Rosenstein LLE, So et al. UPO detection; opt-in detectors adopted by later phases (`lle_chaos_test`, gated UPO, `combined_chaos_*`, `rr_detrend`, `masked_growth_chaos_test`) |
 | `tests/` | pytest suite (463 tests) |
-| `experiments/phase*/` | one directory per phase: code, `PREREGISTRATION*.md`, `HANDOFF.md` (living notes), sources/methods files, `results/` (raw JSONL and tables) |
+| `experiments/phase*/` | one directory per phase (`phase11_robustness/` and `phase12_original/` for the later phases): code, `PREREGISTRATION*.md`, `HANDOFF.md` (living notes), sources/methods files, `results/` (raw JSONL and tables) |
 | `experiments/final_refinement/` | verification (`verify_all.py`, `VERIFICATION.md`), `ERRATA.md`, `KNOWN_ISSUES.md`, `PREREG_INTEGRITY.md`, figures (`make_figures.py`, `figures/`, `tables/`, `FIGURE_NOTES.md`), `download_data.py` |
 | `docs/` | phase reports and the records for writing: `RESULTS_INDEX.md`, `CONCLUSIONS_CHECKLIST.md`, `SOURCES_USED.md`, `AI_USE_RECORD.md`, `FINAL_SUMMARY.md` |
 | `reproduce.sh` | single entry point (below) |
@@ -36,6 +38,11 @@ reproducibility package (`docs/FINAL_SUMMARY.md`).
 | 8 | cardiac-model RR intervals | `docs/PHASE8_CARDIAC_CHAOS.md` | `experiments/phase8_cardiac/PREREGISTRATION.md` |
 | 9 | ECG waveform and noise-robust measures; nsrdb vs chfdb | `docs/PHASE9_WAVEFORM_NOISE_ROBUST.md` | `experiments/phase9_waveform/PREREGISTRATION.md`, `PREREGISTRATION_F.md` |
 | 10 | detection limits, faithful noise titration, ectopy dose-response (nsr2db, chf2db) | `docs/PHASE10_FINAL_RESULTS.md` | `experiments/phase10_final/PREREGISTRATION.md` |
+| 11 | robustness: sham handling, single-beat transplant, within-subject models, titration readings, seeds, K3 at 1/128 s | `docs/PHASE11_ROBUSTNESS_RESULTS.md` | `experiments/phase11_robustness/PREREGISTRATION.md` |
+| 12 | fidelity to Barahona & Poon (1996), published benchmarks, surrogate step, Poon & Merrill (1997) replication (nsrdb, chfdb) | `docs/PHASE12_ORIGINAL_METHODS_RESULTS.md`; citable numbers in `docs/PHASE12_NUMBERS.md` | `experiments/phase12_original/PREREGISTRATION.md` |
+
+Phases 11 and 12 came after the final refinement below, so `reproduce.sh` and the verification and errata files
+cover Phases 1-10 only. Each later report ends with its own regeneration commands.
 
 ## Environment
 
@@ -84,10 +91,10 @@ requires attribution:
 | database (version 1.0.0) | DOI | used in | publication PhysioNet asks users to cite |
 |---|---|---|---|
 | MIT-BIH Arrhythmia Database | 10.13026/C2F305 | Phases 7, 9, 10 | Moody GB, Mark RG. IEEE Eng Med Biol 20(3):45-50 (2001) |
-| MIT-BIH Normal Sinus Rhythm Database | 10.13026/C2NK5R | Phases 9, 10 | – |
-| BIDMC Congestive Heart Failure Database | 10.13026/C29G60 | Phases 9, 10 | Baim DS et al. J Am Coll Cardiol 7(3):661-670 (1986) |
-| Normal Sinus Rhythm RR Interval Database | 10.13026/C2S881 | Phase 10 | – |
-| Congestive Heart Failure RR Interval Database | 10.13026/C2F598 | Phase 10 | – |
+| MIT-BIH Normal Sinus Rhythm Database | 10.13026/C2NK5R | Phases 9, 10, 12 | – |
+| BIDMC Congestive Heart Failure Database | 10.13026/C29G60 | Phases 9, 10, 12 | Baim DS et al. J Am Coll Cardiol 7(3):661-670 (1986) |
+| Normal Sinus Rhythm RR Interval Database | 10.13026/C2S881 | Phases 10-12 | – |
+| Congestive Heart Failure RR Interval Database | 10.13026/C2F598 | Phases 10-12 | – |
 | MIT-BIH Noise Stress Test Database | 10.13026/C2HS3T | Phase 9 | Moody GB, Muldrow WE, Mark RG. Computers in Cardiology 11:381-384 (1984) |
 | QT Database | 10.13026/C24K53 | Phase 9 | Laguna P et al. Computers in Cardiology 24:673-676 (1997) |
 
@@ -95,7 +102,8 @@ Every database also requires the standard PhysioNet citation: Goldberger AL et a
 and PhysioNet: components of a new research resource for complex physiologic signals. Circulation
 101(23):e215-e220 (2000). One open-access article (Wu et al. 2009, PLoS ONE, CC-BY) and five PLOS supplementary files used to
 implement methods are stored under `experiments/*/sources/`. Other methods and papers used are listed in
-`docs/SOURCES_USED.md`.
+`docs/SOURCES_USED.md`. The two paywalled originals checked in Phase 12 (Barahona & Poon, Nature 1996; Poon &
+Merrill, Nature 1997) are not in the repository. They are read from the git-ignored `private_inputs/` folder.
 
 ## Citing and archiving
 
