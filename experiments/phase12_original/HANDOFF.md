@@ -1,5 +1,8 @@
 # Phase 12 handoff (living document; update after every step)
 
+**STATUS: COMPLETE (2026-11-07).** Report: `docs/PHASE12_ORIGINAL_METHODS_RESULTS.md`; numbers ledger:
+`docs/PHASE12_NUMBERS.md`. Nothing is running.
+
 Phase 12 = check the titration implementation against the original papers [BP96] and [PM97], test the
 static-transform discrepancy and the omitted surrogate step, and replicate PM97 on nsrdb / chfdb.
 Never merge into main, never open a pull request. Commit and push after every step.
@@ -19,18 +22,18 @@ CURRENT branch's origin copy, so run from `phase12-original-methods`.
 ## Status
 | Step | State | Commit |
 |---|---|---|
-| branch `phase12-original-methods`, papers in `private_inputs/` | done | (this commit) |
+| branch `phase12-original-methods`, papers in `private_inputs/` | done | 8493f90 |
 | environment: venv present (Python 3.13.18; every pinned package matches the recipe); pytest 496 passed + 1 known failure (462 + 34 Phase 11) | done | f1cdee0 |
 | data re-downloaded with the guarded commands; SHA-256 OK (nsr2db 54, chf2db 29, mitdb 48, nsrdb 18, chfdb 15, nstdb) | done | |
 | analysis11 sanity rerun on stored results: analysis11.json byte-identical to the committed file | done | (this commit) |
 | Tier 1A fidelity audit (FIDELITY.md): 4 decision-relevant deviations | done | 65e195f |
 | variant module titration12 + exactness test (22 passed) | done | f1cdee0 |
-| pilot (synthetic 12900+ and mitdb only): projected 0.19 h, no thinning | done | (this commit) |
-| PREREGISTRATION.md committed + pushed before any run on nsr2db/chf2db/nsrdb/chfdb | done | (this commit) |
+| pilot (synthetic 12900+ and mitdb only): projected 0.19 h, no thinning | done | 8d681ec |
+| PREREGISTRATION.md committed + pushed before any run on nsr2db/chf2db/nsrdb/chfdb | done | 8d681ec |
 | Tier 1B run (b1, b2, b4a, b4v, b4s, b4t, b4w; 0 errors) + B3 Santa Fe A; analysis12 Tier 1B sections | done | (this commit) |
 | Tier 1C PM97 replication (pm97, pm97nl; 0 errors; 33 subjects, none excluded) + analysis12 PM97 | done | (this commit) |
-| Tier 2 tables, figures, numbers ledger | todo | |
-| report docs/PHASE12_ORIGINAL_METHODS_RESULTS.md | todo | |
+| Tier 2: paper_tables12 (Tables 12-1..12-11), figures12 (F12-1..3), numbers ledger (43 entries) | done | c53d999 |
+| report docs/PHASE12_ORIGINAL_METHODS_RESULTS.md | **complete** | (this commit) |
 
 ## Resume commands
 Run from branch `phase12-original-methods` (the guard checks `origin/phase12-original-methods`); resumable.
@@ -53,6 +56,10 @@ PYTHONPATH=. /root/venv313/bin/python -m experiments.phase12_original.analysis12
   (tau ~ 100 in Farmer 1982), so tau = 100 is primary and tau = 17 secondary. A one-seed smoke test (disclosed in the
   preregistration) showed tau = 100 undetected noise-free; parameters were not changed.
 
+- D7 (post hoc, labelled): PM97 'descriptive_handling' and 'exploratory_clean_segments' were added after the PM97
+  outputs were seen; labelled in analysis12.json and in the report; nothing registered was changed.
+- D8 (manuscript check): no manuscript draft was provided, so manuscript_check.md / manuscript_text_updates.md were not
+  produced; the report's section 6 gives replacement sentences by content.
 - D6 (B3): Santa Fe series A obtained from the public GitHub repository shubhomoydas/ad_examples (commit 4f20369,
   datasets/SantaFeCompetition/SF_A.dat, 1,000 points), sparse-cloned read-only to /home/user/shubhomoydas/ad_examples
   (outside this repository; data not committed). Series E: not found via PyPI / GitHub -> not obtainable.

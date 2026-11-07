@@ -54,9 +54,9 @@ def add(section, nid, definition, src, path, fmt, n, sentence, flag=""):
 
 # ---------------------------------------------------------------------------------------------- Methods
 add("Methods", "M1", "Decision-relevant deviations of R0 from BP96 found in the fidelity audit", "12",
-    ["fidelity", "n_decision_relevant_deviations"], str, "22 audited points",
-    "Of 22 points audited against the original papers, {v} were decision-relevant deviations of our implementation "
-    "(N in the criterion, the F statistic, the missing Gaussianity check and the omitted surrogate step).")
+    ["fidelity", "n_decision_relevant_deviations"], lambda v: f"{v} rows (4 distinct deviations)", "22 audited points",
+    "Of 22 points audited against the original papers, {v} were decision-relevant: N in the criterion and degrees of "
+    "freedom, the F statistic, the missing Gaussianity check and the omitted surrogate step.")
 add("Methods", "M2", "analysis11 rerun on stored results identical to the committed JSON", "12",
     ["sanity", "analysis11_rerun_identical_to_committed"], str, "-",
     "Re-running the Phase 11 analysis on the stored results reproduced it exactly ({v}).")
