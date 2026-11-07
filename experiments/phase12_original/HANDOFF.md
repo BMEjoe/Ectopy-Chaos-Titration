@@ -22,13 +22,13 @@ CURRENT branch's origin copy, so run from `phase12-original-methods`.
 | branch `phase12-original-methods`, papers in `private_inputs/` | done | (this commit) |
 | environment: venv present (Python 3.13.18; every pinned package matches the recipe); pytest 496 passed + 1 known failure (462 + 34 Phase 11) | done | f1cdee0 |
 | data re-downloaded with the guarded commands; SHA-256 OK (nsr2db 54, chf2db 29, mitdb 48, nsrdb 18, chfdb 15, nstdb) | done | |
-| analysis11 sanity rerun on stored results | running | |
+| analysis11 sanity rerun on stored results: analysis11.json byte-identical to the committed file | done | (this commit) |
 | Tier 1A fidelity audit (FIDELITY.md): 4 decision-relevant deviations | done | 65e195f |
 | variant module titration12 + exactness test (22 passed) | done | f1cdee0 |
 | pilot (synthetic 12900+ and mitdb only): projected 0.19 h, no thinning | done | (this commit) |
 | PREREGISTRATION.md committed + pushed before any run on nsr2db/chf2db/nsrdb/chfdb | done | (this commit) |
-| Tier 1B B1-B4 | todo | |
-| Tier 1C PM97 replication | todo | |
+| Tier 1B run (b1, b2, b4a, b4v, b4s, b4t, b4w; 0 errors) + B3 Santa Fe A; analysis12 Tier 1B sections | done | (this commit) |
+| Tier 1C PM97 replication (pm97, pm97nl) | running | |
 | Tier 2 tables, figures, numbers ledger | todo | |
 | report docs/PHASE12_ORIGINAL_METHODS_RESULTS.md | todo | |
 
@@ -52,6 +52,23 @@ PYTHONPATH=. /root/venv313/bin/python -m experiments.phase12_original.analysis12
 - D5 (Mackey-Glass tau = 100): the BP96 scan describes its Mackey-Glass series as having an implicit dimension of seven
   (tau ~ 100 in Farmer 1982), so tau = 100 is primary and tau = 17 secondary. A one-seed smoke test (disclosed in the
   preregistration) showed tau = 100 undetected noise-free; parameters were not changed.
+
+- D6 (B3): Santa Fe series A obtained from the public GitHub repository shubhomoydas/ad_examples (commit 4f20369,
+  datasets/SantaFeCompetition/SF_A.dat, 1,000 points), sparse-cloned read-only to /home/user/shubhomoydas/ad_examples
+  (outside this repository; data not committed). Series E: not found via PyPI / GitHub -> not obtainable.
+
+## Findings to carry into the report
+- Sanity: analysis11 rerun identical. R0 recomputed = Phase 10 stored decisions (988/988 raw, masked, edited) and
+  Phase 11 transplant decisions (1756/1756).
+- B1: R0 passes (d_opt 20/20; F_calc median 6,885 vs BP96 9,387; loss point median 35 % = lower edge of 35-65 %;
+  BP96 ~50 %). R0-BP96 FAILS (loss 30 %). R0-BP96F passes (35 %).
+- B2: 4/9 primary misses under every reading (ecological 34 vs 50; GOPY 42 vs 25; Rossler 25 vs 75; Lorenz 72 vs 50);
+  Mackey-Glass tau = 100 never detected (0 vs 15: 'consistent' only by the +/-15 rule); MG tau = 17: 42 vs 15.
+- B3: Santa Fe A R0 F_calc 10.51 (BP96 10.23), Z -22.1 (-24.6), F crit 1.17 (1.16).
+- B4: all readings pass V1-V6; claims (i), (iii)-(v) hold under all; (ii) fails under R0-S-AAFT (+4.2 [-5.0, 13.8]).
+  N5 rule -> 'no verified surrogate reading removes N5' (Phase 10 N5 100/100 under all readings; AAFT removes most
+  AR(1) static-transform positives). Transplant V1-V0: R0 +64.2, BP96 +27.8, S-AAFT +29.8, S-FT +61.0.
+  S2 isolated 5 %: R0 4/100 but R0-BP96F 39, R0-BP96 46.
 
 ## Notes
 - Never `pkill -f <pattern>` with a pattern that also appears in the calling shell command.
