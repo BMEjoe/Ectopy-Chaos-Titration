@@ -93,7 +93,8 @@ Citation metadata: `CITATION.cff`; Zenodo archiving steps: `README.md`.
 
 ## 5. Open items (would need new analysis or new data; not done)
 
-1. **Conclusion 8 (E14).** The author decides whether to restrict its wording; a systematic test of flow chaos
+1. **Conclusion 8 (E14).** Wording resolved 2026-11-11: the author restricted it in the manuscript (ERRATA.md
+   E14). Still open: a systematic test of flow chaos
    under different beat definitions (fixed-step sampling vs event intervals) would be new analysis.
 2. **K3 at 1,024 intervals.** K3's real-data rate rose from 0.3 % to 2.8 % at 1,024 intervals; K3 was calibrated
    (false-positive rate) at 512 only. Resolving this needs a calibration or null evaluation at 1,024.

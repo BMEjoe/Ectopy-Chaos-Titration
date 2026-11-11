@@ -7,6 +7,7 @@ authors:
     given-names: Brooks
 repository-code: "https://github.com/BMEjoe/arrhythmia-detection-pipeline"
 version: "paper-v1"
+license: MIT
 keywords:
   - heart rate variability
   - RR intervals

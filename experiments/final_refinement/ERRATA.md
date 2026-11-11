@@ -8,7 +8,8 @@ conclusion is not made without the author's decision.
 
 **Outcome: 14 findings. E1-E13 are corrected; none of them changes any result, conclusion, decision, winner or
 preregistered outcome. E14 (the wording of Phase 10 Conclusion 8) is NOT corrected: correcting it would change a
-conclusion, so it is left for the author's decision.**
+conclusion, so it is left for the author's decision.** *Resolved 2026-11-11: the author adopted the narrower
+wording in the manuscript (see E14 below).*
 - E1 is a tabulation deviation from a preregistered decision rule (Phase 9). Corrected by a deterministic
   re-tabulation; the decision is unchanged.
 - E2–E12 are report-text errors in `docs/PHASE10_FINAL_RESULTS.md`: a miscount, a rounding slip, and summary
@@ -32,7 +33,7 @@ conclusion, so it is left for the author's decision.**
 | E11 | PHASE10 8.2 | "Three subjects recur from the 512-interval detections" | five of the six subjects recur (nsr029, nsr049, chf211, chf216, chf218) | T-8 | no |
 | E12 | PHASE10 6 | development nsrdb "lost only 2–6 % of positives" | 4–6 % (3.5–6.1 % over the masked, edited and Wu arms) | T-9 | no |
 | E13 | `phase10_final/results/dev/analysis/{analysis.json, tables.md}` | Q4 development robustness computed on 3 windows | 36 windows (the committed `dev/robust.jsonl`) | reproduce check (rerun of `analysis10 --phase dev`) | no |
-| E14 (**not corrected**) | PHASE10 12 #8 (Conclusion 8) | "None of the project's detectors sees continuous-flow chaos sampled as RR intervals at realistic lengths" | holds for flows sampled at fixed time steps; Mackey-Glass chaos as maxima intervals was detected (K1 26/70, K3 81/140) | X-21 | **would change Conclusion 8**: author's decision |
+| E14 (**not corrected**) | PHASE10 12 #8 (Conclusion 8) | "None of the project's detectors sees continuous-flow chaos sampled as RR intervals at realistic lengths" | holds for flows sampled at fixed time steps; Mackey-Glass chaos as maxima intervals was detected (K1 26/70, K3 81/140) | X-21 | **would change Conclusion 8**: author's decision; resolved 2026-11-11, narrower wording adopted in the manuscript |
 
 ## E1 — Phase 9 TEST decision tabulated over 81 instead of the 101 preregistered conditions
 
@@ -185,6 +186,13 @@ not out-of-sample for Phase 8, see the Phase 8 report), which may be why the con
 **Why it is not corrected.** A correction (for example restricting the statement to flows sampled at fixed time
 steps and to weak, near-threshold Mackey-Glass chaos) changes what the conclusion claims. Under the error policy
 of this phase such a fix is not made without the author's decision. The report text is unchanged.
+
+**Resolution (author's decision, 2026-11-11).** The author adopted the narrower wording in the manuscript. It
+states that the detectors made no detections for flows sampled at fixed time steps (Rössler, Mackey-Glass),
+that a flow represented by the intervals between its maxima was detected when its chaos was strong enough, and
+it lists flows sampled at fixed time steps as "not excluded" in its summary of what the null result excludes.
+`docs/PHASE10_FINAL_RESULTS.md` is left as written, as the record of the original Conclusion 8; `verify_all.py`
+and `VERIFICATION.md` therefore still list E14 as not corrected in that report.
 
 ## Observations that are not errors
 
