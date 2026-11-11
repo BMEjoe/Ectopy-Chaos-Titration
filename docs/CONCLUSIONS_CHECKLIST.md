@@ -73,7 +73,7 @@ verified Poon-Barahona noise titration of Phase 10 (the Phase 8 C4 version was a
 - **Limits.** The LLE component alone fires more often on trend and step nulls after detrending (N3 23 → 40,
   N4 17 → 40 of 400; 6-9); the AND is unaffected. G1 (Lorenz maxima) power −3/300. Only linear drift was tested.
 
-### 8. None of the project's detectors sees continuous-flow chaos sampled as RR intervals at realistic lengths. ✖ (see ERRATA.md E14; not corrected, author's decision)
+### 8. None of the project's detectors sees continuous-flow chaos sampled as RR intervals at realistic lengths. ✖ (see ERRATA.md E14; not corrected in the Phase 10 report; the author adopted the narrower wording in the manuscript, 2026-11-11)
 - **Scope as evidenced.** Flows sampled at fixed time steps: Phase 5 G2 (Rössler, about 6 samples per orbit)
   and G3 (Mackey-Glass τ = 17, step 6.0), 256 intervals; Phase 8 the same flows at 512.
 - **Supports.** K1-type AND 0/200 on G2 and G3 at m = 2, 3, 4 (5-6); K1 0/200 on Phase 8 flows (8-5); LLE alone

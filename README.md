@@ -76,7 +76,8 @@ root.
   raw result files.
 - `experiments/final_refinement/ERRATA.md`: every discrepancy found, with evidence; corrected passages in the
   reports are marked `[Erratum En]`. No erratum changes a result, decision or conclusion; one
-  conclusion-wording issue (E14) was identified and left for the author's decision.
+  conclusion-wording issue (E14) was identified and left for the author's decision. The author has since
+  adopted the narrower wording in the manuscript (resolved 2026-11-11; see `ERRATA.md` E14).
 - `experiments/final_refinement/KNOWN_ISSUES.md`: the AVX-512-dependent unit test, cross-machine replicability,
   the frozen Phase 9 decision script, partial development runs, GEE working correlations, the neurokit2/pandas pin.
 
@@ -107,11 +108,15 @@ Merrill, Nature 1997) are not in the repository. They are read from the git-igno
 
 ## Citing and archiving
 
-Citation metadata: `CITATION.cff` (author Brooks Bezanson). No software licence file has been chosen yet; add one
-before archiving if the code is to be reusable by others.
+Citation metadata: `CITATION.cff` (author Brooks Bezanson).
+
+**Licence.** This repository is released under the MIT License (`LICENSE`). The exceptions are the third-party
+files stored under `experiments/*/sources/` (Wu et al. 2009 and the five PLOS supplementary files listed under
+"Data and licences"), which keep their own CC-BY licences. The PhysioNet databases are not included; they remain
+under the Open Data Commons Attribution License v1.0 (see "Data and licences").
 
 To archive a release on Zenodo (done by the author):
 1. Log in to zenodo.org with GitHub and enable the repository under *Account → GitHub*.
-2. Create a GitHub release from tag `paper-v1` (merge the branch into `main` first if the release should be
-   cut from `main`). Zenodo archives the release and mints a DOI.
+2. Create a GitHub release from `main` with the new tag `paper-v1` (all working branches are already merged
+   into `main`). Zenodo archives the release and mints a DOI.
 3. Add the DOI to `CITATION.cff` (`doi:` field) and to this README in a follow-up commit.
