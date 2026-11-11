@@ -1,8 +1,8 @@
 # Record of work done by Claude Code (from the git history)
 
 Purpose: a factual record, taken from the repository's git history, of what was implemented, run and written by
-Claude Code (Anthropic's coding agent), to support the author's disclosure of AI use. It does not describe the
-author's role; the author will do that.
+Claude Code (Anthropic's coding agent), to support my disclosure of AI use. For each phase of development I gave
+detailed instructions of what I wanted done and how I wanted it done.
 
 **How this was compiled (2026-10-03).** From the full history of this repository (207 commits before the final
 refinement), with `git log` author fields, commit messages, `Co-Authored-By` trailers and the files each commit
