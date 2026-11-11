@@ -1,5 +1,7 @@
 # arrhythmia-detection-pipeline
 
+Most commits made by Claude Code were made under my (the author) instruction and knowledge.
+
 Code, preregistrations, results and reports of a twelve-phase study that asks whether deterministic chaos can be
 detected in human heart-rate (RR-interval) data, and how ectopic beats, noise and detector design produce false
 detections. The work runs from a reconstructed R-peak and unstable-periodic-orbit pipeline (Phases 1-2E) through
