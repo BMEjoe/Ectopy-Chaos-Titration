@@ -1,4 +1,4 @@
-# arrhythmia-detection-pipeline
+# Ectopy-Chaos-Titration
 
 Most commits made by Claude Code were made under my (the author) instruction and knowledge.
 
