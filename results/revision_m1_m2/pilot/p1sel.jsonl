@@ -1,0 +1,2 @@
+{"id": "p1sel|rossler|4|12950", "part": "p1sel", "system": "rossler", "seed": 12950, "m": 4.0, "eps_lin": 0.24568355012159762, "eps_nl": 0.05743922610741303, "diff": 0.1882443240141846, "nonlinear": true, "t_wall": 3.5618951320648193, "t_cpu": 3.5283997279999997}
+{"id": "p1sel|rossler|0.25|12950", "part": "p1sel", "system": "rossler", "seed": 12950, "m": 0.25, "eps_lin": 0.0036054291277263944, "eps_nl": 9.411099230741492e-08, "diff": 0.003605335016734087, "nonlinear": true, "t_wall": 0.9275467395782471, "t_cpu": 0.925431382}
