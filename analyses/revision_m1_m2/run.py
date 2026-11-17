@@ -126,7 +126,7 @@ def tasks(part, pilot):
         return T
     if part == "ver":
         from experiments.phase10_final import verify_titration as VT
-        cfgs = ABL_CONFIGS + ("R0-ORIG",)
+        cfgs = ABL_CONFIGS + ("R0-ORIG", "R0-ORIG-minus-S3b")
         VTT = [(n, a) for n, a in VT.tasks() if n != "logistic"]
         if pilot:
             VTT = VTT[::20]

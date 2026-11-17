@@ -293,3 +293,9 @@ environment record. One command regenerates everything: `python analyses/revisio
   the 12-min segments, the PM97 blocks, and the 17 Phase 10 synthetic null and ectopy conditions (100 seeds each;
   the van der Pol windows are left out). Same code, seeds and statistics as Section 4. Reported next to the three
   planned readings, with this amendment cited. Nothing else changes.
+
+### Amendment 4 (2026-11-17, with Amendment 3; before its outputs were seen)
+- Verification controls V5-V6 (Amendment 1) also for `R0-ORIG-minus-S3b`, so that its headline results carry their
+  verification status like every other configuration. V1-V4 come from its logistic scan (part `abl2`).
+- The claims check also reports the attributable fraction AF computed from the stored Phase 12 window decisions for
+  R0-BP96F, R0-S-FT and R0-S-AAFT (no new run).

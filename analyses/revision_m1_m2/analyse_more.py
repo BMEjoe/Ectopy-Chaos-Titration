@@ -305,6 +305,13 @@ def stored_readings():
                    "couplets5": sy.get("E3_couplets_5pct", {}).get(rd), "runs": sy.get("E4_runs", {}).get(rd),
                    "isolated5": sy.get("S2_ectopic_5pct", {}).get(rd), "N1": sy.get("N1_linear_rr", {}).get(rd),
                    "N5": sy.get("N5_linear_rr_warped", {}).get(rd), "raw_rate": m.get("rates", {}).get("raw")}
+    frames, _ = A12.window_frames()
+    for rd, f in frames.items():
+        if rd in out:
+            out[rd]["AF_emp"] = af_emp(f)
+            b = f[f.burden == 0].raw.mean()
+            out[rd]["ratio_1_vs_0"] = float(f[f.burden == 1].raw.mean() / b) if b > 0 else None
+            out[rd]["dose_burden"] = burden_rows(f)
     return out
 
 

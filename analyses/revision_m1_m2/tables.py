@@ -168,6 +168,9 @@ def claims(s):
     rds = [r for r in HEADS if r in H]
     # A0 / C8: "mainly"
     af = {rd: g(rd, "AF_emp") for rd in rds}
+    for rd in ("R0-BP96F", "R0-S-FT", "R0-S-AAFT"):
+        if ST.get(rd, {}).get("AF_emp"):
+            af[rd + " (Phase 12)"] = ST[rd]["AF_emp"]
     vals = {rd: fmt_ci(a["AF"], a["ci"], 100, 0) + " %" for rd, a in af.items() if a}
     minaf = min(a["AF"] for a in af.values() if a)
     holds = all(a["AF"] > 0.5 for a in af.values() if a)
@@ -182,6 +185,11 @@ def claims(s):
     # L1: nearly tripled
     vals = {rd: f"{g(rd, 'ratio_1_vs_0'):.2f}x" for rd in rds if g(rd, "ratio_1_vs_0")}
     rr = [g(rd, "ratio_1_vs_0") for rd in rds if g(rd, "ratio_1_vs_0")]
+    for rd in ("R0-BP96F", "R0-S-FT", "R0-S-AAFT"):
+        x = ST.get(rd, {}).get("ratio_1_vs_0")
+        if x:
+            vals[rd + " (Phase 12)"] = f"{x:.2f}x"
+            rr.append(x)
     add("L1", "lead paragraph", "One ectopic beat nearly tripled the chance of titration reporting chaos", vals,
         all(x >= 2.5 for x in rr), f"One ectopic beat raised the chance of titration reporting chaos {min(rr):.1f}- to "
         f"{max(rr):.1f}-fold, depending on the test's conventions", "rate ratio (burden 1 vs 0) >= 2.5 under every reading")
