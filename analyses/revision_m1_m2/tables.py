@@ -12,7 +12,7 @@ import pandas as pd
 
 from analyses.revision_m1_m2 import analyse as AN
 
-HEADS = ("R0", "R0-BP96", "R0-ORIG")
+HEADS = ("R0", "R0-BP96", "R0-ORIG", "R0-ORIG-minus-S3b")
 TABLE3 = [("N1_linear_rr", "Linear (N1), none"), ("S2_ectopic_5pct", "Isolated, 5 %"),
           ("S2_ectopic_10pct", "Isolated, 10 %"), ("E6_ectopic10_trend", "Isolated, 10 %, with trend"),
           ("E5_atrial_5pct", "Atrial-type, 5 %"), ("E5_atrial_10pct", "Atrial-type, 10 %"),
@@ -232,14 +232,17 @@ def claims(s):
         "positive", vals, allh, None, "couplets 5 %: 100/100 under every reading")
     # A2: 22 % -> 63 %
     vals, ok = {}, True
+    r0s, r1s = [], []
     for rd in rds:
         b = g(rd, "dose_burden")
         if b:
             vals[rd] = f"{100 * b[0]['rate']:.0f} % -> {100 * b[1]['rate']:.0f} %"
             ok &= b[1]["ci"][0] > b[0]["ci"][1]
+            r0s.append(100 * b[0]["rate"])
+            r1s.append(100 * b[1]["rate"])
     add("A2", "abstract; lead", "In 988 real windows, positive rates increased from 22 % (no ectopic beats) to 63 % "
-        "(1 ectopic beat)", vals, ok, "positive rates rose from 22-37 % (no ectopic beats) to 50-63 % (1 ectopic beat), "
-        "depending on the test's conventions", "rate at burden 1 above burden 0 (Wilson CIs disjoint); the quoted "
+        "(1 ectopic beat)", vals, ok, f"positive rates rose from {min(r0s):.0f}-{max(r0s):.0f} % (no ectopic beats) to "
+        f"{min(r1s):.0f}-{max(r1s):.0f} % (1 ectopic beat), depending on the test's conventions", "rate at burden 1 above burden 0 (Wilson CIs disjoint); the quoted "
         "numbers are R0's")
     # A3 / C4: single beat 28-64 pp
     vals, lo, hi = {}, [], []
@@ -277,8 +280,11 @@ def claims(s):
         ranges += [100 * p["diff"] for p in post]
     add("A4", "abstract; lead; conclusions", "Raw CHF segments were positive 22.4 points more often than healthy ones, but "
         "-4.9 to +5.4 points (not significant) after ectopy handling", vals, bool(ok_raw and ok_post),
-        f"holds under every reading; across readings the handled differences span {min(ranges):+.1f} to {max(ranges):+.1f} "
-        "points (all not significant)", "raw CI > 0 and every handled-arm CI includes 0, under every reading")
+        (f"holds under every reading; across readings the handled differences span {min(ranges):+.1f} to "
+         f"{max(ranges):+.1f} points (all not significant)") if (ok_raw and ok_post) else
+        ("After editing or Wu-style deletion, CHF and healthy segments did not differ under any reading; after masking "
+         "they did not differ under R0, R0-BP96 and R0-ORIG, but CHF was lower under the configuration closest to the "
+         "published benchmarks (see values)"), "raw CI > 0 and every handled-arm CI includes 0, under every reading")
     # windows raw excess (Sec. V A) incl. stored AAFT
     vals, ok = {}, True
     for rd in rds:
@@ -354,7 +360,8 @@ def claims(s):
     md = ["# Claims check (EXPLORATORY, post hoc)", "",
           "One row per quantitative claim in the abstract, lead paragraph and conclusions (plus the Results statements "
           "they rest on). Values per reading; 'holds' applies the stated criterion to every reading listed. Phase 12 "
-          "values are stored results on that phase's seeds.", ""]
+          "values are stored results on that phase's seeds. R0-ORIG-minus-S3b (= S1 + S2 + S5a, the configuration "
+          "closest to the published benchmarks) was added by PLAN.md Amendment 3 after the planned runs.", ""]
     for _, r in df.iterrows():
         md.append(f"## {r['id']} ({r['where']})")
         md.append(f"**Claim.** {r['claim']}")

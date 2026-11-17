@@ -1,20 +1,21 @@
 {
  "python": "3.13.18",
  "platform": "Linux-6.18.44-fc-v553-x86_64-with-glibc2.39",
- "git_commit": "79297a96115387bc062b9da9a1454259ff797b05",
+ "git_commit": "170a469cc9ddbee1f3f9f1e39875a7a3f3f7b68f",
  "git_branch": "revision-m1-m2",
- "plan_commit": "f863043a169a82124d5a43bb8b5c1848cf649732 2026-11-17T16:42:55+00:00",
+ "plan_commit": "170a469cc9ddbee1f3f9f1e39875a7a3f3f7b68f 2026-11-17T18:49:42+00:00",
  "cpu_hours_by_part": {
   "abl": 3.783,
   "abl2": 1.558,
   "gen": 0.389,
   "head": 5.236,
+  "head2": 0.542,
   "m2": 0.554,
   "p1sel": 0.049,
-  "ver": 0.101
+  "ver": 0.106
  },
- "cpu_hours_total": 11.67,
- "this_invocation_wall_minutes": 5.4,
+ "cpu_hours_total": 12.22,
+ "this_invocation_wall_minutes": 6.5,
  "workers": 4,
  "OMP_NUM_THREADS": 1,
  "seeds": {

@@ -3,6 +3,7 @@ R0,0.6373,0.08691,0,1,1,0.8475,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True
 R0-BP96,0.6674,0.08906,0,1,0.9444,0.7568,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
 R0-BP96F,0.6727,0.08906,0,1,0.9444,0.6988,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
 R0-ORIG,0.733,0.08184,0,1,0.9444,0.8716,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+R0-ORIG-minus-S3b,0.718,0.08809,0,1,1,0.7835,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
 R0-TEXT,0.6373,0.08691,0,1,1,0.8475,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
 S1,0.6488,0.08711,0,1,1,0.8202,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
 S2,0.6611,0.09199,0,1,0.9444,0.7399,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True

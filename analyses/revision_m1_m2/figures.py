@@ -19,8 +19,8 @@ from experiments.phase11_robustness import figures11 as F11
 plt = F11.plt
 S, MK, INK, INK2, GRID, W1, W2 = F11.S, F11.MK, F11.INK, F11.INK2, F11.GRID, F11.W1, F11.W2
 OUT = AN.RES / "figures"
-RCOL = {"R0": S[0], "R0-BP96": S[1], "R0-ORIG": S[2], "R0-BP96F": S[3]}
-RMK = {"R0": "o", "R0-BP96": "s", "R0-ORIG": "^", "R0-BP96F": "D"}
+RCOL = {"R0": S[0], "R0-BP96": S[1], "R0-ORIG": S[2], "R0-BP96F": S[3], "R0-ORIG-minus-S3b": S[3]}
+RMK = {"R0": "o", "R0-BP96": "s", "R0-ORIG": "^", "R0-BP96F": "D", "R0-ORIG-minus-S3b": "D"}
 TYPE_LABEL = {"ventricular": "ventricular", "atrial": "atrial-type", "spike": "single spike", "missed": "missed beat",
               "extra": "extra beat"}
 
@@ -97,17 +97,18 @@ def fig_logistic(A):
 def fig_dose(A):
     H = A["headline"]["readings"]
     fig, ax = plt.subplots(figsize=(W1, 2.3))
-    for i, rd in enumerate(("R0", "R0-BP96", "R0-ORIG")):
+    for i, rd in enumerate(("R0", "R0-BP96", "R0-ORIG", "R0-ORIG-minus-S3b")):
         b = H.get(rd, {}).get("dose_burden")
         if not b:
             continue
-        x = np.arange(len(b)) + (i - 1) * 0.18
+        x = np.arange(len(b)) + (i - 1.5) * 0.15
         r = np.array([v["rate"] for v in b]) * 100
         lo = np.array([v["ci"][0] for v in b]) * 100
         hi = np.array([v["ci"][1] for v in b]) * 100
         ge = H[rd]["gee"]["coef"]["x"]
+        lab = "S1+S2+S5a (Amendment 3)" if rd == "R0-ORIG-minus-S3b" else rd
         ax.errorbar(x, r, yerr=[r - lo, hi - r], fmt=RMK[rd], ms=3.5, color=RCOL[rd], elinewidth=0.8,
-                    label=f"{rd} (GEE OR {ge['OR']:.2f})")
+                    label=f"{lab} (GEE OR {ge['OR']:.2f})")
         ax.plot(x, r, color=RCOL[rd], lw=0.7)
     ax.set_xticks(range(5))
     ax.set_xticklabels([f"{v['burden']}\n({v['n']})" for v in H["R0"]["dose_burden"]])
@@ -157,7 +158,7 @@ def fig_k_types(A):
     h2, l2 = axes[1, 0].get_legend_handles_labels()
     fig.legend(h + [h2[0]], ["R0, raw", "affected rows removed", "sham rows removed", "periodic placement", "R0-BP96, raw",
                              "R0-ORIG, raw"], loc="lower center", ncol=6, frameon=False, fontsize=6,
-               bbox_to_anchor=(0.5, -0.04))
+               bbox_to_anchor=(0.5, -0.11))
     save(fig, "M2_positive_rate_vs_k_by_type")
 
 

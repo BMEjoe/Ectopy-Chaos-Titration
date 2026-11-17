@@ -1,0 +1,23 @@
+head2: 3243 tasks to run (0 done)
+  head2 162/3243 0.5 min; eta 9.9 min
+  head2 324/3243 1.1 min; eta 10.0 min
+  head2 486/3243 1.6 min; eta 9.0 min
+  head2 648/3243 2.0 min; eta 8.0 min
+  head2 810/3243 2.4 min; eta 7.2 min
+  head2 972/3243 2.9 min; eta 6.8 min
+  head2 1134/3243 3.2 min; eta 6.0 min
+  head2 1296/3243 3.7 min; eta 5.6 min
+  head2 1458/3243 4.3 min; eta 5.2 min
+  head2 1620/3243 4.6 min; eta 4.6 min
+  head2 1782/3243 5.0 min; eta 4.1 min
+  head2 1944/3243 5.5 min; eta 3.7 min
+  head2 2106/3243 5.8 min; eta 3.1 min
+  head2 2268/3243 6.2 min; eta 2.7 min
+  head2 2430/3243 6.5 min; eta 2.2 min
+  head2 2592/3243 6.9 min; eta 1.7 min
+  head2 2754/3243 7.2 min; eta 1.3 min
+  head2 2916/3243 7.7 min; eta 0.9 min
+  head2 3078/3243 8.0 min; eta 0.4 min
+  head2 3240/3243 8.4 min; eta 0.0 min
+  head2 3243/3243 8.4 min; eta 0.0 min
+RUN DONE ('head2',)
