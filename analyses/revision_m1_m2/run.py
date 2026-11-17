@@ -233,11 +233,27 @@ def run_task(task, pilot):
 def run_synth(task, cfg):
     from experiments.phase10_final import harness10 as H
     cond = tuple(task["cond"]) if task["kind"] == "vdp" else task["cond"]
-    rr, types = H.synthetic_window(task["kind"], cond, task["seed"], 512)
+    rr, types = synth_window_cached(task["kind"], cond, task["seed"])
     m = H.k3_mask(types)
     key = (B.PART["synth"], B.crc(task["id"].split("|", 2)[2]))
     return {"n_ectopic": int(np.sum(np.asarray(types) != "N")),
             **{a: B.arm(rr, m, a, cfg, B.surr_rng(cfg, *key, i)) for i, a in enumerate(("raw", "masked", "edited"))}}
+
+
+def synth_window_cached(kind, cond, seed, n=512):
+    """harness10.synthetic_window, cached on disk (the van der Pol generator takes ~5 s per window)."""
+    from experiments.phase10_final import harness10 as H
+    cid = cond if kind == "null" else f"vdp{cond[0]}_{cond[1]}"
+    p = B.CACHE.parent / "synth" / f"{cid}_{seed}_{n}.npz"
+    if p.exists():
+        z = np.load(p)
+        return z["rr"], z["types"]
+    rr, types = H.synthetic_window(kind, cond, seed, n)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    tmp = p.with_name(f"{p.stem}.{os.getpid()}.tmp.npz")
+    np.savez(tmp, rr=np.asarray(rr, float), types=np.asarray(types))
+    os.replace(tmp, p)
+    return np.asarray(rr, float), np.asarray(types)
 
 
 def run_win(task, cfg, pilot):
