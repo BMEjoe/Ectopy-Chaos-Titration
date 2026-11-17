@@ -266,3 +266,17 @@ environment record. One command regenerates everything: `python analyses/revisio
   them is reported as such; R0-ORIG is still built by the 3.5 rule (no change) and still run, with the failure stated
   next to every result under it.
 - Regression check extended: `verify_control` reproduces the stored Phase 10 control NL under R0 (test added, passed).
+
+### Amendment 2 (2026-11-17, after the single-switch ablation; before any R0-ORIG run)
+- **Seen when written:** the complete single-switch ablation (13 configurations, 22,542 tasks, 0 errors;
+  `ablation_benchmarks.csv`, `ablation_table1_by_system.csv`, `p1_choice.json`).
+- **R0-ORIG by the 3.5 rule** (`r0orig.json`): composite closures S1 +0.10, S2 +0.14, S3 -0.09, S3b +0.08, S4 -0.08,
+  S5a +0.09, S5b +0.03, S6 -0.30, S7 0.00. Eligible: S1, S2, S3b, S5a, S5b; S5a beats S5b in its group.
+  **R0-ORIG = S1 + S2 + S3b + S5a** (N = series length; plain F ratio replaced by the Mann-Whitney test as the
+  decision test, since S3b replaces the F-test; degree up to 8 with M <= 84). Leave-one-out variants:
+  R0-ORIG minus S1, S2, S3b, S5a. Note: with S3b in R0-ORIG the decision test is Mann-Whitney, so S2 only affects
+  the reported F (and the surrogate F convention), not the decision.
+- **P1** (sampling of flows): m = 4 (Rossler, Duffing, Mackey-Glass tau = 100), 3 (Lorenz), 1 (Mackey-Glass tau = 17);
+  three of four choices are at the edge of the registered grid. P1 is a benchmark protocol, not part of R0-ORIG.
+- Correction: Amendment 1's heading time should read 16:01 UTC (commit 4e137ea).
+- Nothing else changes. Run order: head, m2, ver, abl2.

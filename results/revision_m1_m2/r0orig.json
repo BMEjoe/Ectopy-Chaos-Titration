@@ -1,0 +1,27 @@
+{
+ "switches": [
+  "S1",
+  "S2",
+  "S3b",
+  "S5a"
+ ],
+ "composite": {
+  "S1": 0.10377130772254681,
+  "S2": 0.14244591723845001,
+  "S3": -0.09095683165226065,
+  "S3b": 0.07798600148761566,
+  "S4": -0.07588479287654087,
+  "S5a": 0.08605807433673651,
+  "S5b": 0.02979707232212902,
+  "S6": -0.30157205679945454,
+  "S7": 0.0
+ },
+ "eligible": [
+  "S1",
+  "S2",
+  "S3b",
+  "S5a",
+  "S5b"
+ ],
+ "rule": "PLAN.md 3.5: every single switch with composite closure > 0; in the groups {S3, S3b} and {S5a, S5b} only the option with the larger positive composite closure"
+}

@@ -1,0 +1,79 @@
+config,switches,benchmark,metric,value,ci_lo,ci_hi,target,gap,closure,closure_ci_lo,closure_ci_hi,gap_closed,extra
+R0,-,T1,MAD vs Table 1 (pp),14.56,14.17,15.08,0,14.56,0,0,0,False,5/9 within 15 pp
+R0,-,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+R0,-,LOG,mean NL at r = 3.7,0.6603,0.6571,0.6635,0.75,0.08974,0,0,0,False,
+R0,-,PM,nsrdb raw 500-beat positive rate,0.5264,0.4347,0.6194,1,0.4736,0,0,0,False,
+R0,-,composite,mean closure of 4 benchmarks,0,0,0,1,,0,0,0,,
+R0,-+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.17,15.74,16.65,0,16.17,-0.1109,-0.1353,-0.08423,False,5/9 within 15 pp
+S1,S1,T1,MAD vs Table 1 (pp),14.9,14.51,15.43,0,14.9,-0.02385,-0.04472,0,False,5/9 within 15 pp
+S1,S1,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+S1,S1,LOG,mean NL at r = 3.7,0.6762,0.6728,0.6798,0.75,0.07377,0.1779,0.1659,0.1912,False,
+S1,S1,PM,nsrdb raw 500-beat positive rate,0.65,0.5542,0.7389,1,0.35,0.261,0.182,0.3538,False,
+S1,S1,composite,mean closure of 4 benchmarks,0.1038,0.08348,0.129,1,,0.1038,0.08348,0.129,,
+S1,S1+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.43,16.13,16.95,0,16.43,-0.1288,-0.1617,-0.1005,False,5/9 within 15 pp
+S2,S2,T1,MAD vs Table 1 (pp),15.52,14.87,16.08,0,15.52,-0.06619,-0.08503,-0.02964,False,5/9 within 15 pp
+S2,S2,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+S2,S2,LOG,mean NL at r = 3.7,0.6892,0.6849,0.6935,0.75,0.06083,0.3222,0.2954,0.3511,False,
+S2,S2,PM,nsrdb raw 500-beat positive rate,0.675,0.6014,0.7472,1,0.325,0.3138,0.2514,0.3849,False,
+S2,S2,composite,mean closure of 4 benchmarks,0.1424,0.1264,0.1651,1,,0.1424,0.1264,0.1651,,
+S2,S2+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.96,16.31,17.35,0,16.96,-0.1652,-0.187,-0.1188,False,5/9 within 15 pp
+S3,S3,T1,MAD vs Table 1 (pp),15.34,14.95,15.95,0,15.34,-0.05367,-0.08509,-0.03194,False,6/9 within 15 pp
+S3,S3,ECO,median loss point (% noise),30,25,30,50,20,-0.3333,-0.6667,-0.3333,False,pass rule False
+S3,S3,LOG,mean NL at r = 3.7,0.6631,0.6598,0.6666,0.75,0.08687,0.03197,0.02265,0.04268,False,
+S3,S3,PM,nsrdb raw 500-beat positive rate,0.5222,0.4361,0.6125,1,0.4778,-0.008798,-0.06854,0.04558,False,
+S3,S3,composite,mean closure of 4 benchmarks,-0.09096,-0.1881,-0.07845,1,,-0.09096,-0.1881,-0.07845,,
+S3,S3+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.52,16.09,16.96,0,16.52,-0.1348,-0.1664,-0.09869,False,6/9 within 15 pp
+S3b,S3b,T1,MAD vs Table 1 (pp),14.74,14.26,15.35,0,14.74,-0.01252,-0.05238,0.02719,False,6/9 within 15 pp
+S3b,S3b,ECO,median loss point (% noise),30,25,30,50,20,-0.3333,-0.6667,-0.3333,False,pass rule False
+S3b,S3b,LOG,mean NL at r = 3.7,0.7106,0.706,0.7153,0.75,0.03939,0.561,0.5216,0.6025,True,
+S3b,S3b,PM,nsrdb raw 500-beat positive rate,0.5722,0.4903,0.6583,1,0.4278,0.09677,-0.002668,0.1962,False,
+S3b,S3b,composite,mean closure of 4 benchmarks,0.07799,-0.02786,0.103,1,,0.07799,-0.02786,0.103,,
+S3b,S3b+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.96,16.4,17.53,0,16.96,-0.1652,-0.207,-0.1166,False,6/9 within 15 pp
+S4,S4,T1,MAD vs Table 1 (pp),14.84,14.49,15.31,0,14.84,-0.01908,-0.04412,0.004592,False,5/9 within 15 pp
+S4,S4,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+S4,S4,LOG,mean NL at r = 3.7,0.6603,0.6571,0.6635,0.75,0.08974,0,0,0,False,
+S4,S4,PM,nsrdb raw 500-beat positive rate,0.3917,0.3125,0.475,1,0.6083,-0.2845,-0.4043,-0.198,False,
+S4,S4,composite,mean closure of 4 benchmarks,-0.07588,-0.107,-0.05341,1,,-0.07588,-0.107,-0.05341,,
+S4,S4+P1,T1,"MAD vs Table 1 (pp), P1 sampling",15.97,15.67,16.41,0,15.97,-0.0972,-0.132,-0.06487,False,5/9 within 15 pp
+S5a,S5a,T1,MAD vs Table 1 (pp),13.82,13.4,14.34,0,13.82,0.05069,0.03782,0.06243,False,5/9 within 15 pp
+S5a,S5a,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+S5a,S5a,LOG,mean NL at r = 3.7,0.6803,0.6772,0.6834,0.75,0.06971,0.2232,0.2092,0.2379,False,
+S5a,S5a,PM,nsrdb raw 500-beat positive rate,0.5597,0.4639,0.6556,1,0.4403,0.07038,0.02439,0.131,False,
+S5a,S5a,composite,mean closure of 4 benchmarks,0.08606,0.07363,0.1017,1,,0.08606,0.07363,0.1017,,
+S5a,S5a+P1,T1,"MAD vs Table 1 (pp), P1 sampling",15.87,15.43,16.3,0,15.87,-0.09004,-0.1136,-0.06067,False,5/9 within 15 pp
+S5b,S5b,T1,MAD vs Table 1 (pp),13.78,13.21,14.3,0,13.78,0.05367,0.03018,0.08737,False,6/9 within 15 pp
+S5b,S5b,ECO,median loss point (% noise),35,35,40,50,15,0,0,0.3333,False,pass rule True
+S5b,S5b,LOG,mean NL at r = 3.7,0.6564,0.6534,0.6595,0.75,0.0936,-0.04298,-0.05534,-0.03052,False,
+S5b,S5b,PM,nsrdb raw 500-beat positive rate,0.5778,0.4889,0.6681,1,0.4222,0.1085,0.0625,0.1613,False,
+S5b,S5b,composite,mean closure of 4 benchmarks,0.0298,0.0171,0.1219,1,,0.0298,0.0171,0.1219,,
+S5b,S5b+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.48,15.87,17,0,16.48,-0.1318,-0.1631,-0.08731,False,6/9 within 15 pp
+S6,S6,T1,MAD vs Table 1 (pp),34.79,32.87,37.14,0,34.79,-1.39,-1.546,-1.248,False,4/9 within 15 pp
+S6,S6,ECO,median loss point (% noise),65,65,65,50,15,0,0,0,False,pass rule True
+S6,S6,LOG,mean NL at r = 3.7,0.6699,0.6669,0.6731,0.75,0.0801,0.1074,0.09359,0.1213,False,
+S6,S6,PM,nsrdb raw 500-beat positive rate,0.5625,0.4722,0.65,1,0.4375,0.07625,0.02885,0.1266,False,
+S6,S6,composite,mean closure of 4 benchmarks,-0.3016,-0.3437,-0.2637,1,,-0.3016,-0.3437,-0.2637,,
+S6,S6+P1,T1,"MAD vs Table 1 (pp), P1 sampling",30.94,30.59,31.49,0,30.94,-1.125,-1.187,-1.061,False,5/9 within 15 pp
+S7,S7,T1,MAD vs Table 1 (pp),14.56,14.17,15.08,0,14.56,0,0,0,False,5/9 within 15 pp
+S7,S7,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+S7,S7,LOG,mean NL at r = 3.7,0.6603,0.6571,0.6635,0.75,0.08974,0,0,0,False,
+S7,S7,PM,nsrdb raw 500-beat positive rate,0.5264,0.4347,0.6194,1,0.4736,0,0,0,False,
+S7,S7,composite,mean closure of 4 benchmarks,0,0,0,1,,0,0,0,,
+S7,S7+P1,T1,"MAD vs Table 1 (pp), P1 sampling",16.17,15.74,16.65,0,16.17,-0.1109,-0.1353,-0.08423,False,5/9 within 15 pp
+R0-BP96F,S1+S2,T1,MAD vs Table 1 (pp),15.56,14.97,16.16,0,15.56,-0.06857,-0.09541,-0.03231,False,5/9 within 15 pp
+R0-BP96F,S1+S2,ECO,median loss point (% noise),35,35,35,50,15,0,0,0,False,pass rule True
+R0-BP96F,S1+S2,LOG,mean NL at r = 3.7,0.7097,0.7048,0.7149,0.75,0.04029,0.5511,0.5096,0.5964,True,
+R0-BP96F,S1+S2,PM,nsrdb raw 500-beat positive rate,0.7903,0.7278,0.8472,1,0.2097,0.5572,0.4937,0.6278,False,
+R0-BP96F,S1+S2,composite,mean closure of 4 benchmarks,0.2599,0.2408,0.2839,1,,0.2599,0.2408,0.2839,,
+R0-BP96F,S1+S2+P1,T1,"MAD vs Table 1 (pp), P1 sampling",17.04,16.48,17.52,0,17.04,-0.1705,-0.1991,-0.1262,False,5/9 within 15 pp
+R0-BP96,S1+S2+S3,T1,MAD vs Table 1 (pp),16.29,15.75,16.86,0,16.29,-0.1193,-0.1506,-0.08098,False,5/9 within 15 pp
+R0-BP96,S1+S2+S3,ECO,median loss point (% noise),30,25,30,50,20,-0.3333,-0.6667,-0.3333,False,pass rule False
+R0-BP96,S1+S2+S3,LOG,mean NL at r = 3.7,0.7107,0.7057,0.7158,0.75,0.03931,0.5619,0.5204,0.6074,True,
+R0-BP96,S1+S2+S3,PM,nsrdb raw 500-beat positive rate,0.7431,0.6778,0.8056,1,0.2569,0.4575,0.3501,0.5539,False,
+R0-BP96,S1+S2+S3,composite,mean closure of 4 benchmarks,0.1417,0.03632,0.1674,1,,0.1417,0.03632,0.1674,,
+R0-BP96,S1+S2+S3+P1,T1,"MAD vs Table 1 (pp), P1 sampling",17.43,16.87,17.82,0,17.43,-0.1974,-0.2243,-0.1492,False,5/9 within 15 pp
+R0-TEXT,S1+S2+S3+S4,T1,MAD vs Table 1 (pp),17.4,16.88,17.83,0,17.4,-0.195,-0.2278,-0.1463,False,5/9 within 15 pp
+R0-TEXT,S1+S2+S3+S4,ECO,median loss point (% noise),30,25,30,50,20,-0.3333,-0.6667,-0.3333,False,pass rule False
+R0-TEXT,S1+S2+S3+S4,LOG,mean NL at r = 3.7,0.6603,0.6571,0.6635,0.75,0.08974,0,0,0,False,
+R0-TEXT,S1+S2+S3+S4,PM,nsrdb raw 500-beat positive rate,0.5806,0.5069,0.6514,1,0.4194,0.1144,0.01128,0.1963,False,
+R0-TEXT,S1+S2+S3+S4,composite,mean closure of 4 benchmarks,-0.1035,-0.206,-0.08091,1,,-0.1035,-0.206,-0.08091,,
+R0-TEXT,S1+S2+S3+S4+P1,T1,"MAD vs Table 1 (pp), P1 sampling",17.84,17.19,18.14,0,17.84,-0.2254,-0.2546,-0.1672,False,5/9 within 15 pp
