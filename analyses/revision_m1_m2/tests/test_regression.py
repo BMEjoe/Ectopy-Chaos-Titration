@@ -238,3 +238,12 @@ def test_stored_phase12_pm97():
                     assert sg["edited"]["nonlinear"] == ss["edited"][rd]["nonlinear"]
                 if ss.get("wu_eligible"):
                     assert sg["wu"]["nonlinear"] == ss["wu"][rd]["nonlinear"]
+
+
+def test_stored_phase10_verification_controls():
+    R = json.load(open(P10 / "verification" / "titration_verification.json"))["records"]
+    get = {(r["system"], r["arg"]): r for r in R}
+    for name, arg in (("white", 0), ("ar2", 3), ("limit_cycle", 1), ("torus", 2), ("logistic_p3", 4),
+                      ("lorenz", 28.0), ("henon", 0)):
+        o = B.verify_control(name, arg, V.R0)
+        assert o["NL"] == get[(name, arg)]["NL"] and o["positive"] == get[(name, arg)]["positive"], (name, arg)

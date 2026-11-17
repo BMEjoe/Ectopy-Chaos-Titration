@@ -251,3 +251,18 @@ m2_influence.csv, m2_downslope.csv, figures (PNG 300 dpi + PDF, Phase 11 style),
 environment record. One command regenerates everything: `python analyses/revision_m1_m2/run_all.py`.
 
 ## Amendments
+
+### Amendment 1 (2026-11-17, 16:05 UTC): verification controls for every configuration (added before any R0-ORIG run)
+- **Seen when written:** the ablation was about 30 % complete. I looked at interim, incomplete summaries of the
+  ecological loss point, NL(3.7) and the nsrdb rate by configuration (20-35 of 100 seeds, 2-9 of 33 subjects). The
+  zero-padded start (S6) moved the ecological loss point to the censoring limit (65 %), past the published ~50 %.
+  No R0-ORIG, headline or M2 output under any new configuration existed.
+- **Reason:** a configuration chosen for sensitivity on BP96's benchmarks must also be checked for false positives.
+  The plan had no size check for the new configurations.
+- **Added (part `ver`):** the Phase 10 verification controls V5 (white noise, AR(2), limit cycle, 2-torus, logistic
+  period 3; 20 series each) and V6 (Lorenz r = 28 and 160, Henon, Mackey-Glass tau = 17, 23, 30 and 14, 15, 16), same
+  series and noise seeds as Phase 10, for R0, every single switch, R0-BP96F, R0-BP96, R0-TEXT and R0-ORIG. V1-V4 come
+  from the logistic scan already in the plan. Criteria are Phase 10's (METHODS.md 2.5). A configuration that fails
+  them is reported as such; R0-ORIG is still built by the 3.5 rule (no change) and still run, with the failure stated
+  next to every result under it.
+- Regression check extended: `verify_control` reproduces the stored Phase 10 control NL under R0 (test added, passed).

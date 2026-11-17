@@ -12,6 +12,7 @@ Parts
   gen     generate and cache the Table 1 flow series (seeds 12000-12099, m = 1 and the chosen m)
   abl     benchmarks (t1, t1p1, eco, log, scan, pm) for R0, S1-S7, R0-BP96F, R0-BP96, R0-TEXT
   abl2    the same benchmarks for R0-ORIG and its leave-one-out variants
+  ver     Phase 10 verification controls V5-V6 (V1-V4 come from the logistic scan) for every configuration
   head    headline units (synth, win, tr, seg, pm97) for R0, R0-BP96, R0-ORIG
   m2      M2 beat-type x k x placement windows: R0 and R0-ORIG diagnostics, R0-BP96 decision
 """
@@ -122,6 +123,13 @@ def tasks(part, pilot):
                 recs = recs or B.records(db, B.D.DEV_DIR)
                 T += [{"id": f"pm|{c}|{db}|{rec}", "part": "pm", "cfg": c, "db": db, "rec": rec} for rec in recs]
         return T
+    if part == "ver":
+        from experiments.phase10_final import verify_titration as VT
+        cfgs = ABL_CONFIGS + ("R0-ORIG",)
+        VTT = [(n, a) for n, a in VT.tasks() if n != "logistic"]
+        if pilot:
+            VTT = VTT[::20]
+        return [{"id": f"ver|{c}|{n}|{a}", "part": "ver", "cfg": c, "system": n, "arg": a} for c in cfgs for n, a in VTT]
     if part == "head":
         return head_tasks(pilot)
     if part == "m2":
@@ -204,6 +212,8 @@ def run_task(task, pilot):
         return B.scan_nl(task["r"], cfg)
     if p == "pm":
         return B.pm_subject(task["db"], task["rec"], cfg, arms=("raw",), lengths=(500, 2000), pilot=pilot)
+    if p == "ver":
+        return B.verify_control(task["system"], task["arg"], cfg)
     if p == "synth":
         return run_synth(task, cfg)
     if p == "win":

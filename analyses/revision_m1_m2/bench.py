@@ -165,6 +165,34 @@ def scan_nl(r, cfg):
     return {"NL": o["NL"], "NL_i": o["NL_i"], "positive": o["positive"]}
 
 
+def verify_control(name, arg, cfg):
+    """Phase 10 verification V5-V6 series and noise seeds (verify_titration.task) under configuration cfg."""
+    if name == "henon":
+        y = VT.henon()
+    elif name == "lorenz":
+        y = VT.lorenz(arg)
+    elif name == "mg":
+        p = CACHE / f"vt_mg_{arg:g}.npy"
+        if p.exists():
+            y = np.load(p)
+        else:
+            y = np.asarray(VT.mackey_glass(arg), float)
+            CACHE.mkdir(parents=True, exist_ok=True)
+            tmp = p.with_suffix(f".{os.getpid()}.tmp.npy")
+            np.save(tmp, y)
+            os.replace(tmp, p)
+    else:
+        y = VT.controls(name, arg)
+    rng = np.random.default_rng(np.random.SeedSequence([20261003, zlib.crc32(f"{name}|{arg}".encode())]))
+    if cfg.surrogate:
+        o0 = V.titrate_cfg(y, rng, V.R0)
+        g = V.vwk_cfg(y, cfg, rng=surr_rng(cfg, 5, crc(f"{name}|{arg}")))
+        pos = bool(o0["positive"] and g["nonlinear"])
+        return {"NL": o0["NL"] if pos else 0.0, "positive": pos}
+    o = V.titrate_cfg(y, rng, cfg)
+    return {"NL": o["NL"], "positive": o["positive"]}
+
+
 # ------------------------------------------------------------------------------------------- arms (Phase 10 rules)
 def arm(rr, mask, arm_name, cfg, rng=None, keep=("nonlinear", "analysable", "n_rows", "p", "r_lin", "r_nl",
                                                      "kappa_lin", "kappa_nl", "d_nl", "test")):
