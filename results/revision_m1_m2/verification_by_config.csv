@@ -1,0 +1,15 @@
+config,V1_NL_3.7,V2_NL_3.575,V3_NL_3.565,V4_frac_pos_chaotic,V4_frac_zero_periodic,V4_spearman,V5_white_pos,V5_ar2_pos,V5_limit_cycle_pos,V5_torus_pos,V5_logistic_p3_pos,V5_white_NLzero,V5_ar2_NLzero,V5_limit_cycle_NLzero,V5_torus_NLzero,V5_logistic_p3_NLzero,V6_pass,V1_pass,V2_pass,V3_pass,V4_pass,V5_pass,VERIFIED
+R0,0.6373,0.08691,0,1,1,0.8475,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+R0-BP96,0.6674,0.08906,0,1,0.9444,0.7568,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+R0-BP96F,0.6727,0.08906,0,1,0.9444,0.6988,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+R0-ORIG,0.733,0.08184,0,1,0.9444,0.8716,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+R0-TEXT,0.6373,0.08691,0,1,1,0.8475,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S1,0.6488,0.08711,0,1,1,0.8202,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S2,0.6611,0.09199,0,1,0.9444,0.7399,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S3,0.6344,0.08691,0,1,1,0.9157,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S3b,0.6713,0.08652,0,1,0.9444,0.8625,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S4,0.6373,0.08691,0,1,1,0.8475,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S5a,0.6627,0.08672,0,1,1,0.9017,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S5b,0.6314,0.08711,0,1,1,0.8293,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True
+S6,0.6475,0.1809,0.1465,1,0,0.845,0,0,20,20,20,20,20,0,0,0,False,True,True,False,False,False,False
+S7,0.6373,0.08691,0,1,1,0.8475,0,0,0,0,0,20,20,20,20,20,True,True,True,True,True,True,True

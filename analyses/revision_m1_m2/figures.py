@@ -153,7 +153,11 @@ def fig_k_types(A):
         ax.set_xlabel("inserted beats k")
     for ax in axes[:, 0]:
         ax.set_ylabel("positive windows (%)")
-    axes[0, 0].legend(frameon=False, fontsize=5.5, loc="center right")
+    h, l = axes[0, 0].get_legend_handles_labels()
+    h2, l2 = axes[1, 0].get_legend_handles_labels()
+    fig.legend(h + [h2[0]], ["R0, raw", "affected rows removed", "sham rows removed", "periodic placement", "R0-BP96, raw",
+                             "R0-ORIG, raw"], loc="lower center", ncol=6, frameon=False, fontsize=6,
+               bbox_to_anchor=(0.5, -0.04))
     save(fig, "M2_positive_rate_vs_k_by_type")
 
 
@@ -197,8 +201,8 @@ def fig_ssr(A):
             d = ss[(ss.reading == rd) & (ss.type == ty) & (ss.placement == "random") & (ss.subset == "positive")]
             d = d[d.n >= 10].sort_values("k")
             x = np.array([xs[k] for k in d.k]) + (i - 2) * 0.07
-            ax.errorbar(x, 100 * d.share_aff_rows, yerr=[100 * (d.share_aff_rows - d.share_ci_lo),
-                                                         100 * (d.share_ci_hi - d.share_aff_rows)],
+            ax.errorbar(x, 100 * d.share_median, yerr=[100 * (d.share_median - d.share_median_ci_lo),
+                                                       100 * (d.share_median_ci_hi - d.share_median)],
                         fmt="-o", ms=2.5, lw=0.8, color=(S + ["#7d4cdb"])[i], elinewidth=0.6, label=TYPE_LABEL[ty])
         d = ss[(ss.reading == rd) & (ss.type == "ventricular") & (ss.placement == "random") & (ss.subset == "positive")]
         d = d.sort_values("k")
@@ -206,9 +210,10 @@ def fig_ssr(A):
         ax.set_xticks(range(len(xs)))
         ax.set_xticklabels([str(k) for k in M.KS[1:]])
         ax.set_xlabel("inserted beats k (random)")
-        ax.set_title(f"{rd}: share of RSS_lin - RSS_nl from ectopy-affected rows", loc="left")
+        ax.set_title(f"{rd}: share of RSS_lin - RSS_nl from affected rows", loc="left")
+        ax.set_ylim(0, 105)
         F11._grid(ax)
-    axes[0].set_ylabel("% of the improvement (positive windows)")
+    axes[0].set_ylabel("% of the improvement\n(median, positive windows)")
     axes[0].legend(frameon=False, fontsize=5.5)
     save(fig, "M2_ssr_share_vs_k")
 
@@ -216,16 +221,24 @@ def fig_ssr(A):
 def fig_downslope(A):
     dn = pd.read_csv(AN.RES / "m2_downslope.csv")
     curves = json.load(open(AN.RES / "m2_curves.json"))
-    fig, axes = plt.subplots(2, 3, figsize=(W2, 3.6), gridspec_kw={"hspace": 0.5, "wspace": 0.35})
+    fig, axes = plt.subplots(2, 3, figsize=(W2, 4.0), gridspec_kw={"hspace": 0.75, "wspace": 0.75})
     xs = {k: i for i, k in enumerate(M.KS)}
     d = dn[(dn.reading == "R0") & (dn.type == "ventricular")]
     for pl, mk, ls in (("random", "o", "-"), ("periodic", "s", "none")):
         g = d[d.placement == pl].sort_values("k")
         x = [xs[k] for k in g.k]
-        for ax, c, lab in ((axes[0, 0], "lag1", "lag-1 autocorrelation"), (axes[0, 1], "relimp", "1 - RSS_nl/RSS_lin")):
-            ax.errorbar(x, g[c], yerr=[g[c] - g[f"{c}_ci_lo"], g[f"{c}_ci_hi"] - g[c]], fmt=mk, ls=ls, ms=2.8, lw=0.8,
-                        color=S[0], mfc="white" if pl == "periodic" else S[0], elinewidth=0.6, label=pl)
-            ax.set_title(lab, loc="left")
+        ax = axes[0, 0]
+        ax.errorbar(x, g["lag1"], yerr=[g["lag1"] - g["lag1_ci_lo"], g["lag1_ci_hi"] - g["lag1"]], fmt=mk, ls=ls, ms=2.8,
+                    lw=0.8, color=S[0], mfc="white" if pl == "periodic" else S[0], elinewidth=0.6, label=pl)
+        ax.set_title("lag-1 autocorrelation", loc="left")
+        if pl == "random":
+            gg = g[g.k > 0]
+            axes[0, 1].plot([xs[k] for k in gg.k], gg.relimp_median, marker="o", ms=2.8, color=S[0], label="random (median)")
+        else:
+            axes[0, 1].text(0.02, 0.22, "periodic k = 16, 26, 51:\n" + ", ".join(f"{v:.1f}" for v in g.relimp_median) +
+                            " (off scale)", transform=axes[0, 1].transAxes, fontsize=5.5, color=INK2)
+        axes[0, 1].set_title("1 - RSS_nl/RSS_lin (median)", loc="left")
+        axes[0, 1].axhline(0, color=INK2, lw=0.5)
         axes[0, 2].plot(x, g.pos_rate * 100, marker=mk, ls=ls, color=S[0], mfc="white" if pl == "periodic" else S[0],
                         ms=2.8, label=pl)
     g = d[d.placement == "random"].sort_values("k")
@@ -233,16 +246,20 @@ def fig_downslope(A):
     ax = axes[1, 0]
     for c, col, lab in (("nrss_lin_aff", S[1], "linear, affected rows"), ("nrss_nl_aff", S[2], "nonlinear, affected rows"),
                         ("nrss_lin_oth", S[1], "linear, other rows"), ("nrss_nl_oth", S[2], "nonlinear, other rows")):
-        ax.plot(x, g[c], color=col, ls="-" if "aff" in c else ":", marker="o" if "aff" in c else None, ms=2.5, label=lab)
-    ax.set_title("normalised RSS by row group", loc="left")
-    ax.legend(frameon=False, fontsize=5)
+        gg = g[g[f"{c}_median"].notna()]
+        ax.plot([xs[k] for k in gg.k], gg[f"{c}_median"], color=col, ls="-" if "aff" in c else ":",
+                marker="o" if "aff" in c else None, ms=2.5, label=lab)
+    ax.set_ylim(0, 1.4)
+    ax.set_title("normalised RSS (median)", loc="left")
+    ax.legend(frameon=False, fontsize=5, loc="upper left")
     ax = axes[1, 1]
     ax.plot(x, g.kappa_lin_median, color=S[1], marker="o", ms=2.5, label="best linear order (median)")
     ax2 = ax.twinx()
     ax2.plot(x, g.max_abs_z_aff, color=S[3], marker="^", ms=2.5, label="max |z| of affected intervals")
-    ax.set_title("linear order; size of the beats in SD units", loc="left")
-    ax.legend(frameon=False, fontsize=5, loc="upper left")
-    ax2.legend(frameon=False, fontsize=5, loc="upper right")
+    ax.set_title("linear order; beat size", loc="left")
+    ax.set_ylabel("best linear order (orange)", fontsize=6)
+    ax2.set_ylabel("max |z| of beats (yellow)", fontsize=6)
+    ax2.spines["right"].set_visible(True)
     ax = axes[1, 2]
     for kk, col in ((1, S[0]), (8, S[2]), (51, S[1])):
         cv = [c for c in curves if c["reading"] == "R0" and c["type"] in ("ventricular", "none") and c["k"] == kk
@@ -252,7 +269,8 @@ def fig_downslope(A):
             ax.plot(np.arange(1, len(c["lin"]) + 1), c["lin"], color=col, ls=":", lw=0.9)
             ax.plot(np.arange(1, len(c["nl"]) + 1), c["nl"], color=col, lw=0.9, label=f"k = {kk} (kappa_nl {c['kappa_nl']})")
     ax.set_xlabel("number of terms r")
-    ax.set_title("C(r): linear (dotted), best nonlinear family", loc="left")
+    ax.set_title("C(r) curves, seed 11000", loc="left")
+    ax.text(0.98, 0.98, "dotted: linear\nsolid: nonlinear", transform=ax.transAxes, ha="right", va="top", fontsize=5)
     ax.legend(frameon=False, fontsize=5)
     for a in list(axes[0]) + list(axes[1, :2]):
         a.set_xticks(range(len(M.KS)))

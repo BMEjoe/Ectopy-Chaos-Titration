@@ -23,7 +23,7 @@ P10 = ROOT / "experiments" / "phase10_final" / "results" / "conf"
 P11 = ROOT / "experiments" / "phase11_robustness" / "results" / "conf"
 P12 = ROOT / "experiments" / "phase12_original" / "results" / "conf"
 GROUPS = ("NSR", "CHF")
-HEADS = ("R0", "R0-BP96", "R0-ORIG")
+HEADS = ("R0", "R0-BP96", "R0-ORIG", "R0-ORIG-minus-S3b")
 SEED = 20261118
 
 
@@ -41,7 +41,7 @@ def ok_flag(o, arm):
 
 # ============================================================================================ headline frames
 def head_records():
-    return AN.load("head")
+    return AN.load("head") + AN.load("head2")
 
 
 def win_frame(R):
@@ -322,7 +322,7 @@ def m2_frame():
                        "relimp", "lag1", "lag2", "frac_aff6", "frac_affk", "share_aff6", "share_affk", "nrss_lin_aff",
                        "nrss_nl_aff", "nrss_lin_oth", "nrss_nl_oth", "max_abs_z_aff", "max_abs_z_oth",
                        "lev_nl_aff_median", "lev_nl_oth_median", "cook_nl_aff_max", "cook_nl_oth_max",
-                       "top8_cook_aff_share", "n", "test"):
+                       "top8_cook_aff_share", "n", "test", "delta_rss"):
                 row[k_] = o.get(k_)
             ra, rs = o["rm_aff"], o["rm_sham"]
             row["rm_aff_ok"], row["rm_aff_pos"] = ra["analysable"], ra["nonlinear"]
@@ -414,9 +414,26 @@ def m2_tables(df, tm):
                 sm, sci = mean_ci(G.share_aff6)
                 fm = float(G.frac_aff6.mean()) if len(G) else None
                 km, kci = mean_ci(G.share_affk)
+                G2 = G[G.share_aff6.notna()]
+                da = (G2.share_aff6 * G2.delta_rss).astype(float).values
+                dt = G2.delta_rss.astype(float).values
+                rng = np.random.default_rng(SEED + 31)
+                if len(G2):
+                    ib = rng.integers(0, len(G2), (2000, len(G2)))
+                    pooled = float(da.sum() / dt.sum()) if dt.sum() > 0 else None
+                    pb = da[ib].sum(1) / dt[ib].sum(1)
+                    pci = AN.pct(pb[np.isfinite(pb)])
+                    med = float(np.median(G2.share_aff6))
+                    mb = np.median(G2.share_aff6.values[ib], axis=1)
+                    mci = AN.pct(mb)
+                else:
+                    pooled, pci, med, mci = None, [None, None], None, [None, None]
                 ssr.append({"reading": rd, "type": ty, "placement": pl, "k": k, "subset": subset, "n": len(G),
+                            "share_median": med, "share_median_ci_lo": mci[0], "share_median_ci_hi": mci[1],
+                            "share_pooled": pooled, "share_pooled_ci_lo": pci[0], "share_pooled_ci_hi": pci[1],
                             "share_aff_rows": sm, "share_ci_lo": sci[0], "share_ci_hi": sci[1],
                             "frac_aff_rows": fm, "enrichment": (sm / fm) if (sm is not None and fm) else None,
+                            "enrichment_median": (med / fm) if (med is not None and fm) else None,
                             "share_aff_rows_kappa_nl": km, "share_kappa_nl_ci_lo": kci[0], "share_kappa_nl_ci_hi": kci[1]})
         drow = dict(base)
         for c in ("lag1", "lag2", "eps_lin", "eps_nl", "relimp", "nrss_lin_aff", "nrss_nl_aff", "nrss_lin_oth",
@@ -428,6 +445,8 @@ def m2_tables(df, tm):
             mval, ci = mean_ci(v)
             drow[c] = mval
             drow[f"{c}_ci_lo"], drow[f"{c}_ci_hi"] = ci
+        for c in ("nrss_lin_aff", "nrss_nl_aff", "nrss_lin_oth", "nrss_nl_oth", "relimp"):
+            drow[f"{c}_median"] = float(g[c].astype(float).median())
         for c in ("kappa_lin", "r_nl", "kappa_nl"):
             drow[f"{c}_median"] = float(g[c].median())
             drow[f"{c}_q25"], drow[f"{c}_q75"] = float(g[c].quantile(0.25)), float(g[c].quantile(0.75))
@@ -522,8 +541,25 @@ def m2_section():
     down.to_csv(R / "m2_downslope.csv", index=False, float_format="%.4g")
     trows.to_csv(R / "m2_term_selection.csv", index=False, float_format="%.4g")
     (R / "m2_curves.json").write_text(json.dumps(curves))
+    pos = k1_position(df)
+    pos.to_csv(R / "m2_k1_position.csv", index=False)
     return {"n_errors": AN.n_errors("m2"), "n_windows": int(len(df[df.reading == "R0"])), "rules": m2_rules(df, inf),
-            "explore11_agreement": explore_agreement(df)}
+            "explore11_agreement": explore_agreement(df), "k1_position": pos.to_dict("records")}
+
+
+def k1_position(df):
+    """k = 1, random placement: positive rate when the beat enters at least one fitted equation (as target or lag 1-6)
+    versus when it falls before the first fitted row (it then enters only long linear lags)."""
+    rows = []
+    d = df[(df.k == 1) & (df.placement == "random") & (df.reading != "R0-BP96")]
+    for (rd, ty), g in d.groupby(["reading", "type"]):
+        a = g[g.frac_aff6 > 0]
+        b = g[g.frac_aff6 == 0]
+        rows.append({"reading": rd, "type": ty, "in_rows_pos": int(a.nonlinear.sum()), "in_rows_n": len(a),
+                     "in_rows_rate": float(a.nonlinear.mean()) if len(a) else None,
+                     "before_rows_pos": int(b.nonlinear.sum()), "before_rows_n": len(b),
+                     "before_rows_rate": float(b.nonlinear.mean()) if len(b) else None})
+    return pd.DataFrame(rows)
 
 
 def explore_agreement(df):
@@ -541,4 +577,74 @@ def sections(want):
         out["stored_readings"] = stored_readings()
     if (want is None or "m2" in want) and (AN.RAW / "m2.jsonl").exists():
         out["m2"] = m2_section()
+    return out
+
+
+# ============================================================================================ verification (Amendment 1)
+def _arg(a):
+    try:
+        return int(a)
+    except ValueError:
+        return float(a)
+
+
+def ver_section():
+    """Phase 10 V1-V6 criteria (METHODS.md 2.5) for every configuration: V1-V4 from the logistic scan (abl/abl2),
+    V5-V6 from the `ver` part."""
+    from scipy import stats as st
+    V = AN.load("ver")
+    S = AN.load("abl") + AN.load("abl2")
+    le = AN._le_map()
+    out = {}
+    for c in sorted({r["cfg"] for r in V}):
+        rec = {(r["system"], _arg(r["id"].split("|")[3])): r for r in V if r["cfg"] == c}
+        scan = {r["r"]: r for r in S if r["part"] == "scan" and r["cfg"] == c}
+        if len(scan) < 101 or len(rec) < 109:
+            continue
+        res = {}
+        nl37, nl3575, nl3565 = scan[3.7]["NL"], scan[3.575]["NL"], scan[3.565]["NL"]
+        res["V1"] = {"NL_3.7": nl37, "pass": abs(nl37 - 0.75) <= 0.15}
+        res["V2"] = {"NL_3.575": nl3575, "pass": 0.03 <= nl3575 <= 0.20}
+        res["V3"] = {"NL_3.565": nl3565, "pass": nl3565 <= 0.02}
+        ch = [r for r in scan if le[r] > 0.02]
+        pe = [r for r in scan if le[r] < -0.02]
+        fpos = float(np.mean([scan[r]["NL"] > 0 for r in ch]))
+        fzero = float(np.mean([scan[r]["NL"] == 0 for r in pe]))
+        rho = float(st.spearmanr([scan[r]["NL"] for r in ch], [le[r] for r in ch])[0])
+        res["V4"] = {"frac_pos_chaotic": fpos, "frac_zero_periodic": fzero, "spearman": rho,
+                     "pass": bool(fpos >= 0.9 and fzero >= 0.9 and rho >= 0.6)}
+        ctl = {}
+        for k in ("white", "ar2", "limit_cycle", "torus", "logistic_p3"):
+            rr = [v for (s_, a), v in rec.items() if s_ == k]
+            ctl[k] = {"n": len(rr), "positive": int(sum(v["positive"] for v in rr)), "NL_zero": int(sum(v["NL"] == 0 for v in rr))}
+        res["V5"] = {"controls": ctl, "pass": bool(ctl["white"]["positive"] <= 2 and ctl["ar2"]["positive"] <= 2 and
+                                                    all(ctl[k]["NL_zero"] >= 18 for k in ("limit_cycle", "torus", "logistic_p3")))}
+        mgc = [rec[("mg", t)]["NL"] for t in (17.0, 23.0, 30.0)]
+        mgp = [rec[("mg", t)]["NL"] for t in (14.0, 15.0, 16.0)]
+        res["V6"] = {"lorenz28": rec[("lorenz", 28.0)]["NL"], "lorenz160": rec[("lorenz", 160.0)]["NL"],
+                     "henon": rec[("henon", 0)]["NL"], "mg_chaotic": mgc, "mg_periodic": mgp,
+                     "pass": bool(rec[("lorenz", 28.0)]["NL"] > 0 and rec[("lorenz", 160.0)]["NL"] == 0 and
+                                  rec[("henon", 0)]["NL"] > 0 and sum(x > 0 for x in mgc) >= 2 and sum(x == 0 for x in mgp) >= 2)}
+        res["VERIFIED"] = all(res[k]["pass"] for k in ("V1", "V2", "V3", "V4", "V5", "V6"))
+        out[c] = res
+    rows = []
+    for c, r in out.items():
+        rows.append({"config": c, "V1_NL_3.7": r["V1"]["NL_3.7"], "V2_NL_3.575": r["V2"]["NL_3.575"],
+                     "V3_NL_3.565": r["V3"]["NL_3.565"], "V4_frac_pos_chaotic": r["V4"]["frac_pos_chaotic"],
+                     "V4_frac_zero_periodic": r["V4"]["frac_zero_periodic"], "V4_spearman": r["V4"]["spearman"],
+                     **{f"V5_{k}_pos": v["positive"] for k, v in r["V5"]["controls"].items()},
+                     **{f"V5_{k}_NLzero": v["NL_zero"] for k, v in r["V5"]["controls"].items()},
+                     "V6_pass": r["V6"]["pass"], **{f"{k}_pass": r[k]["pass"] for k in ("V1", "V2", "V3", "V4", "V5")},
+                     "VERIFIED": r["VERIFIED"]})
+    pd.DataFrame(rows).to_csv(AN.RES / "verification_by_config.csv", index=False, float_format="%.4g")
+    return out
+
+
+_old_sections = sections
+
+
+def sections(want):                                             # noqa: F811
+    out = _old_sections(want)
+    if (want is None or "ver" in want) and (AN.RAW / "ver.jsonl").exists():
+        out["verification"] = ver_section()
     return out

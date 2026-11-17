@@ -171,8 +171,43 @@ def claims(s):
     vals = {rd: fmt_ci(a["AF"], a["ci"], 100, 0) + " %" for rd, a in af.items() if a}
     minaf = min(a["AF"] for a in af.values() if a)
     holds = all(a["AF"] > 0.5 for a in af.values() if a)
-    add("A0", "abstract; conclusions", "In heart rate, titration mainly detects ectopic beats",
-        {**vals}, holds, None, "attributable fraction AF > 0.50 under every reading (PLAN.md 5)")
+    lo_af = min(a["AF"] for a in af.values() if a)
+    hi_af = max(a["AF"] for a in af.values() if a)
+    add("A0", "abstract; conclusions (C8 'most often caused by ectopic beats')",
+        "In heart rate, titration mainly detects ectopic beats", {**vals}, holds,
+        None if holds else (f"In heart rate, ectopic beats are a major source of titration positives: they account for "
+                            f"about {100 * lo_af:.0f}-{100 * hi_af:.0f} % of positive windows, depending on the test's "
+                            f"conventions, and burden, not group, predicts a positive window"),
+        "attributable fraction AF > 0.50 under every reading (PLAN.md 5)")
+    # L1: nearly tripled
+    vals = {rd: f"{g(rd, 'ratio_1_vs_0'):.2f}x" for rd in rds if g(rd, "ratio_1_vs_0")}
+    rr = [g(rd, "ratio_1_vs_0") for rd in rds if g(rd, "ratio_1_vs_0")]
+    add("L1", "lead paragraph", "One ectopic beat nearly tripled the chance of titration reporting chaos", vals,
+        all(x >= 2.5 for x in rr), f"One ectopic beat raised the chance of titration reporting chaos {min(rr):.1f}- to "
+        f"{max(rr):.1f}-fold, depending on the test's conventions", "rate ratio (burden 1 vs 0) >= 2.5 under every reading")
+    # burden, not group (Sec. V B)
+    vals, ok = {}, True
+    for rd in rds:
+        ge = g(rd, "gee")
+        if ge and ge.get("estimated"):
+            c = ge["coef"]["chf"]
+            vals[rd] = fmt_ci(c["OR"], c["OR_ci95"], 1, 2)
+            ok &= c["OR_ci95"][0] <= 1 <= c["OR_ci95"][1]
+    add("V-B", "Sec. V B; Discussion", "With burden in the model there was no separate effect of CHF (OR 0.77); ectopy "
+        "accounts for the group difference at the window level", vals, ok, None, "adjusted CHF OR CI includes 1 under every "
+        "reading")
+    # isolated ectopy rarely triggers titration (Sec. IV A, Table III)
+    vals, ok = {}, True
+    for rd in rds:
+        v5, v10 = g(rd, "synth", "S2_ectopic_5pct", "raw"), g(rd, "synth", "S2_ectopic_10pct", "raw")
+        a5 = g(rd, "synth", "E5_atrial_5pct", "raw")
+        if v5:
+            vals[rd] = f"isolated 5 %: {v5['k']}/100; 10 %: {v10['k']}/100; atrial 5 %: {a5['k']}/100"
+            ok &= v5["k"] <= 10 and a5["k"] <= 10
+    add("IV-A", "Sec. IV A; Table III", "Isolated beats (5 %, 10 %) and atrial-type beats rarely triggered titration",
+        vals, ok, "Under my implementation, isolated beats at 5-10 % density rarely triggered titration; under the original "
+        "test's conventions, 5 % isolated and atrial-type beats made most windows positive", "isolated 5 % and atrial 5 % "
+        "<= 10/100 under every reading")
     # A1: couplets 100/100 every version
     vals = {}
     allh = True
@@ -195,7 +230,8 @@ def claims(s):
             vals[rd] = f"{100 * b[0]['rate']:.0f} % -> {100 * b[1]['rate']:.0f} %"
             ok &= b[1]["ci"][0] > b[0]["ci"][1]
     add("A2", "abstract; lead", "In 988 real windows, positive rates increased from 22 % (no ectopic beats) to 63 % "
-        "(1 ectopic beat); 'nearly tripled'", vals, ok, None, "rate at burden 1 above burden 0 (Wilson CIs disjoint); "
+        "(1 ectopic beat)", vals, ok, "positive rates rose from 22-37 % (no ectopic beats) to 50-63 % (1 ectopic beat), "
+        "depending on the test's conventions", "rate at burden 1 above burden 0 (Wilson CIs disjoint); the quoted "
         "numbers are R0's")
     # A3 / C4: single beat 28-64 pp
     vals, lo, hi = {}, [], []
@@ -233,7 +269,8 @@ def claims(s):
         ranges += [100 * p["diff"] for p in post]
     add("A4", "abstract; lead; conclusions", "Raw CHF segments were positive 22.4 points more often than healthy ones, but "
         "-4.9 to +5.4 points (not significant) after ectopy handling", vals, bool(ok_raw and ok_post),
-        None if ok_raw and ok_post else "see values", "raw CI > 0 and every handled-arm CI includes 0, under every reading")
+        f"holds under every reading; across readings the handled differences span {min(ranges):+.1f} to {max(ranges):+.1f} "
+        "points (all not significant)", "raw CI > 0 and every handled-arm CI includes 0, under every reading")
     # windows raw excess (Sec. V A) incl. stored AAFT
     vals, ok = {}, True
     for rd in rds:
@@ -247,9 +284,11 @@ def claims(s):
             vals[rd + " (Phase 12)"] = fmt_ci(d["win_raw_diff"], d["win_raw_ci"], 100) + " pp"
             ok &= d["win_raw_ci"][0] > 0
     add("V-A", "Sec. V A; Discussion", "Raw window-level CHF excess +23.5 (R0), +14.2 (original conventions), +4.2 "
-        "(AAFT surrogates)", vals, ok, None, "raw window CHF - NSR CI > 0 under every reading (known to fail for AAFT)")
+        "(AAFT surrogates)", vals, ok, "keep the manuscript's wording: the raw excess is reading-dependent and disappears "
+        "with amplitude-adjusted surrogates", "raw window CHF - NSR CI > 0 under every reading (known to fail for AAFT)")
     # A5 / L3 / C6: PM97
     vals, okr, okh = {}, True, True
+    pm_def = []
     for rd in rds:
         p = g(rd, "pm97")
         if not p:
@@ -259,10 +298,12 @@ def claims(s):
         vals[rd] = (f"NSR raw {100 * p['500|raw']['group_rates']['NSR']['mean_subject_rate']:.1f} %; raw diff "
                     f"{fmt_ci(raw['diff'], raw['ci95'], 100)}; handled " + ", ".join(fmt_ci(x["diff"], x["ci95"], 100) for x in post))
         okr &= not p["500|raw"].get("pattern", {}).get("reproduced", False)
+        pm_def += [-100 * x["diff"] for x in post]
         okh &= all(x["ci95"][1] < 0 for x in post)
     add("A5", "abstract; lead; conclusions", "On 2 older databases, Poon and Merrill's procedure did not reproduce their "
         "lower positive rate in CHF on raw intervals; it appeared only after ectopy handling (26-46 points lower)",
-        vals, bool(okr and okh), None, "raw PM97 pattern not reproduced and every handled-arm CI < 0, under every reading")
+        vals, bool(okr and okh), f"holds under every reading; after handling CHF was {min(pm_def):.0f}-{max(pm_def):.0f} "
+        "points lower across readings", "raw PM97 pattern not reproduced and every handled-arm CI < 0, under every reading")
     # A7: static transforms (N5)
     vals, ok = {}, True
     for rd in rds:
@@ -301,6 +342,25 @@ def claims(s):
             "51 beats 5 % and 0 %", vals, None, None, "descriptive (exploratory dose-response)")
     df = pd.DataFrame(rows)
     df.to_csv(AN.RES / "claims_check.csv", index=False)
+    vcols = [c for c in df.columns if c.startswith("value_")]
+    md = ["# Claims check (EXPLORATORY, post hoc)", "",
+          "One row per quantitative claim in the abstract, lead paragraph and conclusions (plus the Results statements "
+          "they rest on). Values per reading; 'holds' applies the stated criterion to every reading listed. Phase 12 "
+          "values are stored results on that phase's seeds.", ""]
+    for _, r in df.iterrows():
+        md.append(f"## {r['id']} ({r['where']})")
+        md.append(f"**Claim.** {r['claim']}")
+        md.append("")
+        for c in vcols:
+            if isinstance(r[c], str):
+                md.append(f"- {c[6:]}: {r[c]}")
+        hv = r["holds_under_every_reading"]
+        md.append(f"- **Criterion:** {r['criterion']}. **Holds under every reading:** "
+                  f"{'yes' if hv is True else ('no' if hv is False else 'descriptive')}")
+        if isinstance(r["suggested_wording"], str):
+            md.append(f"- **Suggested wording:** {r['suggested_wording']}")
+        md.append("")
+    (AN.RES / "claims_check.md").write_text("\n".join(md) + "\n")
     return df
 
 

@@ -280,3 +280,16 @@ environment record. One command regenerates everything: `python analyses/revisio
   three of four choices are at the edge of the registered grid. P1 is a benchmark protocol, not part of R0-ORIG.
 - Correction: Amendment 1's heading time should read 16:01 UTC (commit 4e137ea).
 - Nothing else changes. Run order: head, m2, ver, abl2.
+
+### Amendment 3 (2026-11-17, after all planned runs; before this added run)
+- **Seen when written:** every planned output (ablation incl. R0-ORIG and leave-one-out, verification, headline
+  under R0 / R0-BP96 / R0-ORIG, M2).
+- **Finding that prompts it:** by the 3.5.4 leave-one-out, R0-ORIG without S3b (= S1 + S2 + S5a) has the largest
+  composite closure of any configuration run (+0.37 vs +0.26 for R0-ORIG); the Mann-Whitney test (S3b) helps the
+  logistic benchmark but costs power under noise. Under 3.5.4 this combination is reported as the one that explains
+  most of the gap.
+- **Added (exploratory, part `head2`):** the headline units under `R0-ORIG-minus-S3b`, to check whether the
+  headline claims depend on including S3b: the 988 windows (raw, masked, edited, Wu), the 439 transplant windows,
+  the 12-min segments, the PM97 blocks, and the 17 Phase 10 synthetic null and ectopy conditions (100 seeds each;
+  the van der Pol windows are left out). Same code, seeds and statistics as Section 4. Reported next to the three
+  planned readings, with this amendment cited. Nothing else changes.

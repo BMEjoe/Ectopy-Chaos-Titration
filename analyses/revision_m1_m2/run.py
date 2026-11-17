@@ -14,6 +14,7 @@ Parts
   abl2    the same benchmarks for R0-ORIG and its leave-one-out variants
   ver     Phase 10 verification controls V5-V6 (V1-V4 come from the logistic scan) for every configuration
   head    headline units (synth, win, tr, seg, pm97) for R0, R0-BP96, R0-ORIG
+  head2   (Amendment 3) headline units except van der Pol windows for R0-ORIG-minus-S3b
   m2      M2 beat-type x k x placement windows: R0 and R0-ORIG diagnostics, R0-BP96 decision
 """
 from __future__ import annotations
@@ -132,16 +133,18 @@ def tasks(part, pilot):
         return [{"id": f"ver|{c}|{n}|{a}", "part": "ver", "cfg": c, "system": n, "arg": a} for c in cfgs for n, a in VTT]
     if part == "head":
         return head_tasks(pilot)
+    if part == "head2":
+        return [t for t in head_tasks(pilot, cfgs=("R0-ORIG-minus-S3b",)) if not (t["part"] == "synth" and t["kind"] == "vdp")]
     if part == "m2":
         return m2_tasks(pilot)
     raise ValueError(part)
 
 
-def head_tasks(pilot):
+def head_tasks(pilot, cfgs=None):
     from experiments.phase10_final import run10 as R10
     from experiments.phase12_original import run12 as R12
     T = []
-    cfgs = ("R0", "R0-BP96") if pilot else HEAD_CONFIGS
+    cfgs = cfgs or (("R0", "R0-BP96") if pilot else HEAD_CONFIGS)
     ctx = R12.Ctx(pilot)
     if pilot:
         conds = [("null", "N1_linear_rr"), ("null", "E3_couplets_5pct"), ("vdp", [26, "E3_10"])]

@@ -113,7 +113,8 @@ def build():
     for sw in df.switch:
         parts = [s for s in sw.split("/") if s in cfgs]
         if not parts:
-            comp.append(None if sw != "P1" else S.get("ablation", {}).get("P1_on_R0", {}).get("composite_closure"))
+            p1 = S.get("ablation", {}).get("P1_on_R0", {}).get("composite_closure")
+            comp.append(f"P1: {p1:+.2f} (Table 1 only: {4 * p1:+.2f})" if sw == "P1" and p1 is not None else None)
             continue
         comp.append("; ".join(f"{s}: {cfgs[s]['closure']['composite']['closure']:+.2f}" for s in parts))
     df["composite_closure_of_switch"] = comp
