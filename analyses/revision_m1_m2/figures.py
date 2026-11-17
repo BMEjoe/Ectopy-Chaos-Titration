@@ -27,7 +27,7 @@ TYPE_LABEL = {"ventricular": "ventricular", "atrial": "atrial-type", "spike": "s
 
 def save(fig, name):
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT / f"{name}.pdf", bbox_inches="tight")
+    fig.savefig(OUT / f"{name}.pdf", bbox_inches="tight", metadata={"CreationDate": None})
     fig.savefig(OUT / f"{name}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
