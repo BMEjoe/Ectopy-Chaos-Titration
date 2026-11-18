@@ -159,6 +159,8 @@ def fig_k_types(A):
     fig.legend(h + [h2[0]], ["R0, raw", "affected rows removed", "sham rows removed", "periodic placement", "R0-BP96, raw",
                              "R0-ORIG, raw"], loc="lower center", ncol=6, frameon=False, fontsize=6,
                bbox_to_anchor=(0.5, -0.11))
+    for ax, lab in ((axes[0, 0], "(a)"), (axes[1, 0], "(b)")):  # panel labels: (a) R0, (b) R0-ORIG
+        ax.text(-0.42, 1.18, lab, transform=ax.transAxes, fontsize=8, fontweight="bold", va="bottom", ha="left")
     save(fig, "M2_positive_rate_vs_k_by_type")
 
 

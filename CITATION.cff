@@ -6,7 +6,7 @@ authors:
   - family-names: Bezanson
     given-names: Brooks
 repository-code: "https://github.com/BMEjoe/Ectopy-Chaos-Titration"
-version: "paper-v1.1"
+version: "paper-v1.2"
 license: MIT
 keywords:
   - heart rate variability

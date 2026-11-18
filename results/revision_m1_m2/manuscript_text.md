@@ -1,4 +1,4 @@
-# Draft text for the revision (M1, M2)
+# Draft manuscript text for the exploratory analyses (M1, M2)
 
 All numbers come from `results/revision_m1_m2/` (exploratory analyses; plan committed before any run). Section and
 table numbers follow FINAL_DRAFT_4; new items are marked "new". Replace "Ref. [72]" with the archive reference of the
@@ -10,7 +10,7 @@ revised repository.
 
 ### J. Ablation of implementation details (exploratory)
 
-A referee pointed out that my test might be less sensitive than the original one. If so, large outliers such as
+A mock referee report pointed out that my test might be less sensitive than the original one. If so, large outliers such as
 ectopic beats would make up a larger share of its positives. To find out which of my implementation details matter,
 I listed every way my implementation differs, or might differ, from the original papers [9-11] (Table S-D). Nine
 can be switched one at a time: N in the criterion (series length instead of fitted rows), the plain ratio of error
@@ -146,7 +146,7 @@ positives in heart failure."
   were positive less often than healthy ones, as on the older databases.
 - The single-beat effect rests on a few high-leverage regression equations. Any test that compares residual
   variances of fitted models, as the F test does, inherits this sensitivity to isolated outliers.
-- The ablation and the influence analysis are exploratory. They were planned after a referee comment, and the
+- The ablation and the influence analysis are exploratory. They were planned after a mock referee report, and the
   configuration that best matched the benchmarks was identified after the planned runs.
 - The mechanism analysis uses one linear null, one window length and stylized beats.
 

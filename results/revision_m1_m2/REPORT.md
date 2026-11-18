@@ -3,6 +3,10 @@
 **EXPLORATORY, POST HOC.** These analyses answer a mock referee report. They were planned after every database and
 design had been analysed in Phases 10-12, so none of them is confirmatory.
 
+**Names used in the paper.** The configuration called "R0-ORIG minus S3b" or "S1 + S2 + S5a" here is called
+R0-BP96F-d8 in the paper (N = series length, plain F ratio, polynomial degree up to 8 within the 84-term limit).
+All other reading names (R0, R0-BP96F, R0-BP96, R0-S-FT, R0-S-AAFT, R0-ORIG) are the same in both.
+
 - **Plan:** `analyses/revision_m1_m2/PLAN.md`, commit **6166ef7**, **2026-11-17T15:23:47Z**, written and pushed before
   any run. Amendments: 1 (4e137ea, 16:01Z: verification controls for every configuration), 2 (f863043, 16:42Z: R0-ORIG
   composition by the fixed rule), 3 (0828bd2, 18:47Z: headline under R0-ORIG without S3b), 4 (170a469, 18:49Z:
