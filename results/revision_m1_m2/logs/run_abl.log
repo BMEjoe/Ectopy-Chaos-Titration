@@ -1,0 +1,127 @@
+p1sel: 150 tasks to run (0 done)
+  p1sel 7/150 0.1 min; eta 1.4 min
+  p1sel 14/150 0.1 min; eta 0.9 min
+  p1sel 21/150 0.1 min; eta 0.9 min
+  p1sel 28/150 0.2 min; eta 0.7 min
+  p1sel 35/150 0.2 min; eta 0.6 min
+  p1sel 42/150 0.3 min; eta 0.6 min
+  p1sel 49/150 0.3 min; eta 0.5 min
+  p1sel 56/150 0.3 min; eta 0.5 min
+  p1sel 63/150 0.4 min; eta 0.5 min
+  p1sel 70/150 0.4 min; eta 0.4 min
+  p1sel 77/150 0.4 min; eta 0.4 min
+  p1sel 84/150 0.4 min; eta 0.3 min
+  p1sel 91/150 0.5 min; eta 0.3 min
+  p1sel 98/150 0.5 min; eta 0.3 min
+  p1sel 105/150 0.6 min; eta 0.2 min
+  p1sel 112/150 0.6 min; eta 0.2 min
+  p1sel 119/150 0.6 min; eta 0.2 min
+  p1sel 126/150 0.6 min; eta 0.1 min
+  p1sel 133/150 0.7 min; eta 0.1 min
+  p1sel 140/150 0.7 min; eta 0.1 min
+  p1sel 147/150 0.8 min; eta 0.0 min
+  p1sel 150/150 0.8 min; eta 0.0 min
+{
+ "rule": "PLAN.md 3.2 P1: m maximising the median (eps_lin - eps_nl) over design seeds 12900-12904, noise-free, R0; ties -> smaller m",
+ "systems": {
+  "rossler": {
+   "m_opt": 4.0,
+   "median_diff": {
+    "0.25": 0.0032060850677096716,
+    "0.5": 0.03556103135876506,
+    "1.0": 0.09986063958312283,
+    "2.0": 0.14459497658582854,
+    "3.0": 0.16518463429726812,
+    "4.0": 0.18224811283796022
+   }
+  },
+  "duffing": {
+   "m_opt": 4.0,
+   "median_diff": {
+    "0.25": 3.5166497880301716e-08,
+    "0.5": 0.0005056951039425431,
+    "1.0": 0.035658413270028916,
+    "2.0": 0.23176950593885037,
+    "3.0": 0.34436418389018014,
+    "4.0": 0.3593661185805247
+   }
+  },
+  "lorenz": {
+   "m_opt": 3.0,
+   "median_diff": {
+    "0.25": 3.078721150063516e-05,
+    "0.5": 0.00760360126930378,
+    "1.0": 0.16035523318655698,
+    "2.0": 0.48241453450020233,
+    "3.0": 0.5034684230566377,
+    "4.0": 0.44358929369352756
+   }
+  },
+  "mackey_glass_100": {
+   "m_opt": 4.0,
+   "median_diff": {
+    "0.25": 0.014525649075801644,
+    "0.5": -0.022598586665563247,
+    "1.0": -0.08128108196806516,
+    "2.0": 0.2931124481989642,
+    "3.0": 0.22282730605237921,
+    "4.0": 0.4273880106611173
+   }
+  },
+  "mackey_glass_17": {
+   "m_opt": 1.0,
+   "median_diff": {
+    "0.25": 0.08084170038732487,
+    "0.5": 0.22522417450987753,
+    "1.0": 0.2895764798398689,
+    "2.0": 0.24681522879813672,
+    "3.0": 0.2641960873083573,
+    "4.0": 0.20350574509976985
+   }
+  }
+ }
+}
+gen: 900 tasks to run (0 done)
+  gen 45/900 0.3 min; eta 5.3 min
+  gen 90/900 0.6 min; eta 5.0 min
+  gen 135/900 0.8 min; eta 4.8 min
+  gen 180/900 1.2 min; eta 4.8 min
+  gen 225/900 1.5 min; eta 4.5 min
+  gen 270/900 1.8 min; eta 4.1 min
+  gen 315/900 2.1 min; eta 3.9 min
+  gen 360/900 2.4 min; eta 3.6 min
+  gen 405/900 2.7 min; eta 3.2 min
+  gen 450/900 3.0 min; eta 3.0 min
+  gen 495/900 3.3 min; eta 2.7 min
+  gen 540/900 3.5 min; eta 2.3 min
+  gen 585/900 3.9 min; eta 2.1 min
+  gen 630/900 4.2 min; eta 1.8 min
+  gen 675/900 4.5 min; eta 1.5 min
+  gen 720/900 4.8 min; eta 1.2 min
+  gen 765/900 5.1 min; eta 0.9 min
+  gen 810/900 5.4 min; eta 0.6 min
+  gen 855/900 5.6 min; eta 0.3 min
+  gen 900/900 5.9 min; eta 0.0 min
+abl: 22542 tasks to run (0 done)
+  abl 1127/22542 2.8 min; eta 53.4 min
+  abl 2254/22542 5.7 min; eta 51.2 min
+  abl 3381/22542 8.6 min; eta 48.6 min
+  abl 4508/22542 11.6 min; eta 46.3 min
+  abl 5635/22542 14.4 min; eta 43.3 min
+  abl 6762/22542 17.4 min; eta 40.7 min
+  abl 7889/22542 20.6 min; eta 38.3 min
+  abl 9016/22542 23.3 min; eta 35.0 min
+  abl 10143/22542 26.0 min; eta 31.7 min
+  abl 11270/22542 28.8 min; eta 28.8 min
+  abl 12397/22542 31.6 min; eta 25.9 min
+  abl 13524/22542 34.4 min; eta 23.0 min
+  abl 14651/22542 37.4 min; eta 20.2 min
+  abl 15778/22542 40.4 min; eta 17.3 min
+  abl 16905/22542 43.4 min; eta 14.5 min
+  abl 18032/22542 46.1 min; eta 11.5 min
+  abl 19159/22542 49.2 min; eta 8.7 min
+  abl 20286/22542 52.0 min; eta 5.8 min
+  abl 21413/22542 54.7 min; eta 2.9 min
+  abl 22540/22542 57.5 min; eta 0.0 min
+  abl 22542/22542 57.5 min; eta 0.0 min
+RUN DONE ('p1sel', 'gen', 'abl')

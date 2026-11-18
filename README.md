@@ -42,9 +42,13 @@ reproducibility package (`docs/FINAL_SUMMARY.md`).
 | 10 | detection limits, faithful noise titration, ectopy dose-response (nsr2db, chf2db) | `docs/PHASE10_FINAL_RESULTS.md` | `experiments/phase10_final/PREREGISTRATION.md` |
 | 11 | robustness: sham handling, single-beat transplant, within-subject models, titration readings, seeds, K3 at 1/128 s | `docs/PHASE11_ROBUSTNESS_RESULTS.md` | `experiments/phase11_robustness/PREREGISTRATION.md` |
 | 12 | fidelity to Barahona & Poon (1996), published benchmarks, surrogate step, Poon & Merrill (1997) replication (nsrdb, chfdb) | `docs/PHASE12_ORIGINAL_METHODS_RESULTS.md`; citable numbers in `docs/PHASE12_NUMBERS.md` | `experiments/phase12_original/PREREGISTRATION.md` |
+| revision (exploratory) | ablation of implementation details against the published benchmarks; mechanism of the single-beat effect; headline results under each reading | `results/revision_m1_m2/REPORT.md` | plan (not a preregistration): `analyses/revision_m1_m2/PLAN.md` |
 
 Phases 11 and 12 came after the final refinement below, so `reproduce.sh` and the verification and errata files
-cover Phases 1-10 only. Each later report ends with its own regeneration commands.
+cover Phases 1-10 only. Each later report ends with its own regeneration commands. The revision analyses
+(`analyses/revision_m1_m2/`, results in `results/revision_m1_m2/`) are exploratory and post hoc: they were planned
+after a mock referee report on the manuscript draft, once Phases 10-12 were complete, and their plan was committed
+before any run. In the paper they are sections 2.6-2.7 and supplements S12-S14.
 
 ## Environment
 
